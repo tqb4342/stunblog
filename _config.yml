@@ -6,13 +6,12 @@ title: 拾光集
 subtitle: 记录与分享
 description: 拾光集：一个安静的中文博客，记录技术笔记与生活思考。
 keywords:
-author: IT码农
+author: 拾光者
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## 上线前把 https://DOMAIN 替换为实际域名（全局替换本文件 + 主题配置）
-url: https://DOMAIN
+url: https://stunblog.tqb-20134342.workers.dev
 root: /
 # URL 规则与旧版 cfblog 保持一致：/posts/文章名/
 permalink: posts/:title/

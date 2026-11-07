@@ -136,10 +136,9 @@ footer:
   beian:
     enable: false
     icp:
-  # 自定义 footer 文案：主站入口
+  # 自定义 footer 文案（此站独立运营，不关联主站）
   custom:
-    enable: true
-    text: '主站 <a href="https://tanqingbo.cn/" rel="noopener" target="_blank">tanqingbo.cn</a>'
+    enable: false
 
 # Creative Commons 4.0 International License
 creative_commons:
