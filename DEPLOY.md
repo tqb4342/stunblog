@@ -1,4 +1,4 @@
-# 拾光集部署教程（Cloudflare Pages 保姆级）
+# AI 冲浪指南部署教程（Cloudflare 保姆级）
 
 从零到上线，每一步照抄即可。全程约 20 分钟（不含等待时间）。
 
@@ -33,7 +33,7 @@ npx hexo server
 ```
 > 启动本地预览。看到 `Hexo is running at http://localhost:4000` 就成功了。
 
-浏览器打开 **http://localhost:4000**——能看到深色大 Banner"拾光集"、文章卡片、右上角 🌜/🌞 切换按钮，就说明一切正常。
+浏览器打开 **http://localhost:4000**——能看到深色大 Banner"AI 冲浪指南"、文章卡片、右上角 🌜/🌞 切换按钮，就说明一切正常。
 
 确认没问题后，回到 PowerShell 按 `Ctrl + C` 停掉预览（会问 `Terminate batch job?`，按 `Y` 回车）。
 

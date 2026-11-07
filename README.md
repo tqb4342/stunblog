@@ -1,14 +1,23 @@
-# stunblog - 拾光集（Hexo + Stun 主题）
+# stunblog - AI 冲浪指南（Hexo + Stun 主题）
 
 用 hexo-theme-stun 主题新建的 Hexo 博客，接替旧版手写静态骨架（D:/cfblog）。
-文章 URL 规则 `posts/:title/` 与旧版保持一致，无缝衔接。
+文章 URL 规则 `:title/`（直接挂根路径，如 `/hello-world/`；文章名避开 about/tags 等保留路径）。
+
+## 一键发布
+
+写完文章后只需一条命令（构建验证 + 提交 + 推送全包）：
+
+```bash
+./deploy.sh              # 默认提交信息
+./deploy.sh "新文章：xxx"  # 自定义提交信息
+```
 
 ## 目录结构
 
 ```
 stunblog/
 ├── _config.yml        # 站点配置（title/url/permalink 等）
-├── _config.stun.yml   # Stun 主题配置（拾光集定制版）
+├── _config.stun.yml   # Stun 主题配置（AI 冲浪指南定制版）
 ├── package.json       # 依赖：Hexo 5.1.1 + 渲染器/生成器（与主站同版本）
 ├── scaffolds/         # 新建文章模板
 ├── source/

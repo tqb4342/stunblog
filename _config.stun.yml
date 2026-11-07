@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------
-# Stun 主题配置（拾光集定制版）
+# Stun 主题配置（AI 冲浪指南定制版）
 # 完整默认配置复制到站点根目录，升级主题不丢配置（官方推荐做法）
 # 主题文档: https://theme-stun.github.io/docs/zh-CN/
 
@@ -83,8 +83,8 @@ header:
     url:
   banner:
     enable: true
-    title: 拾光集
-    subtitle: 记录与分享
+    title: AI 冲浪指南
+    subtitle: 工具实测与网络实践
   mask:
     enable: false
     opacity: 0.5
