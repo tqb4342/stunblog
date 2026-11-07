@@ -11,7 +11,7 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-url: https://stunblog.tqb-20134342.workers.dev
+url: https://aisurf.cc
 root: /
 # URL 规则与旧版 cfblog 保持一致：/posts/文章名/
 permalink: posts/:title/

@@ -91,7 +91,7 @@ url: https://你的实际域名
 
 ## 上线前替换
 
-`_config.yml` 中 `url: https://DOMAIN` 替换为实际域名。
+`_config.yml` 的 `url` 已设为正式域名 `https://aisurf.cc`（Cloudflare Registrar 注册，DNS 自动托管）。
 
 ## 常用定制位置
 

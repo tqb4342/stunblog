@@ -152,21 +152,15 @@ git push
 
 ---
 
-## 第 5 步：改掉域名占位符（重要，别跳过）
+## 第 5 步：域名占位符（已完成）
 
-现在网站配置里的网址还是占位符 `https://DOMAIN`，会影响文章链接、分享卡片等。要用真实域名替换：
-
-1. 打开 `D:/stunblog/_config.yml`，找到第 13 行左右：
+`_config.yml` 的 `url` 已替换为正式域名：
 
 ```yaml
-url: https://DOMAIN
+url: https://aisurf.cc
 ```
 
-2. 改成（先用 Cloudflare 送的域名）：
-
-```yaml
-url: https://stunblog.pages.dev
-```
+域名在 Cloudflare Registrar 注册（成本价、无套路续费），DNS 自动托管在 Cloudflare，无需配置 nameserver。
 
 3. 再推一次：
 
