@@ -90,6 +90,19 @@ sitemap:
   tags: true
   categories: true
 
+# RSS 订阅（hexo-generator-feed，Stun 侧栏入口指向 /rss.xml）
+feed:
+  type: rss
+  path: rss.xml
+  limit: 20
+  content: true
+
+# 本地搜索索引（hexo-generator-search，Stun local_search 读取）
+search:
+  path: search.json
+  field: post
+  content: true
+
 # Deployment
 ## 部署方式确定后再配置（Cloudflare Pages：build=npx hexo generate, output=public）
 deploy:

@@ -1,7 +1,17 @@
 {
   "name": "stunblog",
   "compatibility_date": "2026-11-01",
+  // Worker 入口：处理 /api/pv 计数接口，其余请求自动走静态资产
+  "main": "worker.js",
   "assets": {
-    "directory": "./public"
-  }
+    "directory": "./public",
+    // Worker 里通过 env.ASSETS.fetch() 兜底静态请求
+    "binding": "ASSETS",
+    // 未命中路径返回 404.html（此前 assets-only 模式未配置，404 页一直没生效，顺手修复）
+    "not_found_handling": "404-page"
+  },
+  // 文章访问量 KV 存储（namespace: pv-counter）
+  "kv_namespaces": [
+    { "binding": "COUNTER", "id": "9ef3312d07644aeb9d367d7db3e7723c" }
+  ]
 }

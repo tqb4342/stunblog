@@ -3,3 +3,5 @@ public/
 db.json
 .deploy_git/
 *.log
+.assets/
+seo-push.secret.sh

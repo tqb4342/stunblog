@@ -42,8 +42,8 @@ menu_settings:
 # Site config
 
 favicon:
-  small: /images/icons/favicon-16x16.png
-  medium: /images/icons/favicon-32x32.png
+  small: /images/icons/aisurf-favicon-16x16.png
+  medium: /images/icons/aisurf-favicon-32x32.png
 
 # Progressive Web Apps
 pwa:
@@ -74,13 +74,15 @@ layout:
 # The header of site.
 header:
   enable: true
+  # 文章页不显示大 banner（只留导航条，正文顶到最上面）；首页/归档页保留
   show_on:
-    post: true
-  # 无头图时 80% 太空，暂设 50%；配 banner 背景图后可改回 80%
-  height: 50%
+    post: false
+  # banner 背景图（站内本地，Cloudflare CDN 分发）
+  # 高度按屏幕高度百分比计算，仅作用于首页/归档页
+  height: 80%
   bg_image:
-    enable: false
-    url:
+    enable: true
+    url: /images/banner.webp
   banner:
     enable: true
     title: AI 冲浪指南
@@ -136,9 +138,24 @@ footer:
   beian:
     enable: false
     icp:
-  # 自定义 footer 文案（此站独立运营，不关联主站）
+  # 自定义 footer 注入：utterances 评论框配色跟随夜间模式（脚本无 UI，div 不可见）
   custom:
-    enable: false
+    enable: true
+    text: |-
+      <script>
+      (function(){
+        var t;
+        function sync(){
+          var f=document.querySelector(".utterances-frame");
+          if(!f)return;
+          var d=document.documentElement.classList.contains("nightmode");
+          f.contentWindow.postMessage({type:"set-theme",theme:d?"github-dark":"github-light"},"https://utteranc.es");
+        }
+        function retry(n){sync();if(n>0)setTimeout(function(){retry(n-1);},700);}
+        new MutationObserver(function(){clearTimeout(t);t=setTimeout(sync,50);}).observe(document.documentElement,{attributes:true,attributeFilter:["class"]});
+        window.addEventListener("load",function(){retry(4);});
+      })();
+      </script>
 
 # Creative Commons 4.0 International License
 creative_commons:
@@ -168,8 +185,8 @@ sidebar:
 author:
   enable: true
   avatar:
-    url: /images/icons/stun-logo.svg
-    rounded: false
+    url: /images/aisurf-avatar.png
+    rounded: true
     opacity: 1
     animation: turn
   motto: 写过、用过、踩过坑之后才落笔
@@ -196,9 +213,9 @@ toc:
 
 # Subscribe of email and rss.
 feed:
-  enable: false
+  enable: true
   email:
-  rss:
+  rss: /rss.xml
 
 # The reading progress of post.
 reading_progress:
@@ -209,7 +226,9 @@ reading_progress:
 # Page config
 
 codeblock:
-  style: default
+  # carbon = 顶部带 Mac 红黄绿三圆点（carbon.now.sh 风格）
+  # 注意：仅支持 default | simple | carbon，写别的值会静默回退 default
+  style: carbon
   highlight: light
   word_wrap: false
 
@@ -225,21 +244,23 @@ reward:
 # Post config
 
 post_meta:
-  icon_only: false
+  # 图标模式：只显示 图标+数值，悬停显示全称（配合单行紧凑排版）
+  icon_only: true
   created:
     enable: true
     icon: far fa-calendar-plus
+  # 更新时间与发表同天时纯冗余，关闭；以后大改旧文想显示可改回 true
   updated:
-    enable: true
+    enable: false
     icon: far fa-calendar-check
   reading_time:
-    enable: false
+    enable: true
     icon: far fa-clock
     speed:
       zh: 200
       en: 80
   word_count:
-    enable: false
+    enable: true
     icon: far fa-file-word
 
 post_list:
@@ -255,9 +276,9 @@ post_widget:
     enable: true
     horizon_line: true
   share:
-    enable: false
-    label: 'Share to: '
-    target: qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google
+    enable: true
+    label: '分享到：'
+    target: qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter
 
 stick_top:
   position: right
@@ -320,10 +341,11 @@ disqus:
   count: true
 
 utterances:
-  enable: false
-  owner:
-  repo:
-  mapping: title
+  enable: true
+  owner: tqb4342
+  repo: stunblog
+  # pathname 按 URL 匹配评论（改标题不丢评论）；title 会随标题改动丢失关联
+  mapping: pathname
   label: utterances
   theme: github-light
   script_url: https://utteranc.es/client.js
@@ -341,13 +363,15 @@ fbcomments:
 # Statistics and Analytics config
 
 busuanzi:
-  enable: false
+  # 只复用 Stun 的文章阅读数展示位（meta 区 👁 图标 + 数字）
+  # 统计脚本已通过下方 cdn.busuanzi 覆盖为本站 /js/pv.js（自建 KV 计数，不用不蒜子服务）
+  enable: true
   icon_only: false
   site_uv:
-    enable: true
+    enable: false
     icon: fas fa-user
   site_pv:
-    enable: true
+    enable: false
     icon: fas fa-eye
   post_pv:
     enable: true
@@ -367,7 +391,7 @@ algolia_search:
     show_stats: true
 
 local_search:
-  enable: false
+  enable: true
 
 assist_search:
   enable: false
@@ -423,11 +447,11 @@ gallery_waterfall:
   gap_y: 10px
 
 lazyload:
-  enable: false
+  enable: true
   placeholder: gif
 
 quicklink:
-  enable: false
+  enable: true
   home: true
   archive: true
   delay: true
@@ -526,7 +550,7 @@ cdn:
   leancloud_storage:
   waline:
   minivaline:
-  busuanzi:
+  busuanzi: /js/pv.js
   instantsearch_js:
   instantsearch_css:
   canvas_ribbon:
@@ -537,5 +561,5 @@ cdn:
   lazyload:
   quicklink:
   pjax:
-  share_js:
-  share_css:
+  share_js: /js/vendor/social-share.min.js
+  share_css: /css/vendor/share.min.css
