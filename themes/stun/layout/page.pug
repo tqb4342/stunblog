@@ -5,7 +5,7 @@ block content
 
   if page.type === 'tags'
     div.tagcloud
-      div.tagcloud-total= __('page.tags') + ' - '
+      h1.tagcloud-total= __('page.tags') + ' - '
         span= site.tags.length
       - var min_font = theme.tag_cloud ? theme.tag_cloud.min_size : 14;
       - var max_font = theme.tag_cloud ? theme.tag_cloud.max_size : 24;
@@ -15,11 +15,19 @@ block content
         != tagcloud({min_font: min_font, max_font: max_font, amount: theme.tag_cloud.max_amount, color: true, start_color, end_color})
   else if page.type === 'categories'
     div.category
-      div.category-total= __('page.categories') + ' - '
+      h1.category-total= __('page.categories') + ' - '
         span= site.categories.length
-      != list_categories()
+      ul.category-list
+        each cat in site.categories.toArray()
+          li.category-list__item
+            a.category-list__link(href=url_for(cat.path))
+              i.fas.fa-folder-open.category-list__icon
+              span.category-list__name= cat.name
+              span.category-list__count= cat.posts.length
   else
     div.custompage
+      if page.title
+        h1.page-h1= page.title
       if page.photos && page.photos.length
         +gallery(page)
       != page.content

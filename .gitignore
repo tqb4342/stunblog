@@ -5,3 +5,4 @@ db.json
 *.log
 .assets/
 seo-push.secret.sh
+*.bak

@@ -1,0 +1,530 @@
+/* ============================================================
+   站点自定义样式（css_custom）
+   仿 Butterfly 卡片化侧栏：每模块独立白卡 / 圆角 / 阴影
+   颜色一律用 Stun 的 CSS 变量，日间/夜间模式自动切换
+   ============================================================ */
+
+/* ---------- 卡片容器 ---------- */
+.sidebar-ov .sidebar-ov-card {
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  margin-bottom: .9rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+
+/* 悬停：整卡上浮 + 阴影加深（Butterfly 风） */
+.sidebar-ov .sidebar-ov-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .06);
+  transform: translateY(-3px);
+}
+
+/* 卡片标题：图标 + 文字 + 底部细线 */
+.sidebar-card__headline {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  padding-bottom: .55rem;
+  margin-bottom: .65rem;
+  border-bottom: 1px solid var(--color-gray-260);
+}
+
+.sidebar-card__headline i {
+  color: #54bcff;
+  font-size: 13px;
+}
+
+/* ---------- 卡片 1：作者名片 ---------- */
+.sidebar-card-author {
+  text-align: center;
+}
+
+.sidebar-card-author .sidebar-ov-author__avatar {
+  margin-bottom: .6rem;
+}
+
+.sidebar-card-author__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-gray-800);
+  line-height: 1.4;
+}
+
+.sidebar-card-author__desc {
+  font-size: 12.5px;
+  color: var(--color-gray-600);
+  margin: .35rem 0 .8rem;
+  line-height: 1.5;
+}
+
+/* 统计三项横排 */
+.sidebar-card-author__data {
+  display: flex;
+  justify-content: space-around;
+  padding: .55rem 0;
+  margin-bottom: .8rem;
+  border-top: 1px solid var(--color-gray-260);
+  border-bottom: 1px solid var(--color-gray-260);
+}
+
+.sidebar-card-data__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .15rem;
+  min-width: 56px;
+}
+
+.sidebar-card-data__num {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-gray-800);
+  transition: color .2s ease;
+}
+
+.sidebar-card-data__label {
+  font-size: 11px;
+  color: var(--color-gray-600);
+}
+
+.sidebar-card-data__item:hover .sidebar-card-data__num {
+  color: #54bcff;
+}
+
+/* Follow Me 按钮 */
+.sidebar-card-author__follow {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .42rem 1.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #54bcff;
+  border-radius: 18px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.sidebar-card-author__follow:hover {
+  color: #ffffff;
+  opacity: .85;
+  transform: translateY(-1px);
+}
+
+/* ---------- 卡片 2：最新文章 ---------- */
+.sidebar-card-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-card-posts__item {
+  padding: .38rem 0;
+  border-bottom: 1px dashed var(--color-gray-250);
+}
+
+.sidebar-card-posts__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sidebar-card-posts__title {
+  display: block;
+  font-size: 13px;
+  color: var(--color-gray-800);
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.sidebar-card-posts__title:hover {
+  color: #54bcff;
+}
+
+.sidebar-card-posts__date {
+  display: block;
+  font-size: 11px;
+  color: var(--color-gray-600);
+  margin-top: .12rem;
+}
+
+/* ---------- 卡片 3：分类列表 ---------- */
+.sidebar-card-cats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-card-cats__item {
+  padding: .3rem 0;
+}
+
+.sidebar-card-cats__item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-gray-800);
+  transition: color .2s ease;
+}
+
+.sidebar-card-cats__item a:hover {
+  color: #54bcff;
+}
+
+.sidebar-card-cats__count {
+  font-size: 11px;
+  color: var(--color-gray-600);
+  background: var(--color-gray-200);
+  border-radius: 9px;
+  padding: .08rem .5rem;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.sidebar-card-cats__item a:hover .sidebar-card-cats__count {
+  color: #ffffff;
+  background: #54bcff;
+}
+
+/* ---------- 卡片 4：标签云 ---------- */
+.sidebar-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem .4rem;
+}
+
+.sidebar-card-tags__item {
+  font-size: 12px;
+  color: var(--color-gray-700);
+  background: var(--color-gray-200);
+  border-radius: 12px;
+  padding: .18rem .65rem;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.sidebar-card-tags__item:hover {
+  color: #ffffff;
+  background: #54bcff;
+}
+
+/* ---------- 卡片 5：RSS 订阅 ---------- */
+.sidebar-card-feed a {
+  font-size: 12.5px;
+  color: var(--color-gray-700);
+  transition: color .2s ease;
+}
+
+.sidebar-card-feed a:hover {
+  color: #54bcff;
+}
+
+/* ---------- 夜间模式阴影适配（卡片本身已用变量换底色，阴影加深一档） ---------- */
+html.nightmode .sidebar-ov .sidebar-ov-card {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .35), 0 1px 3px rgba(0, 0, 0, .25);
+}
+
+html.nightmode .sidebar-ov .sidebar-ov-card:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .5), 0 3px 8px rgba(0, 0, 0, .3);
+}
+
+/* ============================================================
+   文章页目录卡：概览常驻左栏，目录宽屏悬浮正文右侧
+   ============================================================ */
+
+/* 目录卡内列表适配窄卡（原样式按 300px 侧栏设计） */
+.sidebar-ov .sidebar-toc .toc {
+  font-size: 13px;
+}
+
+/* 宽屏：目录卡 fixed 到正文右侧，形成 概览(左)-正文(中)-目录(右) 三栏
+   top = 导航栏 50px + 20px 间距，避免与 fixed 导航栏重叠 */
+@media (min-width: 1680px) {
+  .sidebar .sidebar-toc.sidebar-ov-card {
+    position: fixed;
+    top: 70px;
+    right: max(20px, calc((100vw - 1138px) / 2 - 250px));
+    width: 230px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* ============================================================
+   侧栏滚动吸附：flex 布局 + 内层 sticky（照抄 Butterfly 方案）
+   ============================================================
+   根因修复（前几版不生效的两个真凶）：
+   ① 主题 .container 带 overflow: hidden（macro.styl）——sticky 的滚动参照物
+     会变成这个「永不滚动的滚动容器」，吸附永远不触发。
+     改为 overflow: clip：视觉裁剪效果完全相同，但不产生滚动容器，sticky 恢复工作。
+   ② sticky 的包含块 .sidebar-ov 高度是 auto（= 自身内容高度），没有吸附行程。
+     flex 拉伸只到 .sidebar-wrap 这一层，中间的 #sidebar / .sidebar-ov 断了链。
+     用 height:100% → min-height:100% 把列高传导到 sticky 的包含块。 */
+.container {
+  overflow: clip;
+}
+
+.main-inner {
+  display: flex;
+  align-items: stretch;
+}
+
+/* 正文列：中和 float，flex 弹性占满剩余空间 */
+.content-wrap {
+  float: none;
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* 侧栏列：DOM 在正文之后，用 order 提前实现左侧位；固定宽不收缩 */
+.sidebar-wrap {
+  float: none;
+  order: -1;
+  flex: 0 0 300px;
+  width: auto;
+  margin-right: 30px;
+}
+
+/* 高度传导链（根因②）：#sidebar 占满被 flex 拉伸的侧栏列，
+   .sidebar-ov 至少撑满列高 —— sticky 从此获得全程吸附行程。
+   同时去掉主题给 #sidebar 的白色卡壳（background/padding/border-radius），
+   让卡片直接落在页面背景上，与 whitee.cn 的分离卡片形态一致 */
+#sidebar.sidebar {
+  height: 100%;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.sidebar-ov {
+  min-height: 100%;
+}
+
+/* sticky 组：吸附于导航栏（50px）下方 20px 处 */
+.sidebar-sticky {
+  position: sticky;
+  top: 70px;
+}
+
+/* 中和主题 JS 动态添加的 .sidebar--sticky（fixed 吸附）：
+   类还会被加，但样式全部失效，吸附行为由上面的 sticky 接管 */
+.sidebar.sidebar--sticky {
+  position: static;
+  transform: none;
+  max-height: none;
+  overflow-y: visible;
+}
+
+/* ============================================================
+   上一篇 / 下一篇：单条深色横幅左右分布（仿 whitee.cn）
+   ============================================================ */
+.post-paginator-bar {
+  display: flex;
+  margin-top: 1.2rem;
+  border-radius: 8px;
+  background: #2d3e50;
+  overflow: hidden;
+}
+
+.post-paginator-bar__item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: .7rem 1.05rem;
+  color: #ffffff;
+  transition: background-color .2s ease;
+}
+
+.post-paginator-bar__item--prev {
+  text-align: left;
+}
+
+.post-paginator-bar__item--next {
+  text-align: right;
+}
+
+.post-paginator-bar__item:hover {
+  background: rgba(255, 255, 255, .08);
+  color: #ffffff;
+}
+
+.post-paginator-bar__label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, .6);
+}
+
+.post-paginator-bar__title {
+  font-size: 13.5px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* hover 时标题完整展开（仿 whitee.cn）：取消单行截断，自动换行显示全 */
+.post-paginator-bar__item:hover .post-paginator-bar__title {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* 两块之间的细分隔线（仅两边都存在时出现） */
+.post-paginator-bar__item--prev + .post-paginator-bar__item--next {
+  border-left: 1px solid rgba(255, 255, 255, .14);
+}
+
+/* 夜间模式：底色提亮一档与页面背景区分 */
+html.nightmode .post-paginator-bar {
+  background: #3a4d63;
+}
+
+/* ============================================================
+   相关文章：白卡 + 垂直列表，标题左/日期右（仿主站样式）
+   ============================================================ */
+.post-related {
+  margin-top: 1.2rem;
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.post-related__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  padding-bottom: .55rem;
+  margin-bottom: .3rem;
+  border-bottom: 1px solid var(--color-gray-260);
+}
+
+.post-related__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-related__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .42rem 0;
+}
+
+.post-related__link {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  color: var(--color-gray-800);
+  line-height: 1.5;
+  transition: color .2s ease;
+}
+
+.post-related__link:hover {
+  color: #54bcff;
+}
+
+.post-related__date {
+  flex-shrink: 0;
+  font-size: 11.5px;
+  color: var(--color-gray-600);
+}
+
+html.nightmode .post-related {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .35), 0 1px 3px rgba(0, 0, 0, .25);
+}
+
+/* ---------- 列表页文章标题（SEO 将 h1 降级 h2 后的视觉兜底） ---------- */
+h2.post-title {
+  font-size: 1.6em;
+}
+
+/* ---------- 薄内容页 H1（归档/分类/标签/关于，SEO 补充） ---------- */
+h1.page-h1,
+h1.tagcloud-total,
+h1.category-total {
+  margin: 0 0 1rem;
+  font-size: 1.7em;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  line-height: 1.4;
+}
+
+h1.tagcloud-total span,
+h1.category-total span {
+  font-size: .65em;
+  font-weight: 400;
+  color: var(--color-gray-500);
+}
+
+/* ---------- 分类页列表美化（Butterfly 风：图标+名称+徽章，整行 hover） ---------- */
+ul.category-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-list__item {
+  margin: 0 0 10px;
+}
+
+.category-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.category-list__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--color-card);
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.category-list__link:hover {
+  border-color: #54bcff;
+  box-shadow: 0 3px 10px rgba(84, 188, 255, .18);
+  transform: translateY(-1px);
+}
+
+.category-list__icon {
+  font-size: 16px;
+  color: #54bcff;
+  flex-shrink: 0;
+}
+
+.category-list__name {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.category-list__count {
+  min-width: 26px;
+  padding: 1px 9px;
+  border-radius: 13px;
+  font-size: 12.5px;
+  text-align: center;
+  color: #54bcff;
+  background: rgba(84, 188, 255, .12);
+  transition: color .2s ease, background .2s ease;
+}
+
+.category-list__link:hover .category-list__count {
+  color: #ffffff;
+  background: #54bcff;
+}
+
+

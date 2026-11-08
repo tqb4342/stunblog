@@ -5,15 +5,13 @@ nav(class=`${is_post() ? 'post-paginator' : ''}`).paginator
     div.paginator-inner
       != paginator({ prev_text: prevText, next_text: nextText, mid_size: 1, escape: false })
   else
-    if page.prev
-      div.paginator-prev
-        a.paginator-prev__link(href=url_for(page.prev.path))
-          span.paginator-prev__icon
-            i(class=theme.icon.paginator_prev)
-          span.paginator-prev__text= page.prev.title || __('post.untitled')
-    if page.next
-      div.paginator-next
-        a.paginator-next__link(href=url_for(page.next.path))
-          span.paginator-prev__text= page.next.title || __('post.untitled')
-          span.paginator-next__icon
-            i(class=theme.icon.paginator_next)
+    // 上一篇/下一篇：单条横幅左右分布（仿 whitee.cn / Butterfly），样式在 custom.css
+    div.post-paginator-bar
+      if page.prev
+        a.post-paginator-bar__item.post-paginator-bar__item--prev(href=url_for(page.prev.path))
+          span.post-paginator-bar__label 上一篇
+          span.post-paginator-bar__title= page.prev.title || __('post.untitled')
+      if page.next
+        a.post-paginator-bar__item.post-paginator-bar__item--next(href=url_for(page.next.path))
+          span.post-paginator-bar__label 下一篇
+          span.post-paginator-bar__title= page.next.title || __('post.untitled')

@@ -71,12 +71,29 @@ if theme.sougou_site_verification
 title= title
 
 if theme.canonical
-  link(ref="canonical" href=full_url_for(page.path))
+  link(rel="canonical" href=full_url_for(page.path))
 
 if theme.feed.rss
   link(rel="alternate" href=url_for(theme.feed.rss) type="application/atom+xml")
 
-link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
+// Article 结构化数据（JSON-LD）：文章页自动生成，供搜索引擎富媒体结果使用
+if is_post()
+  -
+    var schema_image = page.top_image || page.banner_img || page.photos && page.photos[0] || '';
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "#{full_url_for(page.path)}" },
+      "headline": !{JSON.stringify(page.title || '')},
+      "url": "#{full_url_for(page.path)}",
+      "datePublished": "#{date_xml(page.date)}",
+      "dateModified": "#{date_xml(page.updated || page.date)}",
+      "description": !{JSON.stringify((page.description || page.excerpt || '').substring(0, 300))},
+      "image": "#{schema_image}",
+      "author": { "@type": "Person", "name": "#{config.author}", "url": "#{config.url}" },
+      "publisher": { "@type": "Organization", "name": "#{config.title}", "logo": { "@type": "ImageObject", "url": "#{config.url}/images/aisurf-avatar.png" } }
+    }
 
 - var fontawesome_css = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css';
 - if (theme.cdn.fontawesome) fontawesome_css = theme.cdn.fontawesome;
@@ -106,7 +123,7 @@ if theme.post_widget.share.enable
 link(rel="stylesheet" href=`${url_for(theme.css)}/index.css?v=${stun_env('version')}`)
 
 if theme.css_custom
-  link(rel="stylesheet" href=theme.css_custom)
+  link(rel="stylesheet" href=url_for(theme.css_custom))
 
 if theme.google_analytics
   link(rel="dns-prefetch" href="https://www.googletagmanager.com")

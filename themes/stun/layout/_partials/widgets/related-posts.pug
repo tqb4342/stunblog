@@ -1,0 +1,26 @@
+// 相关文章：取同分类的其他文章（排除当前篇），按日期倒序最多 5 篇
+// 样式在 custom.css 的 .post-related（仿主站 tanqingbo.cn 的列表风格）
+-
+  var relatedPosts = [];
+  var relatedSeen = {};
+  if (page.categories && page.categories.length) {
+    page.categories.each(function (cat) {
+      cat.posts.each(function (p) {
+        if (p.path !== page.path && !relatedSeen[p.path]) {
+          relatedSeen[p.path] = true;
+          relatedPosts.push(p);
+        }
+      });
+    });
+    relatedPosts.sort(function (a, b) { return b.date - a.date; });
+    relatedPosts = relatedPosts.slice(0, 5);
+  }
+
+if relatedPosts.length
+  div.post-related
+    div.post-related__title 相关文章
+    ul.post-related__list
+      each p in relatedPosts
+        li.post-related__item
+          a.post-related__link(href=url_for(p.path))= p.title || __('post.untitled')
+          span.post-related__date= date(p.date, 'YYYY-MM-DD')

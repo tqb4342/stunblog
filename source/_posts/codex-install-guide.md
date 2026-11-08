@@ -7,6 +7,7 @@ tags: [Codex, AI编程, Trae, OpenAI]
 keywords: codex安装教程,codex使用教程,codex教程,trae codex,codex插件,codex登录,codex cli,codex国内,codex配置,openai codex,codex chatgpt登录,ai编程工具,codex怎么安装,codex怎么用,codex新手入门,codex登录失败,codex插件安装,trae安装codex,codex免费吗,codex多少钱,codex账号,gpt-6 codex,codex额度
 description: Codex 安装使用教程（2026 最新版）：在国内环境下用 Trae 装 OpenAI Codex 插件、用 ChatGPT 账号授权登录、完成首次偏好配置的全流程图文演示，覆盖前置条件、登录失败排查与常见问题。
 top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/codex-install-banner.webp
+photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/codex-install-banner.webp]
 ---
 
 > 🚀 本文只解决一件事——**把 Codex 装起来、登进去、跑起来**。全程以 Trae 为例，Cursor、Qoder、Kiro 等工具流程一致。

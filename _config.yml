@@ -98,8 +98,10 @@ feed:
   content: true
 
 # 本地搜索索引（hexo-generator-search，Stun local_search 读取）
+# 注意：hexo-generator-search 只输出 XML 格式，path 必须以 .xml 结尾；
+# 写 .json 会导致前端按 JSON 解析 XML，搜索功能静默失效
 search:
-  path: search.json
+  path: search.xml
   field: post
   content: true
 

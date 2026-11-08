@@ -5,7 +5,8 @@ mixin postHeader(post)
     if post.top
       include ../_partials/widgets/sticky-top.pug
 
-    h1.post-title
+    // SEO：文章页标题用 h1，列表页（首页/归档）降级为 h2，保证每页唯一 h1
+    #{is_post() ? 'h1' : 'h2'}.post-title
       if post.link
         a.post-title__link(href=url_for(post.link) target="_blank" rel="noopener" )
           = post.title || post.link

@@ -29,9 +29,9 @@ sougou_site_verification:
 menu:
   home: / || fas fa-home
   archives: /archives/ || fas fa-folder-open
+  categories: /categories/ || fas fa-layer-group
+  tags: /tags/ || fas fa-tags
   about: /about/ || fas fa-user
-  # categories: /categories/ || fas fa-layer-group
-  # tags: /tags/ || fas fa-tags
 
 submenu:
 
@@ -79,7 +79,7 @@ header:
     post: false
   # banner 背景图（站内本地，Cloudflare CDN 分发）
   # 高度按屏幕高度百分比计算，仅作用于首页/归档页
-  height: 80%
+  height: 45%
   bg_image:
     enable: true
     url: /images/banner.webp
@@ -178,12 +178,14 @@ back2top:
 
 sidebar:
   enable: true
-  position: right
+  # 左侧边栏（仿 whitee.cn 布局：左栏作者名片/最新文章/分类，右栏文章列表）
+  position: left
   offsetTop: 20px
   horizon_line: false
 
 author:
   enable: true
+  name: AI 冲浪指南
   avatar:
     url: /images/aisurf-avatar.png
     rounded: true
@@ -191,12 +193,9 @@ author:
     animation: turn
   motto: 写过、用过、踩过坑之后才落笔
 
-# Social links（按需启用）
+# Social links（侧栏名片 Follow Me 按钮读取这里）
 social:
-  # github: https://github.com/ || fab fa-github
-  # weibo: https://weibo.com/ || fab fa-weibo
-  # zhihu: https://www.zhihu.com/ || origin:知
-  # telegram: yournumber || fab fa-telegram
+  github: https://github.com/tqb4342/Open-Internet || fab fa-github
 
 social_setting:
   enable: true
@@ -539,7 +538,8 @@ icon:
 
 # Set a CDN address for the vendor you want to customize.
 cdn:
-  fontawesome:
+  # FontAwesome 自托管（jsdelivr 国内被墙，图标会挂；fastly 镜像下载的 5.12.1 全量包）
+  fontawesome: /css/vendor/fontawesome.css
   jquery:
   velocity:
   velocity_ui:
