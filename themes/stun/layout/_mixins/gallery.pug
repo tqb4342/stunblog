@@ -1,4 +1,4 @@
 mixin gallery(post)
   div.gallery
     each photo in post.photos
-      img(src=url_for(photo))
+      img(src=url_for(photo), alt=(post.title || '文章配图'))

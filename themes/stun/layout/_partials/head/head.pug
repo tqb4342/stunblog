@@ -66,12 +66,22 @@ if theme.qihu360_site_verification
 if theme.sougou_site_verification
   meta(name="sogou_site_verification" content=theme.sougou_site_verification)
 
-!= open_graph()
+// og:image 兜底：文章页有 photos/top_image 走默认；首页/关于等无图页传站点 banner，
+// 保证社交分享（微信/QQ/Twitter/Telegram）永远有缩略图
+if (page.photos && page.photos.length) || page.top_image || page.banner_img
+  != open_graph()
+else
+  != open_graph({ image: config.url + '/images/banner.webp' })
 
 title= title
 
 if theme.canonical
   link(rel="canonical" href=full_url_for(page.path))
+
+// SEO：标签页/分类页（含 /tags/ /categories/ 总览页）是薄内容列表页
+// noindex 不进索引；follow 保留内链抓取与权重传递
+if is_tag() || is_category() || page.type === 'tags' || page.type === 'categories'
+  meta(name="robots" content="noindex, follow")
 
 if theme.feed.rss
   link(rel="alternate" href=url_for(theme.feed.rss) type="application/atom+xml")
@@ -92,6 +102,19 @@ if is_post()
       "description": !{JSON.stringify((page.description || page.excerpt || '').substring(0, 300))},
       "image": "#{schema_image}",
       "author": { "@type": "Person", "name": "#{config.author}", "url": "#{config.url}" },
+      "publisher": { "@type": "Organization", "name": "#{config.title}", "logo": { "@type": "ImageObject", "url": "#{config.url}/images/aisurf-avatar.png" } }
+    }
+
+// WebSite 结构化数据：首页输出，帮助搜索引擎识别站点实体
+if is_home()
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "#{config.title}",
+      "url": "#{config.url}/",
+      "description": !{JSON.stringify(config.description || '')},
+      "inLanguage": "#{config.language || 'zh-CN'}",
       "publisher": { "@type": "Organization", "name": "#{config.title}", "logo": { "@type": "ImageObject", "url": "#{config.url}/images/aisurf-avatar.png" } }
     }
 

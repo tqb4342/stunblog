@@ -9,7 +9,7 @@ section.postlist
 
       div.post-body
         if theme.post_list.cover_image.home && post.top_image
-          img(src=post.top_image)
+          img(src=post.top_image, alt=post.title)
 
         if post.photos && post.photos.length
           +gallery(post)

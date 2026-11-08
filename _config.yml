@@ -4,7 +4,7 @@
 # Site
 title: AI 冲浪指南
 subtitle: 工具实测与网络实践
-description: AI 冲浪指南：AI 工具实测与网络冲浪实践笔记，亲手用过、踩过坑才写下来。
+description: AI 冲浪指南：Codex 安装使用教程、Trae / Cursor 等 AI 编程工具实测、谷歌账号注册与网络配置排障笔记，亲手用过、踩过坑才写下来的实践经验。
 keywords: AI工具,工具实测,网络冲浪,冲浪指南
 author: 冲浪客
 language: zh-CN
@@ -84,11 +84,12 @@ ignore:
 theme: stun
 
 # Sitemap（提交搜索引擎用）
+# tags/categories 关闭：薄内容列表页不进 sitemap（页面本身另有 noindex,follow）
 sitemap:
   path: sitemap.xml
   rel: false
-  tags: true
-  categories: true
+  tags: false
+  categories: false
 
 # RSS 订阅（hexo-generator-feed，Stun 侧栏入口指向 /rss.xml）
 feed:

@@ -30,7 +30,11 @@ if !isNoHeader
     if theme.header.banner.enable
       div.header-banner-info
         if page.header_title || theme.header.banner.title
-          div.header-banner-info__title= page.header_title || theme.header.banner.title
+          // SEO：首页用 h1 承载站点标题（全页唯一），其他页面保持 div 不与正文 h1 冲突
+          if is_home()
+            h1.header-banner-info__title= page.header_title || theme.header.banner.title
+          else
+            div.header-banner-info__title= page.header_title || theme.header.banner.title
         if page.header_subtitle || theme.header.banner.subtitle
           div.header-banner-info__subtitle= page.header_subtitle || theme.header.banner.subtitle
 

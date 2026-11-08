@@ -1,19 +1,85 @@
-// 相关文章：取同分类的其他文章（排除当前篇），按日期倒序最多 5 篇
-// 样式在 custom.css 的 .post-related（仿主站 tanqingbo.cn 的列表风格）
+// 相关文章推荐 —— 三级优先级（与主站 tanqingbo.cn 同款逻辑）
+// ① 手动白名单：front-matter 里 related: [slug] 或 [{slug, text}]
+//    （text 为自定义锚文本，SEO 内链用；跳过自身与 archived: true 的文章）
+// ② tag 重合度打分：共同 tag 每个 +3 分、同分类每个 +1 分，0 分不入选；
+//    相关度降序 → 同分按日期降序
+// ③ 同分类兜底：仍不足 5 篇时用同分类文章补足
+// 样式在 custom.css 的 .post-related（仿主站列表风格）
 -
   var relatedPosts = [];
+  var relatedLinks = {};
   var relatedSeen = {};
-  if (page.categories && page.categories.length) {
-    page.categories.each(function (cat) {
-      cat.posts.each(function (p) {
-        if (p.path !== page.path && !relatedSeen[p.path]) {
-          relatedSeen[p.path] = true;
-          relatedPosts.push(p);
-        }
-      });
+  var allPostsArr = site.posts.toArray();
+
+  // ① 手动白名单
+  if (page.related && page.related.length) {
+    var allPostsBySlug = {};
+    allPostsArr.forEach(function (p) { allPostsBySlug[p.slug] = p; });
+    page.related.forEach(function (item) {
+      var slug = typeof item === 'string' ? item : item.slug;
+      var text = typeof item === 'string' ? null : item.text;
+      var target = allPostsBySlug[slug];
+      if (target && target.path !== page.path && !target.archived && !relatedSeen[target.path]) {
+        relatedSeen[target.path] = true;
+        relatedPosts.push(target);
+        if (text) relatedLinks[target.slug] = text;
+      }
     });
-    relatedPosts.sort(function (a, b) { return b.date - a.date; });
-    relatedPosts = relatedPosts.slice(0, 5);
+  }
+
+  var currentTags = {};
+  var currentCats = [];
+  if (page.tags && page.tags.length) {
+    page.tags.each(function (t) { currentTags[t.name] = true; });
+  }
+  if (page.categories && page.categories.length) {
+    page.categories.each(function (c) { currentCats.push(c.name); });
+  }
+
+  // ② tag 重合度打分（白名单不足 5 篇时补齐）
+  if (relatedPosts.length < 5) {
+    var scored = [];
+    allPostsArr.forEach(function (p) {
+      if (p.path === page.path || p.archived || relatedSeen[p.path]) return;
+      var score = 0;
+      if (p.tags && p.tags.length) {
+        p.tags.each(function (t) { if (currentTags[t.name]) score += 3; });
+      }
+      if (p.categories && p.categories.length) {
+        p.categories.each(function (c) {
+          if (currentCats.indexOf(c.name) !== -1) score += 1;
+        });
+      }
+      if (score > 0) scored.push({ post: p, score: score });
+    });
+    scored.sort(function (a, b) {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.post.date - a.post.date;
+    });
+    scored.forEach(function (s) {
+      if (relatedPosts.length < 5) {
+        relatedSeen[s.post.path] = true;
+        relatedPosts.push(s.post);
+      }
+    });
+  }
+
+  // ③ 同分类兜底
+  if (relatedPosts.length < 5) {
+    allPostsArr.forEach(function (p) {
+      if (relatedPosts.length >= 5) return;
+      if (p.path === page.path || p.archived || relatedSeen[p.path]) return;
+      var hasCommon = false;
+      if (p.categories && p.categories.length) {
+        p.categories.each(function (c) {
+          if (currentCats.indexOf(c.name) !== -1) hasCommon = true;
+        });
+      }
+      if (hasCommon) {
+        relatedSeen[p.path] = true;
+        relatedPosts.push(p);
+      }
+    });
   }
 
 if relatedPosts.length
@@ -22,5 +88,5 @@ if relatedPosts.length
     ul.post-related__list
       each p in relatedPosts
         li.post-related__item
-          a.post-related__link(href=url_for(p.path))= p.title || __('post.untitled')
+          a.post-related__link(href=url_for(p.path))= relatedLinks[p.slug] || p.title || __('post.untitled')
           span.post-related__date= date(p.date, 'YYYY-MM-DD')

@@ -130,11 +130,11 @@ footer:
     animation: false
     color: '#ff0000'
   powered:
-    enable: true
-    version: true
+    enable: false
+    version: false
   theme:
-    enable: true
-    version: true
+    enable: false
+    version: false
   beian:
     enable: false
     icp:
