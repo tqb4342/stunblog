@@ -6,3 +6,4 @@ db.json
 .assets/
 seo-push.secret.sh
 *.bak
+.verify-sticky/

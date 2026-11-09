@@ -244,7 +244,7 @@ reward:
 
 post_meta:
   # 图标模式：只显示 图标+数值，悬停显示全称（配合单行紧凑排版）
-  icon_only: true
+  icon_only: false
   created:
     enable: true
     icon: far fa-calendar-plus
@@ -252,8 +252,9 @@ post_meta:
   updated:
     enable: false
     icon: far fa-calendar-check
+  # 阅读时间不显示（与字数统计信息重复，meta 区保持三项：发表时间/字数/阅读次数）
   reading_time:
-    enable: true
+    enable: false
     icon: far fa-clock
     speed:
       zh: 200

@@ -8,6 +8,13 @@ keywords: codex安装教程,codex使用教程,codex教程,trae codex,codex插件
 description: Codex 安装使用教程（2026 最新版）：在国内环境下用 Trae 装 OpenAI Codex 插件、用 ChatGPT 账号授权登录、完成首次偏好配置的全流程图文演示，覆盖前置条件、登录失败排查与常见问题。
 top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/codex-install-banner.webp
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/codex-install-banner.webp]
+related:
+  - slug: ai-tools-network-guide
+    text: AI 编程工具连不上？TUN 模式与分流规则配置
+  - slug: windows-internet-guide
+    text: Windows 翻墙教程：Clash Verge 从零配置
+  - slug: accounts-google
+    text: 谷歌账号(Gmail)注册教程：收不到验证码三招解决
 ---
 
 > 🚀 本文只解决一件事——**把 Codex 装起来、登进去、跑起来**。全程以 Trae 为例，Cursor、Qoder、Kiro 等工具流程一致。
@@ -34,6 +41,8 @@ Codex 以插件形式跑在 AI 编程工具里，Trae、Cursor、Qoder、Kiro �
 
 Codex 需要付费会员才能用，Plus、Business、Pro 都可以。免费账号登不进去，这是硬门槛。
 
+连 ChatGPT 账号都还没有的话，用谷歌邮箱注册一个最顺——[谷歌账号(Gmail)注册教程](/accounts-google/)，国内手机号收不到验证码的解法也在这篇里。
+
 还没有 Plus 的两条路：
 
 - **自己开**：需要外币信用卡，走官方渠道 20 美元/月。支付被拒的话，先确认卡片开通了境外无卡支付，再换 PayPal 试试
@@ -44,8 +53,7 @@ Codex 需要付费会员才能用，Plus、Business、Pro 都可以。免费账�
 这是国内用户卡得最多的一关：**Codex 的登录授权页在 OpenAI 域名下，直连打不开**。开始装之前，先确认浏览器能正常访问 ChatGPT 官网。
 
 - 已经有代理工具和机场订阅的，装之前把全局或规则模式开好
-- 还没解决网络问题的，先把这一课补上：一台 Clash 类工具加一个稳定订阅是标配，机场尽量选有试用、运营年限长的
-- 网络环境具体怎么配（工具选型、订阅导入、分流规则、线路挑选的踩坑记录），本站后续的冲浪实践系列会展开写
+- 还没解决网络问题的，先把这一课补上：[Windows 翻墙教程：Clash Verge 从零配置](/windows-internet-guide/)——工具选型、订阅导入、节点挑选的踩坑记录全在里面
 
 > 💡 三个条件齐了再往下走。登录授权失败的案例里，十有八九是网络问题被当成了账号问题。
 
@@ -89,7 +97,7 @@ Codex 需要付费会员才能用，Plus、Business、Pro 都可以。免费账�
 
 两个注意点：
 
-- 授权页一直转圈打不开：九成是网络没走代理，回到第一节的网络条件排查，别急着卸载重装
+- 授权页一直转圈打不开：九成是网络没走代理，回到第一节的网络条件排查，别急着卸载重装；AI 编程工具场景的网络排障（TUN 模式、分流规则、节点挑选）另有一篇专门讲：[AI 编程工具网络配置](/ai-tools-network-guide/)
 - 确认账号是 Plus、Business 或 Pro 会员，免费号会在这一步被拒——反复重试没用，这是会员门槛，不是 bug
 
 ### 3.4 登录成功确认

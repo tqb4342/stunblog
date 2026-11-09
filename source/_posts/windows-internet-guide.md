@@ -3,11 +3,18 @@ title: Windows 翻墙教程（2026）：Clash Verge 从零配置，小白一次�
 date: 2026-11-08 14:30:00
 updated: 2026-11-08 14:30:00
 categories: 冲浪实践
-tags: [Windows, 科学上网, Clash, Clash Verge, 翻墙, 一枝红杏, 机场订阅]
+tags: [Windows, 翻墙, Clash Verge, 科学上网]
 keywords: windows翻墙教程,windows科学上网,电脑翻墙,windows梯子,翻墙软件,电脑vpn,clash verge安装,clash verge教程,clash导入订阅,windows clash配置,新手翻墙教程,2026翻墙,windows上google,windows用chatgpt,一枝红杏,机场订阅,tun模式,科学上网工具,翻墙软件推荐,电脑vpn怎么弄
 description: Windows 翻墙教程（2026 最新版）：从注册机场、下载 Clash Verge、导入订阅到开启代理选节点，零基础图文全流程，一台 Windows 电脑从打不开 Google 到稳定科学上网，一小时搞定。
 top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner_win_internet.webp
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner_win_internet.webp]
+related:
+  - slug: ai-tools-network-guide
+    text: AI 编程工具网络配置：TUN 模式与节点挑选
+  - slug: accounts-google
+    text: 谷歌账号(Gmail)注册教程：收不到验证码三招解决
+  - slug: codex-install-guide
+    text: Codex 安装使用教程：Trae 配置全流程
 ---
 
 > 🖥️ 这篇写给**纯小白**：手上只有一台 Windows 电脑，别的什么都没有。从注册、下载、配置到第一次打开 Google，每一步都配图，照着点就行。已经会翻墙、只是某工具连不上的，直接看 [AI 编程工具网络配置](/ai-tools-network-guide/) 那篇更对症。
@@ -132,7 +139,7 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 1. [注册一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)（Lite 99 元/年，先 3 天试用）→ 复制订阅链接
 2. 装 Clash Verge → 导入订阅 → 开系统代理 → 选香港/新加坡节点
-3. 浏览器开 Google 验证，通了收工
+3. 浏览器开 Google 验证，通了收工；顺手注册个 Gmail 留着以后用：[谷歌账号(Gmail)注册教程](/accounts-google/)
 4. 要用 AI 编程工具的，加一步开 TUN 模式：[网络配置进阶篇](/ai-tools-network-guide/)
 
 从零到通，就这四条。跑通之后你会发现，Windows 翻墙最难的不是操作，是选一个不跑路的机场——这步你已经替自己省掉了。

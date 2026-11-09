@@ -443,6 +443,13 @@ html.nightmode .post-related {
   box-shadow: 0 3px 10px rgba(0, 0, 0, .35), 0 1px 3px rgba(0, 0, 0, .25);
 }
 
+/* ---------- 文章 meta 区：阅读次数颜色统一 ----------
+   Stun 主题默认给阅读次数上橙红强调色（$post-reading-count-color = $orange-dark），
+   与发表时间/字数统计的灰色不一致——统一为主题灰 */
+.post-meta-item--visitors {
+  color: var(--color-gray-700);
+}
+
 /* ---------- 列表页文章标题（SEO 将 h1 降级 h2 后的视觉兜底） ---------- */
 h2.post-title {
   font-size: 1.6em;
