@@ -48,8 +48,8 @@ script.
               // 删除 HTML 标签 和 所有空白字符
               var content = data.content && data.content.replace(/<[^>]+>/g, '');
               var contentLower = content && content.toLowerCase();
-              // 删除重复的 /
-              var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 删除重复的 / （保留协议符 https:// 中的 //，否则浏览器会把域名解析进路径导致 404）
+            var postURL = data.url && decodeURI(data.url).replace(/([^:])\/{2,}/g, '$1/');
               // 标题中匹配到的关键词
               var titleHitSlice = [];
               // 内容中匹配到的关键词

@@ -95,7 +95,7 @@ related:
 
 谷歌账号的价值远不止一个邮箱，它是海外互联网的通用身份证：
 
-- **注册 ChatGPT**：Gmail 是注册 ChatGPT 最顺的邮箱，没有之一。注册完想用 Codex 这类 AI 编程工具的，看 [Codex 安装使用教程](/codex-install-guide/)
+- **注册 ChatGPT**：Gmail 是注册 ChatGPT 最顺的邮箱，没有之一。完整流程看 [ChatGPT 国内使用教程](/chatgpt-vpn-guide/)，注册完想用 Codex 这类 AI 编程工具的，再看 [Codex 安装使用教程](/codex-install-guide/)
 - **注册 Telegram**：Gmail 同样可以用来注册电报，比 +86 手机号省心
 - **注册 TikTok**：Gmail 注册 TikTok 最省事，全程不涉及手机号
 - **Google Play 商店**：安卓用户下载海外 App 的官方渠道，配合美区账号想下什么下什么

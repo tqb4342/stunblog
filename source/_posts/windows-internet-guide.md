@@ -109,7 +109,7 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 **用 Trae / Cursor / Codex 这类 AI 编程工具？** 它们的很多请求不读系统代理，浏览器能上 Google、编辑器照样转圈。解法是开 **TUN 模式**（虚拟网卡接管全部流量），具体操作和原理看这篇：[AI 编程工具连不上？网络配置一篇搞定](/ai-tools-network-guide/)
 
-**想用 ChatGPT？** 先看这篇把账号问题解决：[Codex 安装使用教程（2026）](/codex-install-guide/)，里面也讲了 Plus 账号便宜的合租路子。
+**想用 ChatGPT？** 网络通了之后的注册全流程看 [ChatGPT 国内使用教程（2026）](/chatgpt-vpn-guide/)；写代码要用 Codex 这类编程工具的，再看 [Codex 安装使用教程](/codex-install-guide/)，里面也讲了 Plus 账号便宜的合租路子。
 
 **一枝红杏节点能解锁什么？** 实测 Google / YouTube / Gmail、ChatGPT / Claude、Netflix / Disney+ 都没问题，日常场景全覆盖。
 
@@ -129,7 +129,7 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 **公司电脑能装吗？**
 
-技术上能装，但两个前提自己掂量：一是公司网络可能有审计，二是 Clash Verge 需要 UAC 权限安装服务模式，没有管理员权限装不全。公司场景更建议用手机热点 + 手机上的代理 App。
+技术上能装，但两个前提自己掂量：一是公司网络可能有审计，二是 Clash Verge 需要 UAC 权限安装服务模式，没有管理员权限装不全。公司场景更建议用手机热点 + 手机上的代理 App，配置方法见[安卓翻墙教程：ClashA 从零配置](/android-internet-guide/)。
 
 **每月 100G 流量够用吗？**
 

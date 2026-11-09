@@ -2,12 +2,12 @@
 title: AI 编程工具连不上？Trae / Cursor / Codex 网络配置一篇搞定（2026）
 date: 2026-11-08 01:45:00
 updated: 2026-11-08 01:45:00
-categories: 冲浪实践
+categories: AI工具
 tags: [AI编程, 网络配置, TUN模式, 科学上网]
 keywords: ai编程工具连不上,trae登录不了,trae网络配置,cursor登录失败,cursor连不上,codex登录失败,codex网络错误,ai工具代理设置,ai工具翻墙,clash tun模式,tun模式怎么开,clash verge教程,clash订阅导入,chatgpt打不开,ai工具节点选择,一枝红杏,机场订阅,ai编程网络环境,clash规则分流,ai工具网络报错,ai登录无限验证码,chatgpt access denied,cursor timeout 解决,clash tun和vpn冲突
 description: Trae、Cursor、Codex 等 AI 编程工具登录失败、连接超时怎么排查？本文讲透三个根因（编辑器不读系统代理、分流规则漏了 AI 域名、节点 IP 被风控），给出 TUN 模式与规则分流两套解法，附从零搭建网络环境的完整流程——没有代理工具和订阅的也能照着走通。
-top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/clash-tun-mode.webp
-photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/clash-tun-mode.webp]
+top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-aitools.webp
+photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-aitools.webp]
 related:
   - slug: codex-install-guide
     text: Codex 安装使用教程：Trae 配置与 ChatGPT 账号授权
@@ -145,7 +145,7 @@ rules:
 
 ## 六、从零搭一套：工具 + 订阅完整流程
 
-上面都建立在「你已经有代理工具和订阅」的前提上。还没有的，这节从零走一遍；只翻墙不折腾 AI 的，看通用版[Windows 翻墙教程](/windows-internet-guide/)就够了，那篇对小白更友好。整套东西就两样：**一个客户端（免费）+ 一个订阅（付费）**。
+上面都建立在「你已经有代理工具和订阅」的前提上。还没有的，这节从零走一遍；只翻墙不折腾 AI 的，看通用版[Windows 翻墙教程](/windows-internet-guide/)就够了，那篇对小白更友好；手机端翻墙则看[安卓版教程](/android-internet-guide/)。整套东西就两样：**一个客户端（免费）+ 一个订阅（付费）**。
 
 订阅我用的是 [**一枝红杏**](https://order.yizhihongxing.org/aff.php?aff=4818)——香港公司运营、7 年+ 没断过流的老牌机场，Trojan 协议，节点对 ChatGPT / Claude / Codex 这类 AI 服务友好（这点正是本文场景最需要的），新用户还有 3 天 IEPL 专线试用，走完一套注册流程够用。
 

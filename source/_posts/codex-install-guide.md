@@ -41,7 +41,7 @@ Codex 以插件形式跑在 AI 编程工具里，Trae、Cursor、Qoder、Kiro �
 
 Codex 需要付费会员才能用，Plus、Business、Pro 都可以。免费账号登不进去，这是硬门槛。
 
-连 ChatGPT 账号都还没有的话，用谷歌邮箱注册一个最顺——[谷歌账号(Gmail)注册教程](/accounts-google/)，国内手机号收不到验证码的解法也在这篇里。
+连 ChatGPT 账号都还没有的话，用谷歌邮箱注册一个最顺——[ChatGPT 国内使用教程](/chatgpt-vpn-guide/) 讲了从翻墙到注册的全流程；谷歌邮箱本身国内手机号收不到验证码的解法，看 [谷歌账号(Gmail)注册教程](/accounts-google/)。
 
 还没有 Plus 的两条路：
 
