@@ -41,13 +41,10 @@ section.sidebar-ov
       a.sidebar-card-data__item(href=url_for(statLinks.tags))
         span.sidebar-card-data__num= site.tags.length
         span.sidebar-card-data__label 标签
-    // Follow Me 按钮（指向 GitHub 仓库）
-    if theme.social && theme.social.github
-      -
-        var githubUrl = (theme.social.github.split('||')[0] + '').trim();
-      a.sidebar-card-author__follow(href=githubUrl target="_blank" rel="noopener")
-        i.fab.fa-github
-        span Follow Me
+    // AI 工具箱入口按钮（指向站内导航页）
+    a.sidebar-card-author__follow(href=url_for('/ai-tools/'))
+      i.fas.fa-toolbox
+      span AI工具箱
 
   // ---- sticky 组：以下卡片吸附滚动（仿 Butterfly .sticky_layout） ----
   div.sidebar-sticky

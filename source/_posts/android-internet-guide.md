@@ -171,6 +171,7 @@ ChatGPT 正常开代理就能用，账号注册的完整流程看 [ChatGPT 国�
 2. 官网知识库下载安卓客户端 ClashA
 3. 按第四节导入订阅、启动
 4. 浏览器开 Google 验证，通了收工；顺手注册个 Gmail 留着以后用：[谷歌账号(Gmail)注册教程](/accounts-google/)
-5. 电脑端也想配齐的，看 [Windows 翻墙教程](/windows-internet-guide/)；电脑上跑 Trae / Cursor 这类 AI 编程工具连不上的，加看 [AI 编程工具网络配置](/ai-tools-network-guide/)
+5. 电脑端也想配齐的，看 [Windows 翻墙教程](/windows-internet-guide/)；电脑上跑 Trae / Cursor 这类 AI 编程工具连不上的，加看 [AI 编程工具网络配置](/ai-tools-network-guide/)；iPhone 用户不用折腾客户端，几块钱买个[美区 Apple ID](/apple-id-buy-guide/)下载小火箭就行
+6. 网络通了想玩 AI 的，翻 [AI 工具箱](/ai-tools/)——100 个工具按场景分好类，标「实测」的有完整教程
 
 双 11 一年一次的官方折扣窗口快到了（11-10 至 11-13），续费或上车比平时划算，可以留意一下。

@@ -28,6 +28,7 @@ sougou_site_verification:
 
 menu:
   home: / || fas fa-home
+  ai-tools: /ai-tools/ || fas fa-toolbox
   archives: /archives/ || fas fa-folder-open
   categories: /categories/ || fas fa-layer-group
   tags: /tags/ || fas fa-tags

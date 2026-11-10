@@ -1,0 +1,370 @@
+# AI 工具箱数据：加工具只需在对应分类 tools 下加一条，hexo 重新生成即生效
+# 字段：name 工具名 / url 官网 / desc 一句话描述 / tested 本站实测文章链接（有则显示「实测」徽章）/ hot 热门标记
+categories:
+  - id: chat
+    name: AI 聊天助手
+    desc: 日常问答与深度研究的主力模型
+    tools:
+      - name: DeepSeek
+        url: https://chat.deepseek.com/
+        desc: 幻方量化推出的开源大模型，便宜、能打、多模态已补齐
+        tested: /deepseek-vision-guide/
+        hot: true
+      - name: ChatGPT
+        url: https://chatgpt.com/
+        desc: OpenAI 出品，生态最全的 AI 对话产品
+        tested: /chatgpt-vpn-guide/
+        hot: true
+      - name: Claude
+        url: https://claude.ai/
+        desc: Anthropic 出品，长文本与代码能力的第一梯队
+      - name: Gemini
+        url: https://gemini.google.com/
+        desc: Google 出品，多模态与超长上下文见长
+      - name: Kimi
+        url: https://kimi.moonshot.cn/
+        desc: 月之暗面出品，中文长文档阅读的口碑之选
+      - name: 豆包
+        url: https://www.doubao.com/
+        desc: 字节出品的全能助手，免费额度大方
+      - name: 腾讯元宝
+        url: https://yuanbao.tencent.com/
+        desc: 腾讯出品，微信生态集成顺手
+      - name: 智谱清言
+        url: https://chatglm.cn/
+        desc: 智谱 GLM 系列的官方对话产品
+      - name: 文心一言
+        url: https://yiyan.baidu.com/
+        desc: 百度文心大模型，国内最早铺开的对话产品
+      - name: 讯飞星火
+        url: https://xinghuo.xfyun.cn/
+        desc: 讯飞出品，语音交互与 PPT 生成是特色
+      - name: Grok
+        url: https://grok.com/
+        desc: 马斯克 xAI 出品，接 X 实时信息流
+      - name: Qwen Chat
+        url: https://chat.qwen.ai/
+        desc: 阿里通义 Qwen 最新模型的官方体验入口
+      - name: Groq
+        url: https://groq.com/
+        desc: 以推理速度著称，秒出长答案
+      - name: Duck.ai
+        url: https://duck.ai/
+        desc: DuckDuckGo 出品，免费免登录的隐私向聊天
+
+  - id: coding
+    name: AI 编程
+    desc: 写代码、改 Bug、跑 Agent
+    tools:
+      - name: Codex
+        url: https://openai.com/codex/
+        desc: OpenAI 的编程智能体，Plus 用户可用
+        tested: /codex-install-guide/
+        hot: true
+      - name: Claude Code
+        url: https://claude.com/product/claude-code
+        desc: Anthropic 的终端编程 Agent，工程化能力强
+      - name: Trae
+        url: https://www.trae.cn/
+        desc: 字节出品的 AI IDE，国内网络对它最友好
+        tested: /ai-tools-network-guide/
+      - name: Cursor
+        url: https://cursor.com/
+        desc: AI 代码编辑器，补全与对话式重构的标杆
+        tested: /ai-tools-network-guide/
+      - name: GitHub Copilot
+        url: https://github.com/features/copilot
+        desc: 老牌 AI 补全，VS Code / JetBrains 全覆盖
+      - name: Windsurf
+        url: https://windsurf.com/
+        desc: Codeium 出品，Agentic 流程做得顺滑
+      - name: CodeBuddy
+        url: https://codebuddy.ai/
+        desc: 腾讯出品的全栈开发 AI IDE
+      - name: Kiro
+        url: https://kiro.dev/
+        desc: 亚马逊出品的 AI IDE，规格驱动开发
+      - name: Cline
+        url: https://cline.bot/
+        desc: 开源免费的 VS Code 编程智能体
+      - name: Lovable
+        url: https://lovable.dev/
+        desc: 一句话构建全栈网站应用
+      - name: Bolt.new
+        url: https://bolt.new/
+        desc: 浏览器里跑的全栈 AI 代码工具
+      - name: 通义灵码
+        url: https://lingma.aliyun.com/
+        desc: 阿里出品的免费 AI 编程助手
+      - name: Augment Code
+        url: https://augmentcode.com/
+        desc: 专为大型代码库设计的 AI 编程工具
+      - name: JetBrains AI
+        url: https://www.jetbrains.com/ai/
+        desc: JetBrains 全家桶的原生 AI 助手
+      - name: Roo Code
+        url: https://roocode.com/
+        desc: 开源的 VS Code 编程 Agent 扩展
+
+  - id: image
+    name: AI 图像
+    desc: 生图、修图、设计素材
+    tools:
+      - name: 即梦
+        url: https://jimeng.jianying.com/
+        desc: 抖音出品的免费 AI 图片创作工具
+        hot: true
+      - name: Midjourney
+        url: https://www.midjourney.com/
+        desc: 艺术风格生图的代名词
+      - name: LiblibAI
+        url: https://www.liblib.art/
+        desc: 国内领先的模型分享社区与在线生图平台
+      - name: Stable Diffusion
+        url: https://stability.ai/
+        desc: 开源文生图模型，本地部署自由度最高
+      - name: 通义万相
+        url: https://wanx.aliyun.com/
+        desc: 阿里出品的创意内容生成平台
+      - name: 美图设计室
+        url: https://www.designkit.com/
+        desc: 美图出品的 AI 图像创作与设计平台
+      - name: 稿定AI
+        url: https://www.gaoding.com/
+        desc: 一站式 AI 设计工具集，绘图抠图消除全有
+      - name: 吐司AI
+        url: https://www.tusiart.com/
+        desc: AI 绘画模型社区与在线生图平台
+      - name: WHEE
+        url: https://www.whee.com/
+        desc: 美图出品的 AI 图片与绘画生成平台
+      - name: 秒画
+        url: https://miaohua.sensetime.com/
+        desc: 商汤出品的免费 AI 作画平台
+      - name: RunningHub
+        url: https://www.runninghub.cn/
+        desc: 云端 ComfyUI 工作流，不用本地部署
+      - name: 堆友AI
+        url: https://d.design/
+        desc: 阿里出品的设计师 AI 服务平台
+      - name: insMind
+        url: https://www.insmind.com/
+        desc: 面向电商场景的 AI 图片编辑
+      - name: remove.bg
+        url: https://www.remove.bg/
+        desc: 上传即抠图，一键去背景的老牌神器
+      - name: Fotor
+        url: https://www.fotor.com/
+        desc: 修图与 AI 生图一体的在线工具
+
+  - id: video
+    name: AI 视频
+    desc: 文生视频、数字人、剪辑
+    tools:
+      - name: 可灵 AI
+        url: https://klingai.kuaishou.com/
+        desc: 快手出品的视频生成，运动幅度与物理真实感领先
+        hot: true
+      - name: Seedance
+        url: https://www.seed.bytedance.com/
+        desc: 字节 Seed 团队的多模态视频生成模型
+      - name: Vidu
+        url: https://www.vidu.cn/
+        desc: 生数科技出品，主体一致性生成是强项
+      - name: Luma
+        url: https://lumalabs.ai/
+        desc: Dream Machine 视频生成，镜头语言自然
+      - name: Runway
+        url: https://runwayml.com/
+        desc: 老牌 AI 视频工具，影视级控制力
+      - name: Pika
+        url: https://pika.art/
+        desc: 创意短片生成，玩法花样多
+      - name: Higgsfield
+        url: https://higgsfield.ai/
+        desc: 支持专业运镜效果的视频生成
+      - name: 海螺AI
+        url: https://hailuoai.com/
+        desc: MiniMax 出品的视频生成，动作流畅
+
+  - id: writing
+    name: AI 写作
+    desc: 文案、小说、学术
+    tools:
+      - name: 蛙蛙写作
+        url: https://www.wawawriter.com/
+        desc: 面向小说与网文创作者的 AI 写作工具
+      - name: 秘塔写作猫
+        url: https://xiezuocat.com/
+        desc: 校对 + 改写，中文语病的好医生
+      - name: 新华妙笔
+        url: https://miaobi.xinhuaskl.com/
+        desc: 新华社出品的公文写作平台
+      - name: 笔灵AI写作
+        url: https://ibiling.cn/
+        desc: 600+ 模板，论文、小说、文案一键生成
+      - name: Notion AI
+        url: https://www.notion.so/
+        desc: 笔记里的 AI 写作助手
+      - name: Grammarly
+        url: https://www.grammarly.com/
+        desc: 英文写作语法与风格润色的标准工具
+      - name: Jasper
+        url: https://www.jasper.ai/
+        desc: 面向营销团队的 AI 文案平台
+      - name: Copy.ai
+        url: https://www.copy.ai/
+        desc: 营销文案批量生成
+
+  - id: office
+    name: AI 办公
+    desc: PPT、文档、效率
+    tools:
+      - name: Gamma
+        url: https://gamma.app/
+        desc: 一句话生成整套演示，排版审美在线
+        hot: true
+      - name: Kimi PPT 助手
+        url: https://kimi.moonshot.cn/
+        desc: Kimi 自研的 PPT 生成，大纲到成稿一步到位
+      - name: 讯飞智文
+        url: https://zhiwen.xfyun.cn/
+        desc: 一键生成 PPT 和 Word，职场刚需
+      - name: Napkin
+        url: https://www.napkin.ai/
+        desc: 文字一键转示意图，做汇报的视觉外挂
+      - name: AiPPT
+        url: https://www.aippt.cn/
+        desc: 一句话生成高质量 PPT
+      - name: iSlide AIPPT
+        url: https://www.islide.cc/
+        desc: 一键设计精美 PPT，只要一句标题
+      - name: 百度文库AI助手
+        url: https://wenku.baidu.com/
+        desc: 文心一言加持的一站式文档助手
+      - name: WPS AI
+        url: https://www.wps.cn/
+        desc: Office 三件套的原生 AI 能力
+      - name: Xmind AI
+        url: https://xmind.cn/
+        desc: 一句话生成思维导图
+      - name: 飞书智能伙伴
+        url: https://www.feishu.cn/
+        desc: 飞书的原生 AI，会议纪要与文档问答
+
+  - id: search
+    name: AI 搜索
+    desc: 带引用来源的智能问答
+    tools:
+      - name: 秘塔 AI 搜索
+        url: https://metaso.cn/
+        desc: 没有广告、直接给答案的中文搜索
+        hot: true
+      - name: Perplexity
+        url: https://www.perplexity.ai/
+        desc: AI 搜索的标杆，答案附带溯源链接
+      - name: Devv
+        url: https://devv.ai/
+        desc: 面向程序员的 AI 搜索引擎
+      - name: Genspark
+        url: https://www.genspark.ai/
+        desc: 自动生成专属 Sparkpage 报告
+      - name: Kagi
+        url: https://kagi.com/
+        desc: 付费无广告，质量优先的搜索
+
+  - id: design
+    name: AI 设计
+    desc: 平面、UI、原型
+    tools:
+      - name: Lovart
+        url: https://www.lovart.ai/
+        desc: 全球首个 AI 设计智能体
+      - name: Canva可画
+        url: https://www.canva.cn/
+        desc: 全球领先的在线设计平台，AI 功能齐全
+      - name: 创客贴
+        url: https://www.chuangkit.com/
+        desc: AI 辅助的在线平面设计工具
+      - name: Pixso AI
+        url: https://pixso.cn/
+        desc: 国产 Figma 平替，AI 生成设计稿
+      - name: 墨刀AI
+        url: https://modao.cc/
+        desc: AI 秒生成原型稿
+      - name: MasterGo AI
+        url: https://mastergo.com/
+        desc: 面向团队的 AI UI 设计工具
+      - name: 即时设计
+        url: https://js.design/
+        desc: 国产在线 UI 设计，AI 能力持续加码
+      - name: Figma AI
+        url: https://www.figma.com/
+        desc: First Draft 草图生成，设计行业标配
+
+  - id: audio
+    name: AI 音频
+    desc: 音乐、配音、语音合成
+    tools:
+      - name: Suno
+        url: https://suno.com/
+        desc: 一句话生成完整歌曲，AI 音乐的代名词
+        hot: true
+      - name: ElevenLabs
+        url: https://elevenlabs.io/
+        desc: 顶级的 AI 语音克隆与配音
+      - name: TTSMaker
+        url: https://ttsmaker.cn/
+        desc: 免费 TTS，50+ 语言 300+ 音色
+      - name: 网易天音
+        url: https://tianyin.163.com/
+        desc: 网易出品的 AI 音乐创作平台
+
+  - id: platform
+    name: AI 开发平台
+    desc: API 聚合、工作流、低代码
+    tools:
+      - name: OpenRouter
+        url: https://openrouter.ai/
+        desc: 一个接口调用 500+ 模型，比价方便
+      - name: SiliconFlow
+        url: https://siliconflow.cn/
+        desc: 硅基流动，国内模型的普惠算力平台
+      - name: Dify
+        url: https://dify.ai/
+        desc: 开源的 AI 应用开发平台，工作流编排
+      - name: 阿里云百炼
+        url: https://bailian.aliyun.com/
+        desc: 一站式大模型开发与应用构建
+      - name: 扣子
+        url: https://www.coze.cn/
+        desc: 字节出品的智能体搭建平台
+      - name: FastGPT
+        url: https://fastgpt.in/
+        desc: 开源的知识库问答系统
+      - name: n8n
+        url: https://n8n.io/
+        desc: 开源低代码工作流自动化，AI 节点丰富
+      - name: 百度千帆
+        url: https://qianfan.cloud.baidu.com/
+        desc: 百度的大模型服务平台
+      - name: ModelScope魔搭
+        url: https://modelscope.cn/
+        desc: 阿里出品的模型开放社区
+      - name: 火山方舟
+        url: https://www.volcengine.com/product/ark
+        desc: 字节的大模型推理与 API 平台
+      - name: Z.ai
+        url: https://chat.z.ai/
+        desc: 智谱面向全球的模型体验平台
+
+  - id: agent
+    name: AI 智能体
+    desc: 自主任务执行与协作
+    tools:
+      - name: Manus
+        url: https://manus.im/
+        desc: 火出圈的通用 AI Agent，给目标就干活
+      - name: Flowith
+        url: https://flowith.io/
+        desc: 画布式多线程智能体

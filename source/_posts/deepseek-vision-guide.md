@@ -121,8 +121,12 @@ related:
 
 当然，国产模型里做多模态的不只 DeepSeek 一家，像 Kimi 的 K3、豆包的 Doubao-Seed-Evolving，支持得都比它早。所以这篇文章的主角不是「国产唯一」，而是「DeepSeek 终于跟上」。
 
+顺带一提，识别之外，这颗模型的建模生产力也已经被人拿来干实事了——[有人用多模型分工一夜产出 1245 种游戏素材](/multimodel-game-assets/)，DeepSeek 在里面正是主力。
+
 ## 想试的话，三步
 
 1. 去官方接口，把模型名改成 `deepseek-flash`（V4.1；旧的 `deepseek-v4-flash-vision-exp` 仍兼容）
 2. 在你常用的 Agent 里，丢一张图试试（截图报错、发票、网页都行）
 3. 效果好，就把它塞进你的日常流水线——丢截图比复制粘贴报错文字顺手多了
+
+模型选型不止 DeepSeek 一家，[AI 工具箱](/ai-tools/) 收了各家主流工具，按分类挑组合。

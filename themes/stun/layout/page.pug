@@ -24,6 +24,96 @@ block content
               i.fas.fa-folder-open.category-list__icon
               span.category-list__name= cat.name
               span.category-list__count= cat.posts.length
+  else if page.type === 'ai-nav'
+    - var nav = site.data['ai-nav']
+    div.ai-nav
+      h1.page-h1= page.title
+      if page.description
+        p.ai-nav-intro= page.description
+      div.ai-nav-search
+        i.fas.fa-search.ai-nav-search-icon
+        input#ai-nav-filter(type="text" placeholder="搜索工具名或功能，比如：PPT、生图、开源" autocomplete="off" aria-label="搜索工具")
+        span#ai-nav-count= nav.categories.reduce((s, c) => s + c.tools.length, 0) + ' 个工具'
+      nav.ai-nav-tabs
+        each cat in nav.categories
+          a.ai-nav-tab(href='#cat-' + cat.id)= cat.name
+      each cat in nav.categories
+        section.ai-nav-section(id='cat-' + cat.id)
+          h2.ai-nav-section-title
+            = cat.name
+            if cat.desc
+              span.ai-nav-section-desc= cat.desc
+          div.ai-nav-grid
+            each tool, ti in cat.tools
+              - var palette = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4', '#ec4899', '#84cc16']
+              - var color = palette[(ti * 3 + nav.categories.indexOf(cat)) % palette.length]
+              div.ai-nav-card(data-search=(tool.name + ' ' + tool.desc + ' ' + cat.name).toLowerCase())
+                a.ai-nav-card-main(href=tool.url target="_blank" rel="noopener noreferrer nofollow")
+                  span.ai-nav-avatar(style="background:" + color)= tool.name.charAt(0)
+                  span.ai-nav-info
+                    span.ai-nav-name
+                      = tool.name
+                      if tool.hot
+                        i.fas.fa-fire.ai-nav-hot(title="热门")
+                    span.ai-nav-desc= tool.desc
+                if tool.tested
+                  a.ai-nav-badge(href=url_for(tool.tested))
+                    i.fas.fa-check-circle
+                    | 看实测教程
+      p.ai-nav-empty(id="ai-nav-empty" style="display:none") 没有匹配的工具，换个关键词试试
+      // SEO：选型指南 + FAQ 正文块（index.md 正文渲染在工具列表下方，补足成段文本内容）
+      if page.content
+        div.ai-nav-content
+          != page.content
+          p.ai-nav-updated
+            | 最后更新：<time datetime="#{date(page.updated || page.date, 'YYYY-MM-DD')}">#{date(page.updated || page.date, 'YYYY-MM-DD')}</time> · 收录 #{nav.categories.reduce((s, c) => s + c.tools.length, 0)} 个工具
+    // SEO：ItemList 结构化数据，由 ai-nav.yml 自动生成
+    -
+      var itemList = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": page.title,
+        "description": page.description || '',
+        "itemListElement": []
+      };
+      var pos = 0;
+      nav.categories.forEach(function (cat) {
+        cat.tools.forEach(function (tool) {
+          itemList.itemListElement.push({
+            "@type": "ListItem",
+            "position": ++pos,
+            "name": tool.name,
+            "url": tool.url
+          });
+        });
+      });
+      itemList.numberOfItems = pos;
+    script(type="application/ld+json").
+      !{JSON.stringify(itemList)}
+    script.
+      (function () {
+        var input = document.getElementById('ai-nav-filter');
+        var cards = document.querySelectorAll('.ai-nav-card');
+        var sections = document.querySelectorAll('.ai-nav-section');
+        var empty = document.getElementById('ai-nav-empty');
+        var count = document.getElementById('ai-nav-count');
+        var total = cards.length;
+        input.addEventListener('input', function () {
+          var kw = input.value.trim().toLowerCase();
+          var shown = 0;
+          cards.forEach(function (card) {
+            var hit = !kw || card.getAttribute('data-search').indexOf(kw) !== -1;
+            card.style.display = hit ? '' : 'none';
+            if (hit) shown++;
+          });
+          sections.forEach(function (sec) {
+            var any = sec.querySelectorAll('.ai-nav-card:not([style*="none"])').length > 0;
+            sec.style.display = any ? '' : 'none';
+          });
+          empty.style.display = shown === 0 ? '' : 'none';
+          count.textContent = shown + ' / ' + total + ' 个工具';
+        });
+      })();
   else
     div.custompage
       if page.title

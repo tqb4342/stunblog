@@ -152,4 +152,4 @@ related:
 2. accounts.google.com 五分钟填完注册信息
 3. 收不到验证码别死磕，[Hero-SMS](https://hero-sms.com/?ref=1716362) 换国外号码，几分钟解决
 4. 急着用的，[环球巴士](http://cn.goingbus.com?s=wX0haoloon) 买现成号 + 三步安全设置
-5. Gmail 到手，ChatGPT、Telegram、Google Play 一串门都开了——下一步想用 AI 编程工具的，接着看 [Codex 安装使用教程](/codex-install-guide/)
+5. Gmail 到手，ChatGPT、Telegram、Google Play 一串门都开了——下一步想用 AI 编程工具的，接着看 [Codex 安装使用教程](/codex-install-guide/)；还没想好用什么的，[AI 工具箱](/ai-tools/) 里按场景慢慢挑

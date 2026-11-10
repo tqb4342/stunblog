@@ -146,6 +146,8 @@ ChatGPT 的网站在国内无法打开，必须先翻墙，VPN / 机场这类科
 
 - 电脑端：[Windows 翻墙教程：Clash Verge 从零配置](/windows-internet-guide/)
 - 手机端：[安卓翻墙教程：ClashA 从零配置](/android-internet-guide/)
-- iOS 用户：App Store 需要切外区账号才能下载官方 App，网页版使用无差别
+- iOS 用户：App Store 需要切外区账号才能下载官方 App，几块钱买个[美区 Apple ID](/apple-id-buy-guide/)就能搞定，网页版使用无差别
 
 机场服务推荐[一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)：节点对 ChatGPT / Claude 等 AI 服务友好，新用户有 3 天 IEPL 专线试用，够走完整套注册流程。
+
+ChatGPT 只是起点——从对话到生图到做视频，[AI 工具箱](/ai-tools/) 收了 100 个工具，按场景分好类。
