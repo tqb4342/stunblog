@@ -87,7 +87,11 @@ block content
         div.ai-nav-content
           != page.content
           p.ai-nav-updated
-            | 最后更新：<time datetime="#{date(page.updated || page.date, 'YYYY-MM-DD')}">#{date(page.updated || page.date, 'YYYY-MM-DD')}</time> · 收录 #{nav.categories.reduce((s, c) => s + c.tools.length, 0)} 个工具
+            |
+            | 最后更新：<time datetime="#{date(page.updated || page.date, 'YYYY-MM-DD')}">#{date(page.updated || page.date, 'YYYY-MM-DD')}</time> · 收录 #{nav.categories.reduce((s, c) => s + c.tools.length, 0)} 个工具 · 访问
+            span.ai-nav-pv(id="busuanzi_value_page_pv") --
+            |
+            | 次
     // SEO：ItemList 结构化数据，由 ai-nav.yml 自动生成
     -
       var itemList = {
@@ -98,14 +102,21 @@ block content
         "itemListElement": []
       };
       var pos = 0;
+      // SEO：url 去重——同一 URL 出现在多个分类（如 Kimi 与 Kimi PPT 助手）时，
+      // 仅首条输出 url 字段（ListItem.url 可选），避免 Rich Results Test 报「重复的属性值」
+      var seenUrls = {};
       nav.categories.forEach(function (cat) {
         cat.tools.forEach(function (tool) {
-          itemList.itemListElement.push({
+          var item = {
             "@type": "ListItem",
             "position": ++pos,
-            "name": tool.name,
-            "url": tool.url
-          });
+            "name": tool.name
+          };
+          if (!seenUrls[tool.url]) {
+            seenUrls[tool.url] = true;
+            item.url = tool.url;
+          }
+          itemList.itemListElement.push(item);
         });
       });
       itemList.numberOfItems = pos;

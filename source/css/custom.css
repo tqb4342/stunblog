@@ -762,6 +762,12 @@ ul.category-list {
   margin-top: 28px; padding: 10px 14px; font-size: 13px; color: #999;
   background: var(--color-card-bg, #f6f8fa); border-radius: 8px;
 }
+/* 访问次数数字：等宽数字 + 主色，加载前显示 -- */
+.ai-nav-pv {
+  font-variant-numeric: tabular-nums;
+  color: #1b9ef3;
+  font-weight: 600;
+}
 
 /* ================= 标签页：统一胶囊云（替换默认字号云） ================= */
 .tagcloud-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
