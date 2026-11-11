@@ -8,6 +8,15 @@ keywords: windows翻墙教程,windows科学上网,电脑翻墙,windows梯子,翻
 description: Windows 翻墙教程（2026 最新版）：从注册机场、下载 Clash Verge、导入订阅到开启代理选节点，零基础图文全流程，一台 Windows 电脑从打不开 Google 到稳定科学上网，一小时搞定。
 top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner_win_internet.webp
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner_win_internet.webp]
+faq:
+  - q: "Windows 翻墙软件哪个好？"
+    a: "新手直接上 Clash Verge：开源免费、界面中文、社区教程多。别用来路不明的一键翻墙软件，免费工具要么偷流量要么偷数据。"
+  - q: "订阅导入后一个节点都没有？"
+    a: "先检查订阅链接是否复制完整，再点客户端订阅页的「更新」按钮拉最新配置；还不行就是订阅本身的问题，找机场客服处理。"
+  - q: "YouTube 能开但视频加载很慢？"
+    a: "三个方向挨个试：换低延迟节点（香港/新加坡/日本）、避开晚高峰（22 点后国际线路普遍拥堵）、确认没在用机房中转的垃圾节点。"
+  - q: "每月 100G 流量够用吗？"
+    a: "纯网页浏览一天几百 MB，YouTube 1080P 一小时 2-3G，AI 对话几乎不占流量。正常浏览加 AI 工具组合一个月 30-50G 封顶，100G 有富余。"
 related:
   - slug: ai-tools-network-guide
     text: AI 编程工具网络配置：TUN 模式与节点挑选

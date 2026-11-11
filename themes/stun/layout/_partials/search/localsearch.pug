@@ -1,9 +1,9 @@
 div.search-mask
 
 div.search-popup
-  span.search-close
+  span.search-close(role="button" aria-label="关闭搜索" tabindex="0")
   div.search-input
-    input(placeholder= __('local_search.input_placeholder'))
+    input(placeholder= __('local_search.input_placeholder') aria-label="搜索文章")
 
     include ./assist-btns.pug
 

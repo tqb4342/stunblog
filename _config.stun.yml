@@ -80,7 +80,7 @@ header:
     post: false
   # banner 背景图（站内本地，Cloudflare CDN 分发）
   # 高度按屏幕高度百分比计算，仅作用于首页/归档页
-  height: 45%
+  height: 35%
   bg_image:
     enable: true
     url: /images/banner.webp

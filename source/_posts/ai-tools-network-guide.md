@@ -3,7 +3,7 @@ title: AI 编程工具连不上？Trae / Cursor / Codex 网络配置一篇搞定
 date: 2026-11-08 01:45:00
 updated: 2026-11-08 01:45:00
 categories: AI工具
-tags: [AI编程, 网络配置, TUN模式, 科学上网]
+tags: [AI编程, 网络配置, TUN模式]
 keywords: ai编程工具连不上,trae登录不了,trae网络配置,cursor登录失败,cursor连不上,codex登录失败,codex网络错误,ai工具代理设置,ai工具翻墙,clash tun模式,tun模式怎么开,clash verge教程,clash订阅导入,chatgpt打不开,ai工具节点选择,一枝红杏,机场订阅,ai编程网络环境,clash规则分流,ai工具网络报错,ai登录无限验证码,chatgpt access denied,cursor timeout 解决,clash tun和vpn冲突
 description: Trae、Cursor、Codex 等 AI 编程工具登录失败、连接超时怎么排查？本文讲透三个根因（编辑器不读系统代理、分流规则漏了 AI 域名、节点 IP 被风控），给出 TUN 模式与规则分流两套解法，附从零搭建网络环境的完整流程——没有代理工具和订阅的也能照着走通。
 top_image: https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-aitools.webp

@@ -67,13 +67,17 @@ if theme.sougou_site_verification
   meta(name="sogou_site_verification" content=theme.sougou_site_verification)
 
 // og:image 兜底：文章页有 photos/top_image 走默认；首页/关于等无图页传站点 banner，
-// 保证社交分享（微信/QQ/Twitter/Telegram）永远有缩略图
+// 保证社交分享（微信/QQ/Twitter/Telegram）永远有缩略图；有图页用大图分享卡
 if (page.photos && page.photos.length) || page.top_image || page.banner_img
-  != open_graph()
+  != open_graph({ twitter_card: 'summary_large_image' })
 else
   != open_graph({ image: config.url + '/images/banner.webp' })
 
 title= title
+
+// SEO：每页输出 meta description（文章页优先 front-matter description，兜底站点描述）
+- var meta_description = (is_post() && page.description) ? String(page.description).replace(/<[^>]+>/g, '').trim() : description;
+meta(name="description" content=meta_description.substring(0, 160))
 
 if theme.canonical
   link(rel="canonical" href=full_url_for(page.path))
@@ -117,6 +121,38 @@ if is_home()
       "inLanguage": "#{config.language || 'zh-CN'}",
       "publisher": { "@type": "Organization", "name": "#{config.title}", "logo": { "@type": "ImageObject", "url": "#{config.url}/images/aisurf-avatar.png" } }
     }
+
+// SEO：面包屑结构化数据（文章页，Google SERP 展示层级提升 CTR）
+if is_post() && page.categories && page.categories.length
+  -
+    var breadcrumbJson = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": config.url + "/" },
+        { "@type": "ListItem", "position": 2, "name": page.categories.data[0].name, "item": config.url + url_for(page.categories.data[0].permalink) },
+        { "@type": "ListItem", "position": 3, "name": page.title || "" }
+      ]
+    };
+  script(type="application/ld+json").
+    !{JSON.stringify(breadcrumbJson)}
+
+// SEO：FAQPage 结构化数据（文章 front-matter faq 字段驱动，供 PAA / AI 搜索引用）
+if is_post() && page.faq && page.faq.length
+  -
+    var faqJson = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": page.faq.map(function (item) {
+        return {
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": { "@type": "Answer", "text": item.a }
+        };
+      })
+    };
+  script(type="application/ld+json").
+    !{JSON.stringify(faqJson)}
 
 - var fontawesome_css = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css';
 - if (theme.cdn.fontawesome) fontawesome_css = theme.cdn.fontawesome;

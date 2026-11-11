@@ -1,10 +1,10 @@
 extends ./_layout.pug
-include ./_mixins/timeline.pug
+include ./_mixins/archive-timeline.pug
 
 block content
-  div.tagpage
-    div.tagpage-title
-      span.tagpage-title__text= `${__('page.tags')} -- `
-      span.tagpage-title__name= page.tag
+  div.archive.tagpage
+    h1.page-h1.archive-title= `${__('page.tags')} · `
+      span= page.tag
+    p.archive-sub= `共 ${page.posts.length} 篇 · 按时间倒序排列`
 
-    +timeline(page.posts.data)
+    +archive-timeline(page.posts.data)

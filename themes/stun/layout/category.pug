@@ -1,10 +1,10 @@
 extends ./_layout.pug
-include ./_mixins/timeline.pug
+include ./_mixins/archive-timeline.pug
 
 block content
-  div.categorypage
-    div.categorypage-title
-      span.categorypage-title__text= `${__('page.categories')} -- `
-      span.categorypage-title__name= page.category
+  div.archive.categorypage
+    h1.page-h1.archive-title= `${__('page.categories')} · `
+      span= page.category
+    p.archive-sub= `共 ${page.posts.length} 篇 · 按时间倒序排列`
 
-    +timeline(page.posts.data)
+    +archive-timeline(page.posts.data)

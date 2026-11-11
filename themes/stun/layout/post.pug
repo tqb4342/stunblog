@@ -27,9 +27,9 @@ block content
           div.post-tags
             each tag in page.tags.data
               span.post-tags-item
-                span.post-tags-item__icon
+                a.post-tags-item__link(href=tag.permalink)
                   i(class=theme.icon.post_tags)
-                a.post-tags-item__link(href=tag.permalink)= tag.name
+                  = tag.name
 
       if theme.post_widget.share.enable
         include ./_partials/widgets/share.pug

@@ -14,6 +14,16 @@ related:
     text: 谷歌账号(Gmail)注册教程：收不到验证码三招解决
   - slug: ai-tools-network-guide
     text: AI 编程工具网络配置：TUN 模式与节点挑选
+
+faq:
+  - q: "安卓手机翻墙合法吗？"
+    a: "自用查资料、访问 Google、YouTube、ChatGPT 这类场景目前没有被处罚的案例，但倒卖账号、传播工具、拿翻墙做灰产生意是明确违法的。自用低调、不碰灰产是安全边界。"
+  - q: "免费的安卓梯子能用吗？"
+    a: "不推荐。免费节点要么速度极慢不稳定，要么靠记录流量、插广告回本，安全风险比付费高一个量级。长期使用建议买付费服务，入门档一年百元左右。"
+  - q: "ClashA 和 ClashMetaForAndroid 哪个好？"
+    a: "ClashA 是一枝红杏官方定制客户端，跟着机场订阅走最省心；ClashMetaForAndroid 是社区维护的通用客户端，更新勤、协议全，适合多机场混用、想精细管理分流的用户。"
+  - q: "安卓翻墙后能上 TikTok 和 ChatGPT 吗？"
+    a: "ChatGPT 开代理就能用；TikTok 检测最严，除了 IP 还查 SIM 卡、语言时区、定位，直接翻墙可能黑屏，需要额外处理。"
 ---
 
 > 📱 这篇写给**安卓新手**：手上只有一部安卓手机，别的什么都没有。从买节点、装客户端、导订阅到一键开代理，每一步都配截图，照着点就行。电脑端的看 [Windows 翻墙教程](/windows-internet-guide/)，双端流程一模一样，只是客户端不同。
@@ -171,7 +181,7 @@ ChatGPT 正常开代理就能用，账号注册的完整流程看 [ChatGPT 国�
 2. 官网知识库下载安卓客户端 ClashA
 3. 按第四节导入订阅、启动
 4. 浏览器开 Google 验证，通了收工；顺手注册个 Gmail 留着以后用：[谷歌账号(Gmail)注册教程](/accounts-google/)
-5. 电脑端也想配齐的，看 [Windows 翻墙教程](/windows-internet-guide/)；电脑上跑 Trae / Cursor 这类 AI 编程工具连不上的，加看 [AI 编程工具网络配置](/ai-tools-network-guide/)；iPhone 用户不用折腾客户端，几块钱买个[美区 Apple ID](/apple-id-buy-guide/)下载小火箭就行
+5. 电脑端也想配齐的，看 [Windows 翻墙教程](/windows-internet-guide/)；电脑上跑 Trae / Cursor 这类 AI 编程工具连不上的，加看 [AI 编程工具网络配置](/ai-tools-network-guide/)；iPhone 用户看 [iPhone 科学上网教程](/iphone-open-internet/)——弄个外区 Apple ID 装 Spectre，订阅可以和安卓共用同一条
 6. 网络通了想玩 AI 的，翻 [AI 工具箱](/ai-tools/)——100 个工具按场景分好类，标「实测」的有完整教程
 
 双 11 一年一次的官方折扣窗口快到了（11-10 至 11-13），续费或上车比平时划算，可以留意一下。

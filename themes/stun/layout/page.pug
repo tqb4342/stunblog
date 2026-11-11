@@ -5,25 +5,29 @@ block content
 
   if page.type === 'tags'
     div.tagcloud
-      h1.tagcloud-total= __('page.tags') + ' - '
+      h1.tagcloud-total= __('page.tags') + ' · '
         span= site.tags.length
-      - var min_font = theme.tag_cloud ? theme.tag_cloud.min_size : 14;
-      - var max_font = theme.tag_cloud ? theme.tag_cloud.max_size : 24;
-      - var start_color = theme.tag_cloud ? theme.tag_cloud.start_color : '#a4d8fa';
-      - var end_color = theme.tag_cloud ? theme.tag_cloud.end_color : '#1b9ef3';
-      div.tagcloud-item
-        != tagcloud({min_font: min_font, max_font: max_font, amount: theme.tag_cloud.max_amount, color: true, start_color, end_color})
+      - var tags = site.tags.toArray().sort(function (a, b) { return b.posts.length - a.posts.length; });
+      div.tagcloud-chips
+        each tag in tags
+          a.tagcloud-chip(class=tag.posts.length >= 2 ? 'is-hot' : '' href=url_for(tag.path))
+            span.tagcloud-chip__name= tag.name
+            span.tagcloud-chip__count= tag.posts.length
   else if page.type === 'categories'
     div.category
-      h1.category-total= __('page.categories') + ' - '
+      h1.category-total= __('page.categories') + ' · '
         span= site.categories.length
-      ul.category-list
-        each cat in site.categories.toArray()
-          li.category-list__item
-            a.category-list__link(href=url_for(cat.path))
-              i.fas.fa-folder-open.category-list__icon
-              span.category-list__name= cat.name
-              span.category-list__count= cat.posts.length
+      div.category-grid
+        each cat, ci in site.categories.toArray()
+          - var palette = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4']
+          - var color = palette[ci % palette.length]
+          a.category-card(href=url_for(cat.path) style='--cat-color: ' + color)
+            span.category-card__icon
+              i.fas.fa-folder-open
+            div.category-card__info
+              span.category-card__name= cat.name
+              span.category-card__desc= cat.posts.length + ' 篇文章'
+            i.fas.fa-arrow-right.category-card__arrow
   else if page.type === 'ai-nav'
     - var nav = site.data['ai-nav']
     div.ai-nav
@@ -32,11 +36,28 @@ block content
         p.ai-nav-intro= page.description
       div.ai-nav-search
         i.fas.fa-search.ai-nav-search-icon
-        input#ai-nav-filter(type="text" placeholder="搜索工具名或功能，比如：PPT、生图、开源" autocomplete="off" aria-label="搜索工具")
-        span#ai-nav-count= nav.categories.reduce((s, c) => s + c.tools.length, 0) + ' 个工具'
+        input#ai-nav-filter(type="text" placeholder="搜索工具或功能，如 PPT、生图" autocomplete="off" aria-label="搜索工具")
+        span#ai-nav-count.ai-nav-count= nav.categories.reduce((s, c) => s + c.tools.length, 0)
+        button#ai-nav-search-btn.ai-nav-search-btn.is-kbd(type="button" aria-label="聚焦搜索") /
       nav.ai-nav-tabs
+        -
+          var catIcons = {
+            chat: 'fas fa-comments',
+            coding: 'fas fa-code',
+            image: 'fas fa-image',
+            video: 'fas fa-video',
+            writing: 'fas fa-pen-nib',
+            office: 'fas fa-briefcase',
+            search: 'fas fa-search',
+            design: 'fas fa-palette',
+            audio: 'fas fa-music',
+            platform: 'fas fa-cubes',
+            agent: 'fas fa-robot'
+          };
         each cat in nav.categories
-          a.ai-nav-tab(href='#cat-' + cat.id)= cat.name
+          a.ai-nav-tab(href='#cat-' + cat.id)
+            i(class=catIcons[cat.id] || 'fas fa-shapes')
+            span= cat.name
       each cat in nav.categories
         section.ai-nav-section(id='cat-' + cat.id)
           h2.ai-nav-section-title
@@ -90,6 +111,19 @@ block content
       itemList.numberOfItems = pos;
     script(type="application/ld+json").
       !{JSON.stringify(itemList)}
+    // SEO：FAQPage 结构化数据（与正文「常见问题」3 问保持同步）
+    -
+      var aiNavFaq = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "这个页面会持续更新吗？", "acceptedAnswer": { "@type": "Answer", "text": "会。工具停止服务会移除，值得关注的新工具会补进来，页面上标注了最后更新时间和收录总数。建议收藏本页，需要时回来查最新版本。" } },
+          { "@type": "Question", "name": "为什么有些知名工具没有收录？", "acceptedAnswer": { "@type": "Answer", "text": "本站只收录自己确认过官方网址和基本可用性的工具，宁缺毋滥。工具导航站最怕死链，缺一个工具的损失远小于点开一条失效链接。" } },
+          { "@type": "Question", "name": "「实测」标记是什么意思？", "acceptedAnswer": { "@type": "Answer", "text": "表示这个工具本站深度用过，并写成了完整教程。徽章直接链到对应文章，配置步骤、避坑点、适用人群都在里面。" } }
+        ]
+      };
+    script(type="application/ld+json").
+      !{JSON.stringify(aiNavFaq)}
     script.
       (function () {
         var input = document.getElementById('ai-nav-filter');
@@ -97,8 +131,33 @@ block content
         var sections = document.querySelectorAll('.ai-nav-section');
         var empty = document.getElementById('ai-nav-empty');
         var count = document.getElementById('ai-nav-count');
+        var wrap = document.querySelector('.ai-nav-search');
+        var btn = document.getElementById('ai-nav-search-btn');
         var total = cards.length;
-        input.addEventListener('input', function () {
+
+        // 清除按钮 / 快捷键提示的三态切换
+        function syncBtn() {
+          var has = !!input.value;
+          wrap.classList.toggle('has-value', has);
+          if (has) {
+            btn.textContent = '\u00d7';
+            btn.className = 'ai-nav-search-btn is-clear';
+            btn.setAttribute('aria-label', '清空搜索');
+            btn.hidden = false;
+          } else {
+            btn.textContent = '/';
+            btn.className = 'ai-nav-search-btn is-kbd';
+            btn.setAttribute('aria-label', '聚焦搜索');
+            // 聚焦输入中不显示 / 提示，避免干扰
+            btn.hidden = document.activeElement === input;
+          }
+        }
+
+        function renderCount(shown) {
+          count.textContent = shown === total ? String(total) : shown + ' / ' + total;
+        }
+
+        function applyFilter() {
           var kw = input.value.trim().toLowerCase();
           var shown = 0;
           cards.forEach(function (card) {
@@ -111,8 +170,111 @@ block content
             sec.style.display = any ? '' : 'none';
           });
           empty.style.display = shown === 0 ? '' : 'none';
-          count.textContent = shown + ' / ' + total + ' 个工具';
+          renderCount(shown);
+        }
+
+        input.addEventListener('input', function () {
+          applyFilter();
+          syncBtn();
         });
+        input.addEventListener('focus', syncBtn);
+        input.addEventListener('blur', syncBtn);
+
+        // 清空并聚焦 / 聚焦
+        btn.addEventListener('click', function () {
+          if (input.value) {
+            input.value = '';
+            applyFilter();
+          }
+          input.focus();
+          syncBtn();
+        });
+
+        // 全局快捷键：/ 聚焦搜索；输入框内 Esc 清空或退出
+        document.addEventListener('keydown', function (e) {
+          var tag = document.activeElement ? document.activeElement.tagName : '';
+          if (e.key === '/' && document.activeElement !== input && !/INPUT|TEXTAREA|SELECT/.test(tag)) {
+            e.preventDefault();
+            input.focus();
+          }
+        });
+        input.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            if (input.value) {
+              input.value = '';
+              applyFilter();
+              syncBtn();
+            } else {
+              input.blur();
+            }
+          }
+        });
+
+        syncBtn();
+      })();
+    script.
+      (function () {
+        var tabs = document.querySelector('.ai-nav-tabs');
+        var links = tabs ? tabs.querySelectorAll('.ai-nav-tab') : [];
+        var sections = document.querySelectorAll('.ai-nav-section');
+        if (!tabs || !links.length) return;
+
+        function setActive(link, center) {
+          for (var i = 0; i < links.length; i++) {
+            if (links[i] !== link) links[i].classList.remove('active');
+          }
+          link.classList.add('active');
+          if (center) link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+
+        var suppressUntil = 0;
+
+        // 点击：平滑滚到分类（区块的 scroll-margin-top 处理吸顶偏移）
+        tabs.addEventListener('click', function (e) {
+          var link = e.target.closest ? e.target.closest('.ai-nav-tab') : null;
+          if (!link) return;
+          e.preventDefault();
+          var sec = document.getElementById(link.getAttribute('href').slice(1));
+          suppressUntil = Date.now() + 700;
+          if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setActive(link, true);
+        });
+
+        // 滚动联动：视野顶部的分类对应胶囊高亮并自动居中
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            ticking = false;
+            if (Date.now() < suppressUntil) return;
+            var current = null;
+            for (var i = 0; i < sections.length; i++) {
+              var rect = sections[i].getBoundingClientRect();
+              if (!rect.height) continue;
+              if (rect.top <= 170) current = sections[i];
+              else break;
+            }
+            if (!current) return;
+            var target = tabs.querySelector('a[href="#' + current.id + '"]');
+            if (target && !target.classList.contains('active')) setActive(target, true);
+          });
+        }, { passive: true });
+
+        // 滚轮横滑：未到边缘时把竖向滚轮转为横向，到边缘自然放行竖向滚页
+        tabs.addEventListener('wheel', function (e) {
+          if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+          var max = tabs.scrollWidth - tabs.clientWidth;
+          if (max <= 0) return;
+          var canMove = e.deltaY > 0 ? tabs.scrollLeft < max - 1 : tabs.scrollLeft > 1;
+          if (canMove) {
+            e.preventDefault();
+            tabs.scrollLeft += e.deltaY;
+          }
+        }, { passive: false });
+
+        // 初始高亮第一个分类
+        setActive(links[0], false);
       })();
   else
     div.custompage

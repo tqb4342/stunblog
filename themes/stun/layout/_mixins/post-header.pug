@@ -5,6 +5,15 @@ mixin postHeader(post)
     if post.top
       include ../_partials/widgets/sticky-top.pug
 
+    // SEO + 导航：文章页面包屑（首页 › 分类 › 当前文），列表页不显示
+    if is_post() && post.categories && post.categories.length
+      nav.post-breadcrumb(aria-label="面包屑导航")
+        a.post-breadcrumb__home(href=url_for('/')) 首页
+        span.post-breadcrumb__sep ›
+        a.post-breadcrumb__cat(href=url_for(post.categories.data[0].permalink))= post.categories.data[0].name
+        span.post-breadcrumb__sep ›
+        span.post-breadcrumb__current= post.title
+
     // SEO：文章页标题用 h1，列表页（首页/归档）降级为 h2，保证每页唯一 h1
     #{is_post() ? 'h1' : 'h2'}.post-title
       if post.link

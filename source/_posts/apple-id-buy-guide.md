@@ -101,7 +101,7 @@ App 装上只是第一步——TikTok 是特例，装完打开黑屏是常事，
 
 ## 七、有了美区 ID，这些 App 都能下了
 
-**网络工具**：Shadowrocket（小火箭）、Spectre、Stash——iPhone 翻墙的必备客户端。注意这类 App 只是工具，下载后还需要一个机场订阅才能用，[一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)这类老牌机场有 3 天试用可以先跑通；安卓用户不用买 ID，直接看[安卓翻墙教程](/android-internet-guide/)。
+**网络工具**：Shadowrocket（小火箭）、Spectre、Stash——iPhone 翻墙的必备客户端。注意这类 App 只是工具，下载后还需要一个机场订阅才能用，[一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)这类老牌机场有 3 天试用可以先跑通，完整的订阅导入和连接步骤看 [iPhone 科学上网教程](/iphone-open-internet/)；安卓用户不用买 ID，直接看[安卓翻墙教程](/android-internet-guide/)。
 
 **即时通讯**：Telegram——下载只是第一步，注册时需要手机号收验证码（+86 号码可以收，但建议优先用海外号，账号更稳）。
 
