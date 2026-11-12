@@ -15,12 +15,18 @@ categories:
         desc: OpenAI 出品，生态最全的 AI 对话产品
         tested: /chatgpt-vpn-guide/
         hot: true
+      - name: GPT-6 Astra
+        url: https://chatgpt.com/
+        desc: OpenAI 2026 旗舰模型，Computer Use 自主用电脑，Plus 用户可用
+        tested: /gpt-6-astra/
+        hot: true
       - name: Claude
         url: https://claude.ai/
         desc: Anthropic 出品，长文本与代码能力的第一梯队
       - name: Gemini
         url: https://gemini.google.com/
         desc: Google 出品，多模态与超长上下文见长
+        tested: /gemini-4-argon/
       - name: Kimi
         url: https://kimi.moonshot.cn/
         desc: 月之暗面出品，中文长文档阅读的口碑之选

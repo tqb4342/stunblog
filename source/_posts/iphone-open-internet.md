@@ -36,7 +36,7 @@ faq:
 - **iPhone 科学上网 = 外区 Apple ID + Spectre 客户端 + 机场订阅**，三样凑齐，十分钟搞定
 - **为什么需要外区 ID**：苹果不允许翻墙客户端在国区 App Store 上架，Spectre、Shadowrocket（小火箭）这些工具在国区**根本搜不到**
 - **ID 哪里来**：嫌自己注册麻烦的，[环球巴士](http://cn.goingbus.com/?s=wX0haoloon)买一个现成的，几分钟到手
-- **订阅哪里来**：个人用推荐[一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)，99 元/年入门版，每月 100G 流量够用
+- **订阅哪里来**：个人用推荐[一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)，99 元/年入门版，每月 100G 流量够用；选型标准和避坑清单看[翻墙 VPN 选型总览](/best-vpn-guide/)
 
 ## 一、原理：两样东西，缺一不可
 

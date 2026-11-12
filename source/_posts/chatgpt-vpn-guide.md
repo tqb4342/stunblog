@@ -16,9 +16,7 @@ related:
     text: 安卓翻墙教程：ClashA 从零配置
 ---
 
-> 🤖 这篇写给**第一次用 ChatGPT 的国内用户**：为什么打不开、怎么访问、用什么邮箱注册、注册完怎么上手，一篇文章讲透。网络还没解决的，先看 [Windows 网络教程](/windows-internet-guide/) 或 [安卓网络教程](/android-internet-guide/)；只想要结论的，直接跳「30 秒速答」。
-
-<!-- more -->
+> 🤖 这篇写给**第一次用 ChatGPT 的国内用户**：为什么打不开、怎么访问、用什么邮箱注册、注册完怎么上手，一篇文章讲透。<!-- more -->网络还没解决的，先看 [Windows 翻墙教程](/windows-internet-guide/) 、 [安卓翻墙教程](/android-internet-guide/)  或 [苹果翻墙教程](/iphone-open-internet/)；只想要结论的，直接跳「30 秒速答」。
 
 ## 30 秒速答
 

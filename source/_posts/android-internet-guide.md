@@ -34,7 +34,7 @@ faq:
 
 - **安卓翻墙就两件事**：装一个客户端（免费），再买一个节点订阅（付费），缺一不可
 - **客户端**：只用一枝红杏就装它家定制的 ClashA，跟着本文第四节五分钟配好；多家机场混用装 ClashMetaForAndroid
-- **节点**：我用的是 [一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)，入门档 99 元/年，每月 100G 流量，日常看 Google、YouTube、ChatGPT 够用
+- **节点**：我用的是 [一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)，入门档 99 元/年，每月 100G 流量，日常看 Google、YouTube、ChatGPT 够用；选型标准和避坑清单看[翻墙 VPN 选型总览](/best-vpn-guide/)
 - **流程**：官网注册 → 买套餐 → 客户端导入订阅链接 → 点启动，全程 10 分钟左右
 
 ## 一、先搞懂：翻墙 = 客户端 + 节点
