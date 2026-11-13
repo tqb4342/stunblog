@@ -170,4 +170,4 @@ Codex 需要付费会员才能用，Plus、Business、Pro 都可以。免费账�
 
 **Codex 教程适用于哪些 AI 编程工具？**
 
-本文以 Trae 为例演示，但 Cursor、Qoder、Kiro 等主流 AI 编程工具的流程一致：搜插件、安装、账号授权登录。区别只在界面布局，核心三步相同。想在装之前先横向比一比各家工具的，看本站 [AI 工具箱](/ai-tools/)，编程类收了十几个主流选手。
+本文以 Trae 为例演示，但 Cursor、Qoder、Kiro 等主流 AI 编程工具的流程一致：搜插件、安装、账号授权登录。区别只在界面布局，核心三步相同。想在装之前先横向比一比各家工具的，看本站 [AI 工具箱](/ai-tools/)，编程类收了十几个主流选手。走终端路线的另有一条路：[Claude Code 安装配置教程](/claude-code-install-guide/)，CLI Agent 流派，和 IDE 插件是两种玩法。

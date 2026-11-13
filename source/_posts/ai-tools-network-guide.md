@@ -241,7 +241,7 @@ rules:
 
 1. **有代理的**：开 TUN 模式 → 重试登录 → 不通就换节点，结束
 2. **没有代理的**：[注册一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)（Lite 99 元/年试水）→ 装 Clash Verge → 导订阅 → 开系统代理 + TUN → 挑个香港/日本节点
-3. **装完网络还没装工具的**：翻出上一篇 [Codex 安装使用教程](/codex-install-guide/)，网络通了之后装工具一路顺
+3. **装完网络还没装工具的**：翻出 [Codex 安装使用教程](/codex-install-guide/)或 [Claude Code 安装配置教程](/claude-code-install-guide/)，网络通了之后装工具一路顺
 
 这套配好之后基本一劳永逸。以后再遇到什么新工具连不上，先过一遍三板斧：**TUN 开没开、规则漏没漏、节点换一个**——九成九的连接问题，就死在这三个地方。
 

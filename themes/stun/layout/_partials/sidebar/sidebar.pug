@@ -73,15 +73,19 @@ section.sidebar-ov
               span.sidebar-card-cats__name= cat.name
               span.sidebar-card-cats__count= cat.posts.length
 
-    // ---- 卡片 4：标签云 ----
+    // ---- 卡片 4：标签云（按文章数取前 15 个，全部标签看 /tags/） ----
     if site.tags.length
       div.sidebar-ov-card
         div.sidebar-card__headline
           i.fas.fa-tags
           span 标签
         div.sidebar-card-tags
-          each tag in site.tags.toArray()
+          -
+            var topTags = site.tags.toArray().sort((a, b) => b.posts.length - a.posts.length).slice(0, 15);
+          each tag in topTags
             a.sidebar-card-tags__item(href=url_for(tag.path))= tag.name
+          if site.tags.length > 15
+            a.sidebar-card-tags__more(href=url_for('/tags/'))= `查看全部 ${site.tags.length} 个 →`
 
     // ---- 卡片 5：RSS 订阅 ----
     if theme.feed.enable

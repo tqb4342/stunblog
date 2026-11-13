@@ -295,6 +295,18 @@
   box-shadow: 0 4px 10px rgba(27, 158, 243, .3);
 }
 
+/* 标签卡「查看全部」链接 */
+.sidebar-card-tags__more {
+  font-size: 12px;
+  color: var(--color-gray-700);
+  padding: .2rem .5rem;
+  transition: color .18s ease;
+}
+
+.sidebar-card-tags__more:hover {
+  color: #1b9ef3;
+}
+
 /* ---------- 卡片 5：RSS 订阅 ---------- */
 .sidebar-card-feed a {
   font-size: 12.5px;

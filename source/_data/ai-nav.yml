@@ -70,6 +70,7 @@ categories:
       - name: Claude Code
         url: https://claude.com/product/claude-code
         desc: Anthropic 的终端编程 Agent，工程化能力强
+        tested: /claude-code-install-guide/
       - name: Trae
         url: https://www.trae.cn/
         desc: 字节出品的 AI IDE，国内网络对它最友好
@@ -77,7 +78,7 @@ categories:
       - name: Cursor
         url: https://cursor.com/
         desc: AI 代码编辑器，补全与对话式重构的标杆
-        tested: /ai-tools-network-guide/
+        tested: /claude-code-install-guide/
       - name: GitHub Copilot
         url: https://github.com/features/copilot
         desc: 老牌 AI 补全，VS Code / JetBrains 全覆盖
