@@ -98,7 +98,7 @@ faq:
 - **只在 App Store 登录，不在设置里登录 iCloud**——登错地方可能导致照片通讯录混淆、甚至手机被远程锁定
 - **双重认证弹窗不要绑定自己的手机号**，按平台订单页提供的收码方式处理
 
-> 💡 这个外区 ID 以后还能反复用：Telegram、TikTok、ChatGPT、日服手游（赛马娘、碧蓝档案、NIKKE），凡是国区搜不到的 App，同一个 ID 都能下。
+> 💡 这个外区 ID 以后还能反复用：[Telegram](/telegram-register-guide/)、TikTok、[ChatGPT](/gpt-6-astra/)、日服手游（赛马娘、碧蓝档案、NIKKE），凡是国区搜不到的 App，同一个 ID 都能下。
 
 ## 四、下载 Spectre：认准图标
 

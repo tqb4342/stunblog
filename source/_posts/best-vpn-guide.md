@@ -39,7 +39,7 @@ faq:
 - **用什么**：[一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)本站实测六七年，40 多个节点、全平台客户端，日常够稳
 - **电脑装什么**：Clash Verge Rev。Clash for Windows 已停更，别再下老的安装包
 - **手机怎么办**：iOS 用 Spectre，安卓用 Clash Meta 系客户端，站内都有对应教程
-- **通了之后干嘛**：海外 AI 是现在最高频的用途，工具选型看 [AI 工具箱](/ai-tools/)；网络环境对 AI 服务的影响之前在 [AI 工具网络配置](/ai-tools-network-guide/) 里详细写过
+- **通了之后干嘛**：海外 AI 是现在最高频的用途，工具选型看 [AI 工具箱](/ai-tools/)；Telegram 是另一个高频刚需，注册流程看 [Telegram 注册教程](/telegram-register-guide/)；网络环境对 AI 服务的影响之前在 [AI 工具网络配置](/ai-tools-network-guide/) 里详细写过
 
 ## 为什么需要翻墙 VPN
 
