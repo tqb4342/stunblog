@@ -122,14 +122,14 @@ footer:
     opacity: 0.5
   copyright:
     enable: true
-    text:
+    text: '冲浪客 · <a href="https://bo.ke/" target="_blank" rel="noopener">博客大联盟</a>'
     since: 2026
     end:
   icon:
     enable: true
     name: fas fa-heart
     animation: false
-    color: '#ff0000'
+    color: '#f87171'
   powered:
     enable: false
     version: false
@@ -139,27 +139,11 @@ footer:
   beian:
     enable: false
     icp:
-  # 自定义 footer 注入：utterances 评论框配色跟随夜间模式（脚本无 UI，div 不可见）
+  # footer 精简为两行：版权行（含博客大联盟互链）+ 浏览总量胶囊
+  # utterances 配色脚本已迁至 scripts/utterances-theme.js（injector body_end）
   custom:
-    enable: true
-    text: |-
-      <script>
-      (function(){
-        var t;
-        function sync(){
-          var f=document.querySelector(".utterances-frame");
-          if(!f)return;
-          var d=document.documentElement.classList.contains("nightmode");
-          f.contentWindow.postMessage({type:"set-theme",theme:d?"github-dark":"github-light"},"https://utteranc.es");
-        }
-        function retry(n){sync();if(n>0)setTimeout(function(){retry(n-1);},700);}
-        new MutationObserver(function(){clearTimeout(t);t=setTimeout(sync,50);}).observe(document.documentElement,{attributes:true,attributeFilter:["class"]});
-        window.addEventListener("load",function(){retry(4);});
-      })();
-      </script>
-      <div class="footer-community-links" style="margin-top:6px;font-size:.85em;">
-        <a href="https://bo.ke/" target="_blank" rel="noopener">博客大联盟</a>
-      </div>
+    enable: false
+    text:
 
 # Creative Commons 4.0 International License
 creative_commons:
@@ -367,15 +351,16 @@ fbcomments:
 # Statistics and Analytics config
 
 busuanzi:
-  # 只复用 Stun 的文章阅读数展示位（meta 区 👁 图标 + 数字）
+  # 复用 Stun 的两个展示位：文章 meta 区阅读数 + footer「浏览总量」
   # 统计脚本已通过下方 cdn.busuanzi 覆盖为本站 /js/pv.js（自建 KV 计数，不用不蒜子服务）
+  # 总量来自 worker.js 维护的 pv:__total__ 键（首次部署会把存量各页面计数求和作为初始值）
   enable: true
   icon_only: false
   site_uv:
     enable: false
     icon: fas fa-user
   site_pv:
-    enable: false
+    enable: true
     icon: fas fa-eye
   post_pv:
     enable: true

@@ -1,13 +1,15 @@
 ---
 title: Claude Code 安装配置教程（2026）：Windows 安装、cc-switch 接国产模型到实战
 date: 2026-11-13 21:30:00
-updated: 2026-11-13 21:30:00
+updated: 2026-11-14 19:30:00
 categories: AI工具
 tags: [Claude Code, AI编程, cc-switch, Cursor, 国产大模型, CLI]
 keywords: claude code安装,claude code教程,claude code配置,claude code国产模型,cc-switch,claude code windows,claude code中文,ai编程工具,claude code免费,glm coding,kimi api,deepseek api,cursor claude,claude code指令,claude.md
 description: Windows 怎么安装 Claude Code？cc-switch 接 GLM/Kimi/DeepSeek 国产模型，新用户免费额度就能跑起来低成本写代码，Cursor 联动、常用指令、CLAUDE.md 规则到连接超时排查，全程截图零基础可跟。
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-claudecode.webp]
 related:
+  - slug: claude-opus-55-guide
+    text: Claude Opus 5.5 使用指南：提需求、跑长任务、验收结果
   - slug: codex-install-guide
     text: Codex 安装使用指南：ChatGPT Plus 的 AI 编程工具
   - slug: ai-tools-network-guide
@@ -188,6 +190,8 @@ CLAUDE.md 是给 Claude 立规矩的文件，分几个层级。
 ![全局级与项目级 CLAUDE.md 的定位对比](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/claudecode-20.webp)
 
 ![CLAUDE.md 与 Auto-memory 的优先级关系](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/claudecode-21.webp)
+
+规则文件里该写什么也有讲究——长任务何时继续何时暂停、汇报格式怎么定，Opus 5.5 时代的一套玩法看 [Claude Opus 5.5 使用指南](/claude-opus-55-guide/)。
 
 ### 4. 高级扩展
 

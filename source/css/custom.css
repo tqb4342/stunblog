@@ -1298,3 +1298,76 @@ textarea:focus-visible,
   color: #ffffff;
   background-color: #1b9ef3;
 }
+
+/* ============================================================
+   Footer 精修：三行信息（版权 / 浏览总量胶囊 / 社区链接）
+   footer 深底在日间/夜间模式不变，颜色可写死浅色系
+   ============================================================ */
+
+/* 整体：缩小字号、拉开行距，信息密度降下来 */
+.footer-inner {
+  padding: 1.7rem 1rem 1.5rem;
+  font-size: .8rem;
+  letter-spacing: .03em;
+  color: rgba(245, 246, 247, .5);
+}
+.footer-inner > div {
+  margin: .32rem 0;
+  line-height: 1.75;
+}
+
+/* 版权行心形：柔玫瑰色 + 缓慢呼吸（主题自带 1.2s 太躁，改 3.2s 轻起伏） */
+.footer .footer__icon {
+  color: #f87171;
+  animation: footer-heart-breathe 3.2s ease-in-out infinite;
+}
+@keyframes footer-heart-breathe {
+  0%, 100% { transform: scale(1); opacity: .82; }
+  50%      { transform: scale(1.14); opacity: 1; }
+}
+
+/* footer 内链接：去掉主题的暗红（#c20808），改中性灰白 */
+.footer .footer-inner a {
+  color: rgba(245, 246, 247, .62);
+  transition: color .2s ease;
+}
+.footer .footer-inner a:hover {
+  color: #ffffff;
+}
+
+/* 浏览总量：胶囊徽章（细描边 + 微底色 + hover 泛蓝） */
+.footer .busuanzi .busuanzi-sitepv {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  padding: .28em 1.15em;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .05);
+  font-size: .78rem;
+  color: rgba(245, 246, 247, .55);
+  transition: border-color .25s ease, background-color .25s ease;
+}
+.footer .busuanzi .busuanzi-sitepv:hover {
+  border-color: rgba(77, 163, 240, .55);
+  background: rgba(77, 163, 240, .1);
+}
+/* 胶囊内：图标用站牌蓝，数字白色加粗等宽（跳动不抖版式） */
+.footer .busuanzi-sitepv .busuanzi-siteuv__icon {
+  color: #5cabf5;
+}
+.footer .busuanzi-sitepv .busuanzi-siteuv__value {
+  color: #ffffff;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 版权行互链（博客大联盟）：与主文案间用间隔点，链接略亮于正文 */
+.footer .footer-inner > div:first-child a {
+  margin-left: .35em;
+  color: rgba(245, 246, 247, .72);
+}
+.footer .footer-inner > div:first-child a:hover {
+  color: #ffffff;
+}
+

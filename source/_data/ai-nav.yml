@@ -23,6 +23,7 @@ categories:
       - name: Claude
         url: https://claude.ai/
         desc: Anthropic 出品，长文本与代码能力的第一梯队
+        tested: /claude-opus-55-guide/
       - name: Gemini
         url: https://gemini.google.com/
         desc: Google 出品，多模态与超长上下文见长
