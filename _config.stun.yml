@@ -157,6 +157,9 @@ footer:
         window.addEventListener("load",function(){retry(4);});
       })();
       </script>
+      <div class="footer-community-links" style="margin-top:6px;font-size:.85em;">
+        <a href="https://bo.ke/" target="_blank" rel="noopener">博客大联盟</a>
+      </div>
 
 # Creative Commons 4.0 International License
 creative_commons:
