@@ -39,6 +39,18 @@ block content
         input#ai-nav-filter(type="text" placeholder="搜索工具或功能，如 PPT、生图" autocomplete="off" aria-label="搜索工具")
         span#ai-nav-count.ai-nav-count= nav.categories.reduce((s, c) => s + c.tools.length, 0)
         button#ai-nav-search-btn.ai-nav-search-btn.is-kbd(type="button" aria-label="聚焦搜索") /
+      if nav.network_card
+        div.ai-nav-netcard
+          div.ai-nav-netcard-head
+            i.fas.fa-globe.ai-nav-netcard-icon
+            p.ai-nav-netcard-title= nav.network_card.title
+          p.ai-nav-netcard-desc= nav.network_card.desc
+          div.ai-nav-netcard-links
+            a.ai-nav-netcard-badge(href=url_for(nav.network_card.badge.url))
+              i.fas.fa-check-circle
+              span= nav.network_card.badge.text
+            each l in nav.network_card.links
+              a.ai-nav-netcard-link(href=url_for(l.url))= l.text
       nav.ai-nav-tabs
         -
           var catIcons = {

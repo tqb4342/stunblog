@@ -1,5 +1,21 @@
 # AI 工具箱数据：加工具只需在对应分类 tools 下加一条，hexo 重新生成即生效
 # 字段：name 工具名 / url 官网 / desc 一句话描述 / tested 本站实测文章链接（有则显示「实测」徽章）/ hot 热门标记
+# 置顶网络问题横幅卡：模板读 network_card，删掉这块即不渲染
+network_card:
+  title: 打不开？先把网络这一课补上
+  desc: 海外 AI 工具大多国内无法直连，配好网络环境再回来挑工具，少走一半弯路。
+  badge:
+    text: 看配置教程
+    url: /windows-internet-guide/
+  links:
+    - text: 安卓翻墙教程
+      url: /android-internet-guide/
+    - text: iPhone 翻墙教程
+      url: /iphone-open-internet/
+    - text: 翻墙 VPN 选型总览
+      url: /best-vpn-guide/
+    - text: AI 工具网络配置
+      url: /ai-tools-network-guide/
 categories:
   - id: chat
     name: AI 聊天助手

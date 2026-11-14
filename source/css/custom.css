@@ -753,10 +753,56 @@ ul.category-list {
 /* 空状态 */
 .ai-nav-empty { text-align: center; color: #999; padding: 40px 0; font-size: 14px; }
 
+/* 网络问题横幅卡：置顶提示卡（数据在 ai-nav.yml 的 network_card 块，缺席不渲染） */
+.ai-nav-netcard {
+  margin: 14px 0 4px;
+  padding: 11.5px 18px;
+  border: 1px solid rgba(27, 158, 243, .3);
+  border-radius: 12px;
+  background: rgba(27, 158, 243, .06);
+}
+.ai-nav-netcard-head { display: flex; align-items: center; gap: 9px; margin: 0 0 3px; }
+.ai-nav-netcard-icon { color: #1b9ef3; font-size: 16px; }
+.ai-nav-netcard-title { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.4; }
+.ai-nav-netcard-desc { margin: 0 0 9px; font-size: 13px; color: #999; }
+.ai-nav-netcard-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+/* 徽章与链接芯片同一几何（padding/描边/字号），仅颜色区分：绿=主行动，蓝=次级 */
+.ai-nav-netcard-badge,
+.ai-nav-netcard-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(27, 158, 243, .28);
+  background: rgba(27, 158, 243, .1);
+  color: #1b9ef3;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.ai-nav-netcard-badge {
+  border-color: rgba(16, 185, 129, .28);
+  background: rgba(16, 185, 129, .1);
+  color: #10b981;
+}
+.ai-nav-netcard-badge i { font-size: 12px; }
+.ai-nav-netcard-badge:hover {
+  color: #0a9e6c;
+  background: rgba(16, 185, 129, .2);
+  border-color: #10b981;
+}
+.ai-nav-netcard-link:hover {
+  color: #ffffff;
+  background: #1b9ef3;
+  border-color: #1b9ef3;
+}
+
 @media (max-width: 600px) {
   .ai-nav-tabs { top: 60px; }
   .ai-nav-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
   .ai-nav-badge { padding: 0 8px; }
+  .ai-nav-netcard { padding: 10px 14px; }
 }
 
 /* AI 工具箱页正文块（选型指南 + FAQ，渲染在工具列表下方） */
@@ -1340,11 +1386,11 @@ textarea:focus-visible,
   display: inline-flex;
   align-items: center;
   gap: .45em;
-  padding: .28em 1.15em;
+  padding: .26em 1.05em;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, .14);
   background: rgba(255, 255, 255, .05);
-  font-size: .78rem;
+  font-size: .7rem;
   color: rgba(245, 246, 247, .55);
   transition: border-color .25s ease, background-color .25s ease;
 }
@@ -1352,13 +1398,11 @@ textarea:focus-visible,
   border-color: rgba(77, 163, 240, .55);
   background: rgba(77, 163, 240, .1);
 }
-/* 胶囊内：图标用站牌蓝，数字白色加粗等宽（跳动不抖版式） */
+/* 胶囊内：图标用站牌蓝，数字与标签同字体同字重（等宽数字防跳动） */
 .footer .busuanzi-sitepv .busuanzi-siteuv__icon {
   color: #5cabf5;
 }
 .footer .busuanzi-sitepv .busuanzi-siteuv__value {
-  color: #ffffff;
-  font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
 
