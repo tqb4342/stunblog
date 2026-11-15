@@ -971,6 +971,14 @@ ul.category-list {
 .archive .timeline-item__link { color: var(--color-gray-900); transition: color .18s; }
 .archive .timeline-item:hover .timeline-item__link { color: #1b9ef3; }
 
+/* 阅读数芯片（pv.js 批量填充，接口异常保持 -- 占位） */
+.archive .timeline-item__pv {
+  margin-left: 12px; flex-shrink: 0; align-self: center;
+  font-size: .8em; color: var(--color-gray-600);
+  font-variant-numeric: tabular-nums; transition: color .18s;
+}
+.archive .timeline-item:hover .timeline-item__pv { color: #1b9ef3; }
+
 /* 移动端适配 */
 @media (max-width: 600px) {
   .archive .timeline-year { padding-left: 1rem; }

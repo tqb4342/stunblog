@@ -116,7 +116,25 @@ mixin postHeader(post)
                 iconText: __('post.reading_count'),
                 popoverPos: 'up',
                 popoverText: __('popover.post.visit_num'),
+                valueText: '--',
                 valueAttr: {
                   id: 'busuanzi_value_page_pv'
+                }
+              })
+
+        //- 列表页（首页卡片）阅读数：data 属性定位元素避免 ID 冲突，pv.js 批量拉取填充
+        if !is_post()
+          if theme.busuanzi.enable && theme.busuanzi.post_pv.enable
+            span.post-meta-item.post-meta-item--visitors
+              - var iconClass = theme.busuanzi.post_pv.icon;
+              +postMetaItem({
+                isIconOnly: isPostMetaIconOnly || theme.busuanzi.icon_only,
+                iconClass: iconClass,
+                iconText: __('post.reading_count'),
+                popoverPos: 'up',
+                popoverText: __('popover.post.visit_num'),
+                valueText: '--',
+                valueAttr: {
+                  'data-pv-path': url_for(post.path)
                 }
               })

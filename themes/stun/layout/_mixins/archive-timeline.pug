@@ -55,5 +55,8 @@ mixin archive-timeline(posts)
               a.timeline-item__link(
                 href=url_for(post.path)
               )= post.title || __('post.untitled')
+            //- 阅读数芯片：pv.js 批量拉取填充，接口异常保持占位符
+            if !post.link && theme.busuanzi.enable && theme.busuanzi.post_pv.enable
+              span.timeline-item__pv(data-pv-path=url_for(post.path)) --
         if post.top
           include ../_partials/widgets/sticky-top.pug

@@ -34,6 +34,30 @@ export default {
       }
     }
 
+    if (url.pathname === "/api/pv-batch") {
+      // 批量只读：列表页一次拉多篇文章阅读数，不计数
+      if (request.method !== "GET") return json({ error: "bad method" }, 405);
+      const paths = (url.searchParams.get("paths") || "")
+        .split(",")
+        .filter(Boolean)
+        .slice(0, 60);
+      if (!paths.length) return json({ error: "bad paths" }, 400);
+      for (const p of paths) {
+        if (!/^\/[\w\-./]*\/?$/.test(p) || p.includes("..") || p.length > 200) {
+          return json({ error: "bad path" }, 400);
+        }
+      }
+      try {
+        const id = env.COUNTER_DO.idFromName("global");
+        const stub = env.COUNTER_DO.get(id);
+        return await stub.fetch(
+          "https://counter/batch?paths=" + encodeURIComponent(paths.join(","))
+        );
+      } catch (e) {
+        return json({ pvs: {} });
+      }
+    }
+
     // 其余请求走静态站点
     return env.ASSETS.fetch(request);
   },

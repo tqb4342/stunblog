@@ -55,6 +55,27 @@ export class CounterDO {
     try {
       await this.ensure();
       const url = new URL(request.url);
+
+      // 批量只读：/batch?paths=/a/,/b/… 返回 { pvs: { 路径: 计数 } }，列表页用
+      if (url.pathname === "/batch") {
+        const paths = (url.searchParams.get("paths") || "")
+          .split(",")
+          .filter(Boolean)
+          .slice(0, 60);
+        const sql = this.state.storage.sql;
+        const pvs = {};
+        for (const p of paths) {
+          const rows = await sql
+            .exec("SELECT value FROM counters WHERE key = ?", "pv:" + p)
+            .toArray();
+          pvs[p] = rows.length ? rows[0].value : 0;
+        }
+        return Response.json(
+          { pvs },
+          { headers: { "Cache-Control": "no-store" } }
+        );
+      }
+
       const path = url.searchParams.get("path") || "/";
       const count = url.searchParams.get("count") === "1";
       const key = "pv:" + path;
