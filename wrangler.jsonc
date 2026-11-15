@@ -11,7 +11,13 @@
     "not_found_handling": "404-page"
   },
   // 文章访问量 KV 存储（namespace: pv-counter）
+  // 2026-11-15 起计数迁至 Durable Object；KV 仅保留给 DO 首次启动导入存量，导入完成可移除
   "kv_namespaces": [
     { "binding": "COUNTER", "id": "9ef3312d07644aeb9d367d7db3e7723c" }
-  ]
+  ],
+  // 访问量计数 Durable Object（SQLite 存储，免费档 10 万行写/天，替代 KV 的 1000 写/天）
+  "durable_objects": {
+    "bindings": [{ "name": "COUNTER_DO", "class_name": "CounterDO" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CounterDO"] }]
 }

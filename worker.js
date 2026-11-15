@@ -1,7 +1,12 @@
-// aisurf.cc 访问量计数 Worker
+// aisurf.cc 访问量计数 Worker（路由层）
 // /api/pv?path=/页面路径/  GET=只读  POST=+1 并返回新值
-// 返回 { pv, total }：pv=当前页面计数，total=全站总访问量
-// 数据存 KV（绑定名 COUNTER，见 wrangler.jsonc）；其余请求全部交给静态资产
+// 计数逻辑在 Durable Object（counter-do.js，SQLite 存储，免费档 10 万行写/天），
+// 本文件只做路径校验、爬虫过滤和转发；KV（COUNTER 绑定）保留给 DO 首次启动导入存量用
+// 爬虫（Googlebot/Bingbot 等会渲染 JS 的）一律只读不计数：不烧写入额度，也不虚增阅读数
+export { CounterDO } from "./counter-do.js";
+
+const BOT_RE = /(bot|crawler|spider|slurp|bingpreview|headless|facebookexternalhit|lighthouse|python-requests|curl\/)/i;
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -12,19 +17,19 @@ export default {
       if (!/^\/[\w\-./]*\/?$/.test(path) || path.includes("..") || path.length > 200) {
         return json({ error: "bad path" }, 400);
       }
-      const key = "pv:" + path;
+      const ua = request.headers.get("user-agent") || "";
+      const count = request.method === "POST" && !BOT_RE.test(ua);
       try {
-        let pv;
-        if (request.method === "POST") {
-          pv = parseInt((await env.COUNTER.get(key)) || "0", 10) + 1;
-          await env.COUNTER.put(key, String(pv));
-        } else {
-          pv = parseInt((await env.COUNTER.get(key)) || "0", 10);
-        }
-        const total = await totalCounter(env, request.method === "POST");
-        return json({ pv, total });
+        const id = env.COUNTER_DO.idFromName("global");
+        const stub = env.COUNTER_DO.get(id);
+        const doUrl =
+          "https://counter/api?path=" +
+          encodeURIComponent(path) +
+          "&count=" +
+          (count ? "1" : "0");
+        return await stub.fetch(doUrl);
       } catch (e) {
-        // 超出每日写入额度等异常：返回 0 不报错，不影响页面
+        // DO 冷启动异常等极端情况：维持兜底形状（前端会忽略全 0 响应，不覆盖显示）
         return json({ pv: 0, total: 0 });
       }
     }
@@ -33,32 +38,6 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
-
-const TOTAL_KEY = "pv:__total__";
-
-// 全站总访问量：正常读改写；首次调用（键不存在）时把存量各页面计数求和作为初始值，
-// 这样上线前积累的文章阅读数全部计入总量，只初始化一次。
-async function totalCounter(env, increment) {
-  const saved = await env.COUNTER.get(TOTAL_KEY);
-  if (saved !== null) {
-    const total = parseInt(saved, 10) + (increment ? 1 : 0);
-    if (increment) await env.COUNTER.put(TOTAL_KEY, String(total));
-    return total;
-  }
-  let sum = 0;
-  let cursor;
-  do {
-    const page = await env.COUNTER.list({ prefix: "pv:", cursor });
-    for (const k of page.keys) {
-      if (k.name === TOTAL_KEY) continue;
-      sum += parseInt((await env.COUNTER.get(k.name)) || "0", 10);
-    }
-    cursor = page.list_complete ? undefined : page.cursor;
-  } while (cursor);
-  if (increment) sum += 1;
-  await env.COUNTER.put(TOTAL_KEY, String(sum));
-  return sum;
-}
 
 function json(obj, status = 200) {
   return new Response(JSON.stringify(obj), {

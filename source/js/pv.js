@@ -14,6 +14,8 @@
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (!d) return;
+        // {pv:0,total:0} 是接口的降级错误形状（如 KV 写入配额耗尽）：不覆盖已显示的值
+        if (d.pv === 0 && d.total === 0) return;
         if (pageEl && typeof d.pv === "number") pageEl.textContent = d.pv;
         if (siteEl && typeof d.total === "number") siteEl.textContent = d.total;
       })
