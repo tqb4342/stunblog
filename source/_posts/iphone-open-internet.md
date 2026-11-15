@@ -63,17 +63,17 @@ faq:
 
 开通步骤：
 
-1. 打开[一枝红杏官网](https://order.yizhihongxing.org/aff.php?aff=4818)，点击主页的「**购买服务**」按钮
+1. 打开[一枝红杏官网](https://order.yizhihongxing.org/aff.php?aff=4818)，点右上角「用户登录」，在登录界面用邮箱注册：
 
-![一枝红杏官网首页，点击「购买服务」](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/iphone-buy-01.webp)
+   ![一枝红杏官网注册账号](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115133804569.png)
 
-2. 跳转到订购页面后，先在右上角注册一个账号（邮箱即可），再选择入门版下单
+2. 注册完之后跳转到订购页面，再选择一个档位（1年/2年/3年）下单，推荐选3年档的，折合下来每月7.44元，性价比最高，我自己每次续费也是一续就是三年，如果使用频率不高的话也可以先买一年的，平均每月8.25元，也比市面上绝大多数机场便宜。
 
-![套餐选择页：个人用选 99 元/年入门版](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/iphone-buy-02.webp)
+![一枝红杏套餐购买界面](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115134245497.png)
 
-3. 购买后依次点击导航栏的 **产品与服务 → 我的产品与服务 → 查看详情**，就能看到节点信息和订阅链接
+3. 购买后依次点击导航栏的 **产品服务 → 我的服务 → 一枝红杏网络加速器**，就能看到节点信息和订阅链接
 
-![导航栏进入「产品与服务」](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/iphone-buy-03.webp)
+![一枝红杏产品服务详情页](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115135346441.png)
 
 ![产品详情页：节点信息与订阅入口都在这里](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/iphone-buy-04.webp)
 

@@ -14,6 +14,8 @@ related:
     text: 谷歌账号(Gmail)注册教程：收不到验证码三招解决
   - slug: ai-tools-network-guide
     text: AI 编程工具网络配置：TUN 模式与节点挑选
+  - slug: clash-protocols-guide
+    text: Clash 协议对比：VMess/VLESS/Trojan/Reality 怎么选
 
 faq:
   - q: "安卓手机翻墙合法吗？"
@@ -68,17 +70,19 @@ faq:
 
 **第一步：注册并购买**
 
-打开 [一枝红杏官网](https://order.yizhihongxing.org/aff.php?aff=4818)，点击主页的**购买服务**按钮，跳转到服务购买页面。个人用的话，选择 **99 元/年的入门版**就可以，每月 100G 流量足够日常使用。
+打开 [一枝红杏官网](https://order.yizhihongxing.org/aff.php?aff=4818)，点右上角「用户登录」，在登录界面用邮箱注册：
 
-![一枝红杏购买服务入口](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/aoi_02.webp)
+![一枝红杏官网注册账号](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115133804569.png)
 
-跳转到订购页面后，先在右上角注册一个新账号，再根据提示购买产品。
+注册完之后再回到主页（订购页面），再选择一个档位（1年/2年/3年）下单，推荐选3年档的，折合下来每月7.44元，性价比最高，我自己每次续费也是一续就是三年。
 
-![一枝红杏订购页面](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/aoi_03.webp)
+如果使用频率不高的话也可以先买一年的，平均每月8.25元，也比市面上绝大多数机场便宜。
 
-购买之后依次点击上方导航栏中的**产品与服务 → 我的产品与服务 → 查看详情**，就能看到你购买的节点信息和订阅链接。
+![一枝红杏套餐购买界面](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115134245497.png)
 
-![一枝红杏产品服务页面](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/aoi_04.webp)
+购买之后依次点击上方导航栏中的**产品服务 → 我的服务 → 一枝红杏网络加速器**，就能看到你购买的节点信息和订阅链接。
+
+![一枝红杏产品服务详情页](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115135346441.png)
 
 ![一枝红杏节点信息](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/aoi_05.webp)
 
@@ -177,7 +181,7 @@ ChatGPT 正常开代理就能用，账号注册的完整流程看 [ChatGPT 国�
 
 ## 行动清单
 
-1. [注册一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)（Lite 99 元/年，先 3 天试用）→ 复制订阅链接
+1. [注册一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)（Lite 99 元/年）→ 复制订阅链接
 2. 官网知识库下载安卓客户端 ClashA
 3. 按第四节导入订阅、启动
 4. 浏览器开 Google 验证，通了收工；顺手注册个 Gmail 留着以后用：[谷歌账号(Gmail)注册教程](/accounts-google/)

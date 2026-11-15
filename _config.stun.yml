@@ -122,7 +122,7 @@ footer:
     opacity: 0.5
   copyright:
     enable: true
-    text: '冲浪客 · <a href="https://bo.ke/" target="_blank" rel="noopener">博客大联盟</a>'
+    text: '冲浪客 · <a href="https://tanqingbo.cn/" target="_blank" rel="noopener">IT码农</a>'
     since: 2026
     end:
   icon:
@@ -139,7 +139,7 @@ footer:
   beian:
     enable: false
     icp:
-  # footer 精简为两行：版权行（含博客大联盟互链）+ 浏览总量胶囊
+  # footer 精简为两行：版权行（含 IT码农友链）+ 浏览总量胶囊
   # utterances 配色脚本已迁至 scripts/utterances-theme.js（injector body_end）
   custom:
     enable: false

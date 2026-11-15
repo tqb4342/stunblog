@@ -14,6 +14,8 @@ related:
     text: 安卓翻墙教程：ClashA 从零配置
   - slug: iphone-open-internet
     text: iPhone 教程：Spectre 下载到一键连接
+  - slug: clash-protocols-guide
+    text: Clash 协议对比：VMess/VLESS/Trojan/Reality 怎么选
 faq:
   - q: "翻墙选 VPN 还是机场？"
     a: "看用途。追剧、用海外 AI、日常浏览，机场订阅 + Clash 客户端是国内环境下的主流选择，抗封锁能力强、节点多；只想手机一键连接、完全不想折腾的，用整合型服务更省事。两边也可以主备并用，一边出问题切另一边。"
@@ -52,7 +54,7 @@ VPN（虚拟私人网络）的原理一句话讲完：把你的流量加密后�
 ## 2026 年 11 月格局速览
 
 - **客户端**：Clash for Windows 停止维护后，Windows 首选 [Clash Verge Rev](/windows-internet-guide/)，安卓主流是 Clash Meta 系客户端
-- **协议**：机场主力已是 Trojan / VLESS+Reality，抗封锁能力一档一档往上加
+- **协议**：机场主力已是 Trojan / VLESS+Reality，抗封锁能力一档一档往上加——各协议具体差在哪，看 [Clash 协议对比](/clash-protocols-guide/)
 - **需求**：翻墙第一驱动力已经从看 YouTube 变成用海外 AI（GPT-6 Astra、Claude、Gemini），这类服务对节点质量的要求比看视频高得多——挑梯子时把「AI 可用」当硬指标
 
 ## 怎么挑：三条硬标准

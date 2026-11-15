@@ -18,12 +18,14 @@ faq:
   - q: "每月 100G 流量够用吗？"
     a: "纯网页浏览一天几百 MB，YouTube 1080P 一小时 2-3G，AI 对话几乎不占流量。正常浏览加 AI 工具组合一个月 30-50G 封顶，100G 有富余。"
 related:
-  - slug: ai-tools-network-guide
-    text: AI 编程工具网络配置：TUN 模式与节点挑选
+  - slug: iphone-open-internet
+    text: iPhone 科学上网教程（2026）：订阅导入到一键连接
   - slug: accounts-google
     text: 谷歌账号(Gmail)注册教程：收不到验证码三招解决
   - slug: codex-install-guide
     text: Codex 安装使用教程：Trae 配置全流程
+  - slug: clash-protocols-guide
+    text: Clash 协议对比：VMess/VLESS/Trojan/Reality 怎么选
 ---
 
 > 🖥️ 这篇写给**纯小白**：手上只有一台 Windows 电脑，别的什么都没有。从注册、下载、配置到第一次打开 Google，每一步都配图，照着点就行。已经会翻墙、只是某工具连不上的，直接看 [AI 编程工具网络配置](/ai-tools-network-guide/) 那篇更对症。
@@ -55,26 +57,29 @@ related:
 
 打开 [一枝红杏官网](https://order.yizhihongxing.org/aff.php?aff=4818)，点右上角「用户登录」，在登录界面用邮箱注册：
 
-![一枝红杏官网注册账号](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20260825141445624.png)
+![一枝红杏官网注册账号](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115133804569.png)
 
 ⚠️ 坑提示：这类机场官网域名偶尔会变（防封），**别从搜索引擎的广告位点进去**——认准链接直达，防止进了仿冒站把邮箱密码送人。
 
 ### 2.2 选套餐
 
-进后台点「购买服务」选档位，就两档，不绕人：
+进后台点选档位，就三档，不绕人：
 
 | 档位 | 价格 | 流量 | 设备 | 适合 |
 |------|------|------|------|------|
-| Trojan Lite | 99 元/年 | 100G/月 | 5 台同时在线 | 日常浏览 + AI 工具，**多数人选这档** |
-| Trojan Pro | 499 元/年 | 500G/月 | 不限设备 | 跨境电商 / 流媒体 4K / 多设备重度用户 |
+| 1年 | 8.25元/月（1年99 元） | 100G/月 | 5 台同时在线 | 日常浏览 + AI 工具 |
+| 2年 | 7.83元/月（2年188 元） | 100G/月 | 5 台同时在线 | 跨境电商 / 流媒体 4K / 多设备重度用户 |
+| 3年 | 7.44元/月（3年268 元） | 100G/月 | 5 台同时在线 | **性价比最高，多数人选这档** |
 
-纯翻墙浏览加 AI 工具，一个月流量撑死几十 G，Lite 档绰绰有余。支付宝、微信都能付，不用外币卡。
+纯翻墙浏览加 AI 工具，一个月流量撑死几十 G，100G绰绰有余。支付宝、微信都能付，不用外币卡，推荐选3年档的，折合下来每月7.44元，性价比最高，我自己每次续费一续就是三年。
 
-![一枝红杏套餐购买界面](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20260825140738542.png)
+如果使用频率不高的话也可以先买一年的，平均每月8.25元，也比市面上绝大多数机场便宜。
 
-买完点导航栏「**产品服务 → 查看详情**」，就能看到你的节点信息：
+![一枝红杏套餐购买界面](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115134245497.png)
 
-![一枝红杏产品服务详情页](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20260704211615752.png)
+买完点导航栏「**产品服务 → 我的服务**」，就能看到你的节点信息：
+
+![一枝红杏产品服务详情页](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20261115135346441.png)
 
 ## 三、第二步：下载安装 Clash Verge
 
@@ -86,7 +91,7 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 ## 四、第三步：导入订阅链接
 
-回到一枝红杏后台「**产品服务 → 查看详情**」页，往下滑找到 `Clash/mihomo` 配置，点右侧的获取地址，选择「复制」：
+回到一枝红杏后台「**产品服务 → 我的服务**」页，点击产品列表「**一枝红杏网络加速器**」，往下滑找到 `Clash/mihomo` 配置，点右侧的获取地址，选择「复制」：
 
 ![获取 Clash 订阅链接](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20260704211719782.png)
 
@@ -98,7 +103,7 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 ![在 Clash Verge 中导入订阅链接](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/7pVMFQKiDWX54Ho.gif)
 
-导入成功后左侧会出现配置卡片，顶部会显示节点数量——看到一堆节点就对了。
+导入成功后，点击左侧「**代理**」按钮会出现配置卡片，顶部会显示节点数量——看到一堆节点就对了。
 
 ## 五、第四步：开代理、选节点
 
@@ -146,7 +151,7 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 ## 行动清单
 
-1. [注册一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)（Lite 99 元/年，先 3 天试用）→ 复制订阅链接
+1. [注册一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)→ 复制订阅链接
 2. 装 Clash Verge → 导入订阅 → 开系统代理 → 选香港/新加坡节点
 3. 浏览器开 Google 验证，通了收工；顺手注册个 Gmail 留着以后用：[谷歌账号(Gmail)注册教程](/accounts-google/)
 4. 要用 AI 编程工具的，加一步开 TUN 模式：[网络配置进阶篇](/ai-tools-network-guide/)

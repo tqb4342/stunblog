@@ -1406,7 +1406,7 @@ textarea:focus-visible,
   font-variant-numeric: tabular-nums;
 }
 
-/* 版权行互链（博客大联盟）：与主文案间用间隔点，链接略亮于正文 */
+/* 版权行友链（IT码农）：与主文案间用间隔点，链接略亮于正文 */
 .footer .footer-inner > div:first-child a {
   margin-left: .35em;
   color: rgba(245, 246, 247, .72);
