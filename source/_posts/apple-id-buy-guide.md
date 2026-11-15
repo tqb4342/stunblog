@@ -14,6 +14,8 @@ related:
     text: 安卓翻墙教程：ClashA 从零配置
   - slug: accounts-google
     text: 谷歌账号(Gmail)注册教程：收不到验证码三招解决
+  - slug: popcorn-guide
+    text: 爆米花合租实测：五平台流媒体一年 314 元
 ---
 
 > 📱 这篇写给**想用 iPhone 下载海外 App 的朋友**：Telegram、TikTok、ChatGPT、小火箭这些在国区 App Store 根本搜不到，解决办法不是换手机，是几块钱买个美区 Apple ID。在哪买、怎么切换登录、怎么防封，一次讲完。只想看结论的，直接跳「30 秒速答」。
@@ -109,7 +111,7 @@ App 装上只是第一步——TikTok 是特例，装完打开黑屏是常事，
 
 **日服手游**：赛马娘、碧蓝档案日服、NIKKE——用美区/日区 ID 下载后切回国区账号，游戏照常玩。
 
-**流媒体**：Netflix、Disney+ 客户端——App 本身免费，账号可以在[环球巴士](http://cn.goingbus.com/?s=wX0haoloon)合租，一个月十几块。
+**流媒体**：Netflix、Disney+ 客户端——App 本身免费，账号可以在[环球巴士](http://cn.goingbus.com/?s=wX0haoloon)合租，一个月十几块；片单横跨多平台的，还有 [爆米花五平台全家桶](/popcorn-guide/)，一年三百出头。
 
 ## 写在最后
 

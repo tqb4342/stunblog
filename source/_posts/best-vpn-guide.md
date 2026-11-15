@@ -16,6 +16,8 @@ related:
     text: iPhone 教程：Spectre 下载到一键连接
   - slug: clash-protocols-guide
     text: Clash 协议对比：VMess/VLESS/Trojan/Reality 怎么选
+  - slug: popcorn-guide
+    text: 爆米花合租实测：五平台流媒体一年 314 元
 faq:
   - q: "翻墙选 VPN 还是机场？"
     a: "看用途。追剧、用海外 AI、日常浏览，机场订阅 + Clash 客户端是国内环境下的主流选择，抗封锁能力强、节点多；只想手机一键连接、完全不想折腾的，用整合型服务更省事。两边也可以主备并用，一边出问题切另一边。"

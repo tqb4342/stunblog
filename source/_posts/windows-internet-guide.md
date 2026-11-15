@@ -127,6 +127,8 @@ Clash Verge 开源免费，Windows 版下载地址（一枝红杏官方教程页
 
 **一枝红杏节点能解锁什么？** 实测 Google / YouTube / Gmail、ChatGPT / Claude、Netflix / Disney+ 都没问题，日常场景全覆盖。
 
+**追海外剧的？** 节点通了只是第一步，Netflix、Disney+ 这些平台还要会员——流媒体合租一年三百出头就能拿下五家，实测和购买流程看 [爆米花合租教程](/popcorn-guide/)。
+
 ## 常见问题
 
 **Windows 翻墙软件哪个好？**
