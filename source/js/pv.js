@@ -45,7 +45,11 @@
         if (!d || !d.pvs) return;
         for (var i = 0; i < els.length; i++) {
           var p = els[i].getAttribute("data-pv-path");
-          if (d.pvs[p] !== undefined) els[i].textContent = fmt(d.pvs[p]);
+          if (d.pvs[p] !== undefined) {
+            // 结构含内层数字节点（归档时间线「-- 阅读」胶囊）时只填数字，否则整块填充
+            var num = els[i].querySelector("[data-pv-num]") || els[i];
+            num.textContent = fmt(d.pvs[p]);
+          }
         }
       })
       .catch(function () {});

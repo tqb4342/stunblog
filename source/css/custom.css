@@ -967,17 +967,29 @@ ul.category-list {
 .archive .timeline-item__title {
   flex: 1; min-width: 0; width: auto; margin: 0;
   font-size: 1em; font-weight: 500;
+  display: flex; align-items: center;
 }
-.archive .timeline-item__link { color: var(--color-gray-900); transition: color .18s; }
+.archive .timeline-item__link { flex: 1; min-width: 0; color: var(--color-gray-900); transition: color .18s; }
 .archive .timeline-item:hover .timeline-item__link { color: #1b9ef3; }
 
-/* 阅读数芯片（pv.js 批量填充，接口异常保持 -- 占位） */
+/* 阅读数胶囊（数字 + 「阅读」后缀，pv.js 批量填充内层 [data-pv-num]，异常保持 --）
+   与左侧日期胶囊呼应：灰底小胶囊，hover 行时同步变蓝 */
 .archive .timeline-item__pv {
-  margin-left: 12px; flex-shrink: 0; align-self: center;
-  font-size: .8em; color: var(--color-gray-600);
-  font-variant-numeric: tabular-nums; transition: color .18s;
+  margin-left: 10px; flex-shrink: 0;
+  display: inline-flex; align-items: center;
+  padding: 1px 8px; border-radius: 999px;
+  font-size: 12px; line-height: 1.6;
+  color: var(--color-gray-600, #8d949e);
+  background: var(--color-gray-200, #f5f6f7);
+  font-variant-numeric: tabular-nums;
+  transition: color .18s, background-color .18s;
 }
-.archive .timeline-item:hover .timeline-item__pv { color: #1b9ef3; }
+.archive .timeline-item__pv-num { font-weight: 500; }
+.archive .timeline-item__pv-label { margin-left: 3px; font-size: 11px; color: var(--color-gray-500, #a6abb2); transition: color .18s; }
+.archive .timeline-item:hover .timeline-item__pv {
+  color: #1b9ef3; background: rgba(27, 158, 243, .12);
+}
+.archive .timeline-item:hover .timeline-item__pv-label { color: #1b9ef3; }
 
 /* 移动端适配 */
 @media (max-width: 600px) {
