@@ -28,7 +28,7 @@ faq:
     a: "ChatGPT 开代理就能用；TikTok 检测最严，除了 IP 还查 SIM 卡、语言时区、定位，直接翻墙可能黑屏，需要额外处理。"
 ---
 
-> 📱 这篇写给**安卓新手**：手上只有一部安卓手机，别的什么都没有。从买节点、装客户端、导订阅到一键开代理，每一步都配截图，照着点就行。电脑端的看 [Windows 翻墙教程](/windows-internet-guide/)，双端流程一模一样，只是客户端不同。
+> 📱 这篇写给**安卓新手**：手上只有一部安卓手机，别的什么都没有。从买节点、装客户端、导订阅到一键开代理，每一步都配截图，照着点就行。电脑端的看 [Windows 翻墙教程](/windows-internet-guide/)，双端流程一模一样，只是客户端不同；
 
 <!-- more -->
 
@@ -36,7 +36,7 @@ faq:
 
 - **安卓翻墙就两件事**：装一个客户端（免费），再买一个节点订阅（付费），缺一不可
 - **客户端**：只用一枝红杏就装它家定制的 ClashA，跟着本文第四节五分钟配好；多家机场混用装 ClashMetaForAndroid
-- **节点**：我用的是 [一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)，入门档 99 元/年，每月 100G 流量，日常看 Google、YouTube、ChatGPT 够用；选型标准和避坑清单看[翻墙 VPN 选型总览](/best-vpn-guide/)
+- **节点**：我用的是 [一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)，入门档 7.44 元/月，每月 100G 流量，日常看 Google、YouTube、ChatGPT 够用；选型标准和避坑清单看[翻墙 VPN 选型总览](/best-vpn-guide/)
 - **流程**：官网注册 → 买套餐 → 客户端导入订阅链接 → 点启动，全程 10 分钟左右
 
 ## 一、先搞懂：翻墙 = 客户端 + 节点
@@ -62,7 +62,7 @@ faq:
 
 ## 二、第一步：注册一枝红杏，买订阅
 
-节点服务我个人推荐自己在用的 [**一枝红杏**](https://order.yizhihongxing.org/aff.php?aff=4818)——香港銘佑科技运营，七八年的老牌机场，我自己用了这么多年没断过流。协议是 Trojan，流量伪装成普通 HTTPS 数据，不容易被识别封锁。新用户有 3 天 IEPL 专线试用，不满意不续就是了。
+节点服务我个人推荐自己在用的 [**一枝红杏**](https://order.yizhihongxing.org/aff.php?aff=4818)——香港銘佑科技运营，七八年的老牌机场，我自己用了这么多年没断过流。协议是 Trojan，流量伪装成普通 HTTPS 数据，不容易被识别封锁。
 
 - 支持 Windows、macOS、Android、iOS、OpenWrt 等全平台
 - 亲测网速快，Google、YouTube、Facebook 都能上
@@ -187,5 +187,3 @@ ChatGPT 正常开代理就能用，账号注册的完整流程看 [ChatGPT 国�
 4. 浏览器开 Google 验证，通了收工；顺手注册个 Gmail 留着以后用：[谷歌账号(Gmail)注册教程](/accounts-google/)
 5. 电脑端也想配齐的，看 [Windows 翻墙教程](/windows-internet-guide/)；电脑上跑 Trae / Cursor 这类 AI 编程工具连不上的，加看 [AI 编程工具网络配置](/ai-tools-network-guide/)；iPhone 用户看 [iPhone 科学上网教程](/iphone-open-internet/)——弄个外区 Apple ID 装 Spectre，订阅可以和安卓共用同一条
 6. 网络通了想玩 AI 的，翻 [AI 工具箱](/ai-tools/)——100 个工具按场景分好类，标「实测」的有完整教程
-
-双 11 一年一次的官方折扣窗口快到了（11-10 至 11-13），续费或上车比平时划算，可以留意一下。

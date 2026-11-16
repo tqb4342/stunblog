@@ -1,13 +1,13 @@
 ---
 title: 关于本站与作者
-description: 一个爱折腾的开发者写的中文博客：AI 工具真实实测 10 篇、网络冲浪实践教程 5 篇、谷歌账号与流媒体合租装备指南 5 篇，另维护 101 个工具的 AI 工具箱导航。全部亲手用过才写，没有云评测。
+description: 一个爱折腾的开发者写的中文博客：AI 工具真实实测 10 篇、网络冲浪实践教程 6 篇、谷歌账号与流媒体合租装备指南 5 篇，另维护 101 个工具的 AI 工具箱导航。全部亲手用过才写，没有云评测。
 keywords: 关于本站,关于作者,AI冲浪指南,博客介绍,AI工具实测,网络配置教程,aisurf
 ---
 
 这里专写 **AI 工具**与**网络冲浪**，落笔的是一个爱折腾的开发者。
 
 <div class="about-stats">
-  <div class="stat"><b>20</b><span>篇长文</span></div>
+  <div class="stat"><b>21</b><span>篇长文</span></div>
   <div class="stat"><b>3</b><span>条内容线</span></div>
   <div class="stat"><b>101</b><span>工具导航</span></div>
   <div class="stat stat-hot"><b>100<i>%</i></b><span>亲手实测</span></div>
@@ -45,7 +45,7 @@ keywords: 关于本站,关于作者,AI冲浪指南,博客介绍,AI工具实测,�
 <div class="lane-card">
   <div class="lane-head">
     <span class="lane-name">网络冲浪实践</span>
-    <span class="lane-badge">5 篇</span>
+    <span class="lane-badge">6 篇</span>
   </div>
   <p class="lane-desc">怎么更稳、更快地访问整个互联网：Windows / 安卓 / iPhone 三平台怎么配，从选 VPN 到挑协议都写了。</p>
   <p class="lane-links">
