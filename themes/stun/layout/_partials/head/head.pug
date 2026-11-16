@@ -66,18 +66,18 @@ if theme.qihu360_site_verification
 if theme.sougou_site_verification
   meta(name="sogou_site_verification" content=theme.sougou_site_verification)
 
+// SEO：meta description 统一在此计算（front-matter description 优先，文章/页面通用，兜底站点描述）
+// 传给 open_graph helper 统一输出——否则 helper 会隐式截取正文再输出一条，造成全站双 description
+- var meta_description = page.description ? String(page.description).replace(/<[^>]+>/g, '').trim().substring(0, 160) : description;
+
 // og:image 兜底：文章页有 photos/top_image 走默认；首页/关于等无图页传站点 banner，
 // 保证社交分享（微信/QQ/Twitter/Telegram）永远有缩略图；有图页用大图分享卡
 if (page.photos && page.photos.length) || page.top_image || page.banner_img
-  != open_graph({ twitter_card: 'summary_large_image' })
+  != open_graph({ twitter_card: 'summary_large_image', description: meta_description })
 else
-  != open_graph({ image: config.url + '/images/banner.webp' })
+  != open_graph({ image: config.url + '/images/banner.webp', description: meta_description })
 
 title= title
-
-// SEO：每页输出 meta description（文章页优先 front-matter description，兜底站点描述）
-- var meta_description = (is_post() && page.description) ? String(page.description).replace(/<[^>]+>/g, '').trim() : description;
-meta(name="description" content=meta_description.substring(0, 160))
 
 if theme.canonical
   link(rel="canonical" href=full_url_for(page.path))

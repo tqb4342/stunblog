@@ -8,6 +8,8 @@ keywords: GPT-6 Astra,GPT-6,gpt-6 astra国内怎么用,GPT-6 Astra价格,OpenAI�
 description: GPT-6 Astra 是 OpenAI 2026 年 9 月发布的旗舰模型：Computer Use、Coding、网络安全三榜刷新 SOTA。本文讲清它到底强在哪、有什么争议，以及国内怎么上车——镜像、合租、代充怎么选，附避坑指南。
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-gpt6astra.webp]
 related:
+  - slug: gpt-6-astra-computer-use
+    text: GPT-6 Astra Computer Use 实战：AI 操作电脑 10 大场景
   - slug: gemini-4-argon
     text: Gemini 4 Argon 全解读：12 项屠榜与国内上车准备
   - slug: chatgpt-vpn-guide
@@ -43,7 +45,7 @@ faq:
 
 ## 先说结论
 
-OpenAI 在 2026-09-03 正式发布 GPT-6 Astra。Greg Brockman 在媒体简报会上直接说「Welcome to the AGI era」下台——行业当天炸锅，倒不是因为分数又刷高（这两年每代都在刷），而是 **Computer Use 第一次让模型能自己干完整件事**：填表单、更新 CRM、整理日历、生成图表、跑前端 QA，从头到尾不喊人。
+OpenAI 在 2026-09-03 正式发布 GPT-6 Astra。Greg Brockman 在媒体简报会上直接说「Welcome to the AGI era」下台——行业当天炸锅，倒不是因为分数又刷高（这两年每代都在刷），而是 **Computer Use 第一次让模型能自己干完整件事**：填表单、更新 CRM、整理日历、生成图表、跑前端 QA，从头到尾不喊人。这 10 个场景逐个展开，看 [Computer Use 实战篇](/gpt-6-astra-computer-use/)。
 
 看发布会到真用上，国内用户中间还隔着**节点**和**支付**两道墙。最稳的上车路径是 [环球巴士](http://cn.goingbus.com/?s=wX0haoloon)：ChatGPT 镜像版 28.88 元/月起，Plus 合租 69.88 元/月，独享/代充 218.88 元/月起，新用户首单 9 折，**优惠码 Tanqingbo**，下单时填上即可。
 
@@ -82,6 +84,8 @@ ScreenSpot-Pro 那项是**纯视觉识别**——不能调工具，只能看屏�
 ![Computer Use 演示：Astra 自动设计 PCB 电路板](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/gpt6-astra-3.webp)
 
 *OpenAI 发布会演示：Astra 在 KiCad 中通过放置元器件和布线，把原理图转成可制造的 PCB（来源：OpenAI）*
+
+误操作率 2.4%（上代 22.0%）、蜜罐越界测试 0%，以及这 10 个场景「明天上班就能用」的落地拆解，单独写了一篇：[GPT-6 Astra Computer Use 实战](/gpt-6-astra-computer-use/)——这篇讲模型，那篇讲干活。
 
 ### 2. Coding：Codex 能跨上下文窗口存笔记
 
