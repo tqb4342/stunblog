@@ -8,7 +8,7 @@
  *
  * 命中域名的链接才处理；已有 nofollow 的不重复加。
  */
-var AFF_DOMAINS = /(goingbus\.com|yizhihongxing\.(org|club)|hero-sms\.com)/i;
+var AFF_DOMAINS = /(goingbus\.com|yizhihongxing\.(org|club)|hero-sms\.com|acceboy\.com)/i;
 
 hexo.extend.filter.register('after_post_render', function seoNofollowFilter(data) {
   var addNofollow = function (html) {

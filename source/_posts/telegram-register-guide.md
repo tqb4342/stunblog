@@ -8,12 +8,14 @@ keywords: telegram注册,电报注册,telegram收不到验证码,tg注册教程,
 description: 大陆怎么注册 Telegram 电报？收不到验证码是 +86 号码的老问题，本文给全套解法：网络、美区 Apple ID、接码平台三道准备，到下载、安装、注册、汉化、加群全流程截图教学，照着流程走一遍就能用。
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-telegram.webp]
 related:
-  - slug: iphone-open-internet
-    text: iPhone 教程：外区 Apple ID 从注册到使用
+  - slug: telegram-search-bots-guide
+    text: Telegram 搜索机器人 Top10：哪个最好用、怎么添加
   - slug: apple-id-buy-guide
     text: 美区 Apple ID 购买教程：下单到防封
   - slug: best-vpn-guide
     text: 翻墙 VPN 选型：三条硬标准与避坑
+  - slug: iphone-open-internet
+    text: iPhone 教程：外区 Apple ID 从注册到使用
 faq:
   - q: "Telegram 注册收不到短信验证码怎么办？"
     a: "先等 2 分钟——Telegram 常先把验证码发到你已登录设备的 App 内而不是短信；再试「Call me」语音验证。反复失败基本是 +86 号码被限制，换个国外号（接码平台 1 美元以内）或 Google Voice 号最彻底。注意别频繁点重发，会被系统暂时屏蔽。"
@@ -135,7 +137,7 @@ Telegram 中文叫「电报」，圈内戏称「纸飞机」，缩写 TG。俄�
 
 **加密聊天**（Secret Chat）：联系人页选「新建加密对话」，端到端加密，消息只存双方设备、不进云端，还支持设置自毁时间。普通聊天对日常够用，谈敏感事情再开这个。
 
-**加群**：每个群有唯一 t.me 链接，点开 Join 即可；不知道链接就在顶部搜索框直接搜群名，公开群基本都能搜到。搜群、搜频道、搜机器人用的是同一个搜索框（下面这张图演示的就是用它搜 BotFather）。私密群没有公开入口，要管理员邀请。
+**加群**：每个群有唯一 t.me 链接，点开 Join 即可；不知道链接就在顶部搜索框直接搜群名，公开群基本都能搜到。搜群、搜频道、搜机器人用的是同一个搜索框（下面这张图演示的就是用它搜 BotFather）。不过官方搜索对中文资源很弱，想找中文群组、频道、电影电子书这类资源，更高效的路子是 [Telegram 搜索机器人](/telegram-search-bots-guide/)，按月活排好了 Top10。私密群没有公开入口，要管理员邀请。
 
 ![Telegram 顶部搜索框搜索 BotFather 机器人——搜群、搜频道同样用这个搜索框](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/tg-register-13.webp)
 
