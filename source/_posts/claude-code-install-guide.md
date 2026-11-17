@@ -298,4 +298,4 @@ Claude Code 的完整链路：**Git Bash → 装本体 → 配 PATH → cc-switc
 
 纠结要不要订阅的，走低成本路线先验证：cc-switch 接 GLM / DeepSeek 的低价编程档（新用户免费额度也够跑完验证流程），番茄钟跑通了、确认这工具确实顺手，再考虑 Claude 订阅解锁完整实力——顺序反了容易白花钱。
 
-想在 AI 编程上多线开花的：OpenAI 阵营的 Codex 安装配置看 [Codex 安装使用指南](/codex-install-guide/)（ChatGPT Plus 用户直接可用）；GPT-6 Astra 的写代码能力与上车方式看 [GPT-6 Astra 国内使用指南](/gpt-6-astra/)；终端连不上的通病排查看 [AI 工具网络配置](/ai-tools-network-guide/)。想系统看看还有哪些 AI 工具值得上车，翻 [AI 工具箱](/ai-tools/)，100+ 个工具按场景分好类，标「实测」的都配了完整教程。
+想在 AI 编程上多线开花的：OpenAI 阵营的 Codex 安装配置看 [Codex 安装使用指南](/codex-install-guide/)（ChatGPT Plus 用户直接可用）；GPT-6 Astra 的写代码能力与上车方式看 [GPT-6 Astra 国内使用指南](/gpt-6-astra/)；终端连不上的通病排查看 [AI 工具网络配置](/ai-tools-network-guide/)；想拆开 Agent 自己组装的，看 [DeepSeek Harness 教程](/deepseek-harness-guide/)，模型、工具、界面全插件化。想系统看看还有哪些 AI 工具值得上车，翻 [AI 工具箱](/ai-tools/)，100+ 个工具按场景分好类，标「实测」的都配了完整教程。

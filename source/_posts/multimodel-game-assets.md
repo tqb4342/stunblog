@@ -76,7 +76,7 @@ GLB 可以理解成装好模型数据的文件包，形体、材质一起带走�
 作者自己写的分工是：
 
 - **Opus 5.5 Med**：指挥 + 游戏实现
-- **DeepSeek 建模端**（经 dsh 调用）：专做物体建模
+- **DeepSeek 建模端**（经 [dsh](/deepseek-harness-guide/) 调用）：专做物体建模
 - **Codex CLI**：由 Opus 无头调用，提供参考图
 - **Sonnet 5.5 Med**：参与部分审查
 

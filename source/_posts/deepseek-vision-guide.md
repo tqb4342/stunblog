@@ -126,7 +126,7 @@ related:
 ## 想试的话，三步
 
 1. 去官方接口，把模型名改成 `deepseek-flash`（V4.1；旧的 `deepseek-v4-flash-vision-exp` 仍兼容）
-2. 在你常用的 Agent 里，丢一张图试试（截图报错、发票、网页都行）
+2. 在你常用的 Agent 里，丢一张图试试（截图报错、发票、网页都行）；想玩得更深、自己组装 Agent 的，DeepSeek 官方开源了 [DeepSeek Harness](/deepseek-harness-guide/)，模型、工具、界面全部可替换
 3. 效果好，就把它塞进你的日常流水线——丢截图比复制粘贴报错文字顺手多了
 
 模型选型不止 DeepSeek 一家，[AI 工具箱](/ai-tools/) 收了各家主流工具，按分类挑组合。
