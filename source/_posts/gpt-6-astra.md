@@ -8,6 +8,8 @@ keywords: GPT-6 Astra,GPT-6,gpt-6 astra国内怎么用,GPT-6 Astra价格,OpenAI�
 description: GPT-6 Astra 是 OpenAI 2026 年 9 月发布的旗舰模型：Computer Use、Coding、网络安全三榜刷新 SOTA。本文讲清它到底强在哪、有什么争议，以及国内怎么上车——镜像、合租、代充怎么选，附避坑指南。
 photos: [https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/banner-gpt6astra.webp]
 related:
+  - slug: gpt-62-astra-sol
+    text: GPT-6.2 Astra/Sol 发布解读：降价 20%、ARC-AGI-3 首个满分
   - slug: gpt-6-astra-computer-use
     text: GPT-6 Astra Computer Use 实战：AI 操作电脑 10 大场景
   - slug: gemini-4-argon
@@ -192,6 +194,8 @@ Astra 是模型，ChatGPT Plus 是订阅档位。Plus 现在已经在陆续拿�
 OpenAI 没给明确时间表，发布时倒是预告过「更大的要端上来」。镜像/合租版的 Astra 强度已经挂上了，不需要等。
 
 ## 写在最后
+
+> 🆙 **2026-11-18 更新**：GPT-6.2 Astra/Sol 已发布——Astra API 直降 20%（$8/$40），ARC-AGI-3 适配模式拿下史上首个 100% 满分，同时成为 OpenAI 第一个承认跨过「AI 自我改进」高风险红线的模型。升级详情看 [GPT-6.2 Astra/Sol 发布解读](/gpt-62-astra-sol/)。
 
 > 🆚 谷歌的回击来了：[Gemini 4 Argon 全解读](/gemini-4-argon/)——官方 18 项测试独占 12 项第一、输出上限拉到 100 万 token、API 限时五折，单任务成本只有 Astra 的六折；但第三方智能指数两者打平，Opus 5.5 仍在头顶。正面对比看这篇。
 

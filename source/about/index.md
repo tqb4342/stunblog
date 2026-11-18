@@ -1,13 +1,13 @@
 ---
 title: 关于本站与作者
-description: 一个爱折腾的开发者写的中文博客：AI 工具真实实测 11 篇、网络冲浪实践教程 6 篇、谷歌账号与流媒体合租装备指南 6 篇，另维护 101 个工具的 AI 工具箱导航。全部亲手用过才写，没有云评测。
+description: 一个爱折腾的开发者写的中文博客：AI 工具真实实测 12 篇、网络冲浪实践教程 6 篇、谷歌账号与流媒体合租装备指南 6 篇，另维护 101 个工具的 AI 工具箱导航。全部亲手用过才写，没有云评测。
 keywords: 关于本站,关于作者,AI冲浪指南,博客介绍,AI工具实测,网络配置教程,aisurf
 ---
 
 这里专写 **AI 工具**与**网络冲浪**，落笔的是一个爱折腾的开发者。
 
 <div class="about-stats">
-  <div class="stat"><b>23</b><span>篇长文</span></div>
+  <div class="stat"><b>24</b><span>篇长文</span></div>
   <div class="stat"><b>3</b><span>条内容线</span></div>
   <div class="stat"><b>101</b><span>工具导航</span></div>
   <div class="stat stat-hot"><b>100<i>%</i></b><span>亲手实测</span></div>
@@ -31,7 +31,7 @@ keywords: 关于本站,关于作者,AI冲浪指南,博客介绍,AI工具实测,�
 <div class="lane-card">
   <div class="lane-head">
     <span class="lane-name">AI 工具实测</span>
-    <span class="lane-badge">11 篇</span>
+    <span class="lane-badge">12 篇</span>
   </div>
   <p class="lane-desc">Claude、Codex、Gemini、Cursor 这些工具，我是真的拿来干活的：写代码、跑长任务、横向对比，用过一段时间之后才告诉你它值不值、适合谁。</p>
   <p class="lane-links">

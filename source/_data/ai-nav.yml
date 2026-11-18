@@ -31,10 +31,10 @@ categories:
         desc: OpenAI 出品，生态最全的 AI 对话产品
         tested: /chatgpt-vpn-guide/
         hot: true
-      - name: GPT-6 Astra
+      - name: GPT-6.2 Astra
         url: https://chatgpt.com/
-        desc: OpenAI 2026 旗舰模型，Computer Use 自主用电脑，Plus 用户可用
-        tested: /gpt-6-astra/
+        desc: OpenAI 最新旗舰，降价 20%，ARC-AGI-3 史上首个满分
+        tested: /gpt-62-astra-sol/
         hot: true
       - name: Claude
         url: https://claude.ai/

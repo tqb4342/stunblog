@@ -258,4 +258,4 @@ Opus 5.5 的用法可以压成三句：**需求一次交底，任务带着规则
 
 第一次照着改，挑一个最近总让你反复催「继续」的任务就够了——从最痛的那条改起，比把清单一次背全管用。
 
-Claude 生态的完整链路：网络还没解决的先看 [Windows 翻墙教程](/windows-internet-guide/)，节点挑不好 AI 服务容易卡验证——挑选思路 [AI 工具网络配置](/ai-tools-network-guide/) 里详细写过；还没装环境的看 [Claude Code 安装配置教程](/claude-code-install-guide/)（Windows 安装、cc-switch 接国产模型到实战）；OpenAI、Google 阵营的旗舰对照看 [GPT-6 Astra 使用指南](/gpt-6-astra/) 和 [Gemini 4 Argon 国内使用指南](/gemini-4-argon/)；想横向看看还有什么工具的，翻 [AI 工具箱](/ai-tools/)，100+ 个工具按场景分好类，标「实测」的都配了完整教程。
+Claude 生态的完整链路：网络还没解决的先看 [Windows 翻墙教程](/windows-internet-guide/)，节点挑不好 AI 服务容易卡验证——挑选思路 [AI 工具网络配置](/ai-tools-network-guide/) 里详细写过；还没装环境的看 [Claude Code 安装配置教程](/claude-code-install-guide/)（Windows 安装、cc-switch 接国产模型到实战）；OpenAI、Google 阵营的旗舰对照看 [GPT-6 Astra 使用指南](/gpt-6-astra/)、[GPT-6.2 Astra/Sol 发布解读](/gpt-62-astra-sol/)（ARC-AGI-3 首个满分、降价 20%，AA 总榜紧咬 Fable 5.2）和 [Gemini 4 Argon 国内使用指南](/gemini-4-argon/)；想横向看看还有什么工具的，翻 [AI 工具箱](/ai-tools/)，100+ 个工具按场景分好类，标「实测」的都配了完整教程。

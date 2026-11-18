@@ -20,6 +20,8 @@ faq:
   - q: "什么工作最适合先交给它？"
     a: "重复性界面操作：批量填表单、CRM 数据维护、日历整理、邮件起草、表格出图。规则明确、步骤固定、量大——这三条占齐的任务性价比最高。"
 related:
+  - slug: gpt-62-astra-sol
+    text: GPT-6.2 Astra/Sol 发布解读：降价 20%、ARC-AGI-3 首个满分
   - slug: gpt-6-astra
     text: GPT-6 Astra 国内怎么用？能力解读、上车到避坑全指南
   - slug: chatgpt-vpn-guide
@@ -217,4 +219,4 @@ Anthropic 2024 年先发了 Computer Use API，方向相同。区别在稳定性
 
 Computer Use 的意义不在「AI 又拿了个第一」，在于**自动化第一次跨过了 API 这道坎**——以前够不着的数字化洼地，现在靠「会用界面」就能进去。
 
-上手顺序建议：镜像版跑两周只读任务（汇总数据、整理邮件），确认它点得准、不乱来，再放给可撤销的写操作；写代码的场景把 [Codex 安装使用指南](/codex-install-guide/) 跑通，Astra 的长任务机制正好接得住。模型侧想横向对比的，看 [Gemini 4 Argon 全解读](/gemini-4-argon/)——同样的活，两家的成本账都在里面；订阅 Claude 的看 [Claude Code 安装配置教程](/claude-code-install-guide/)，国产模型接入的省法也写了。账号和网络这两件事是长期资产：ChatGPT 从访问到注册的完整流程在 [ChatGPT 国内使用教程](/chatgpt-vpn-guide/)；想系统看看还有哪些 AI 工具值得上车，翻 [AI 工具箱](/ai-tools/)，101 个工具按场景分好类，标「实测」的都配了完整教程。
+上手顺序建议：镜像版跑两周只读任务（汇总数据、整理邮件），确认它点得准、不乱来，再放给可撤销的写操作；写代码的场景把 [Codex 安装使用指南](/codex-install-guide/) 跑通，Astra 的长任务机制正好接得住。模型侧想看后续进化的，GPT-6.2 Astra 已经发布：降价 20%、ARC-AGI-3 首个满分，全解读在 [GPT-6.2 Astra/Sol 发布解读](/gpt-62-astra-sol/)；想横向对比谷歌的，看 [Gemini 4 Argon 全解读](/gemini-4-argon/)——同样的活，两家的成本账都在里面；订阅 Claude 的看 [Claude Code 安装配置教程](/claude-code-install-guide/)，国产模型接入的省法也写了。账号和网络这两件事是长期资产：ChatGPT 从访问到注册的完整流程在 [ChatGPT 国内使用教程](/chatgpt-vpn-guide/)；想系统看看还有哪些 AI 工具值得上车，翻 [AI 工具箱](/ai-tools/)，101 个工具按场景分好类，标「实测」的都配了完整教程。
