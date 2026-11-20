@@ -149,7 +149,7 @@ OpenAI 官方的 3D 工程仿真案例更硬核：让 Astra 给一辆跑车做�
 
 第三方榜单成绩第一时间出炉。
 
-**Artificial Analysis 综合智能指数**：Astra 涨 5 分到 62.1，超过 Gemini 4 Carbon 和 Claude Opus 5.5，全榜第二——榜首还是 Claude Fable 5.2 的 64.6。
+**Artificial Analysis 综合智能指数**：Astra 涨 5 分到 62.1，超过 Gemini 4 Carbon 和 Claude Opus 5.5，全榜第二——榜首还是 Claude Fable 5.2 的 64.6。顺带一提，国产这边的 Kimi K3.1 Pro 10 月底也冲到过这个榜的第四（55 分），3D 建模一条龙还免费——[K3.1 Pro 实测看这篇](/kimi-k31-pro-guide/)，网络没配置好也能直接用。
 
 ![Artificial Analysis 智能指数榜](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/gpt62-12.webp)
 

@@ -84,7 +84,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 装好了，但还没有 AI 模型可用——官方 Claude 模型需要订阅。这时候 **cc-switch** 登场：把各家模型的 API key 统一管起来，想用哪家点一下就切过去，不用手动改配置。
 
-cc-switch 支持的模型：[智谱 GLM](https://www.bigmodel.cn/glm-coding?ic=A7DYW5XKAV)、[MiniMax](https://platform.minimaxi.com/subscribe/token-plan)、[Kimi](https://www.kimi.com/membership/pricing)、[DeepSeek](https://platform.deepseek.com/) 等；Claude、GPT 等模型可通过 API 中转接入。
+cc-switch 支持的模型：[智谱 GLM](https://www.bigmodel.cn/glm-coding?ic=A7DYW5XKAV)、[MiniMax](https://platform.minimaxi.com/subscribe/token-plan)、[Kimi](https://www.kimi.com/membership/pricing)、[DeepSeek](https://platform.deepseek.com/) 等；Claude、GPT 等模型可通过 API 中转接入。其中 Kimi 的 K3.1 Pro 已经摸到 Terminal-Bench 第一梯队（65.7 分），国产直连免费用——[实测看这篇](/kimi-k31-pro-guide/)。
 
 下载安装：[github.com/farion1231/cc-switch/releases](https://github.com/farion1231/cc-switch/releases)
 

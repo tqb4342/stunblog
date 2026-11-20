@@ -46,7 +46,8 @@ categories:
         tested: /gemini-4-argon/
       - name: Kimi
         url: https://kimi.moonshot.cn/
-        desc: 月之暗面出品，中文长文档阅读的口碑之选
+        desc: 月之暗面出品，K3.1 Pro 智能指数全球第四，3D Make 草图变网页，免费用
+        tested: /kimi-k31-pro-guide/
       - name: 豆包
         url: https://www.doubao.com/
         desc: 字节出品的全能助手，免费额度大方

@@ -41,7 +41,7 @@ faq:
 - **价格**：API 标准价输入 $4 / 输出 $20（每百万 token），限时五折 $2/$10；跑一个平均任务约 $1.99，是对手的三分之一到六折
 - **现在能用吗**：本体未开放，普通用户要等；**现役 Gemini（3.8 Flash）不受影响照常用**
 - **现在该做什么**：把节点备稳 + 免费 3.8 Flash 先用起来 + 盯合租平台动态，开放当天直接上车
-- **详细对比**：和 GPT-6 Astra 的正面对决看 [GPT-6 Astra 使用与购买指南](/gpt-6-astra/)；Astra 那边「AI 自己操作电脑」的 10 大场景展开在 [Computer Use 实战篇](/gpt-6-astra-computer-use/)；OpenAI 最新一代降价 20%、ARC-AGI-3 拿下史上首个满分，看 [GPT-6.2 Astra/Sol 发布解读](/gpt-62-astra-sol/)
+- **详细对比**：和 GPT-6 Astra 的正面对决看 [GPT-6 Astra 使用与购买指南](/gpt-6-astra/)；Astra 那边「AI 自己操作电脑」的 10 大场景展开在 [Computer Use 实战篇](/gpt-6-astra-computer-use/)；OpenAI 最新一代降价 20%、ARC-AGI-3 拿下史上首个满分，看 [GPT-6.2 Astra/Sol 发布解读](/gpt-62-astra-sol/)；网络还没就绪、想先免费用上第一梯队国产模型的，看 [Kimi K3.1 Pro 实测](/kimi-k31-pro-guide/)
 
 ## 先说结论
 
