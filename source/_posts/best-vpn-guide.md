@@ -17,7 +17,7 @@ related:
   - slug: clash-protocols-guide
     text: Clash 协议对比：VMess/VLESS/Trojan/Reality 怎么选
   - slug: popcorn-guide
-    text: 爆米花合租实测：五平台流媒体一年 314 元
+    text: 爆米花合租实测：五平台全家桶怎么买最划算
 faq:
   - q: "翻墙选 VPN 还是机场？"
     a: "看用途。追剧、用海外 AI、日常浏览，机场订阅 + Clash 客户端是国内环境下的主流选择，抗封锁能力强、节点多；只想手机一键连接、完全不想折腾的，用整合型服务更省事。两边也可以主备并用，一边出问题切另一边。"
@@ -138,4 +138,4 @@ Clash Verge Rev。老教程里的 Clash for Windows 已经停止维护（2023 �
 
 工具本身的边界要认清：推荐的 [一枝红杏](https://order.yizhihongxing.org/aff.php?aff=4818)仅用于日常工作、学习和娱乐，切勿浏览和传播敏感信息。工具只负责把网络打通，用它做什么，分寸在自己手里。
 
-网络通了之后的正事：想用海外 AI 的，[ChatGPT 国内使用教程](/chatgpt-vpn-guide/)从注册到上手全流程都有，注册第一步要的海外邮箱卡在验证码上的，看 [谷歌邮箱购买教程](/gmail-buy-guide/)；想系统看看有哪些值得用的工具，翻 [AI 工具箱](/ai-tools/)，100 个工具按场景分好类，标「实测」的都配了完整教程。
+网络通了之后的正事：想看奈飞追剧的，[奈飞怎么看全教程](/netflix-guide/)从流媒体解锁节点到 16 元/月合租一条龙；想用海外 AI 的，[ChatGPT 国内使用教程](/chatgpt-vpn-guide/)从注册到上手全流程都有，注册第一步要的海外邮箱卡在验证码上的，看 [谷歌邮箱购买教程](/gmail-buy-guide/)；想系统看看有哪些值得用的工具，翻 [AI 工具箱](/ai-tools/)，100 个工具按场景分好类，标「实测」的都配了完整教程。

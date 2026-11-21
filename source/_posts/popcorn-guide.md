@@ -20,6 +20,8 @@ faq:
   - q: "优惠码怎么用？能用几次？"
     a: "结算时在优惠码一栏填 Tanqingbo，打 9 折。仅限环球巴士新用户首单使用一次，老用户按页面原价，具体以平台最新规则为准。"
 related:
+  - slug: netflix-guide
+    text: 奈飞(Netflix)怎么看（2026）：中国观看、注册教程与 16 元合租
   - slug: best-vpn-guide
     text: 翻墙 VPN 选型总览：三条硬标准与全平台安装
   - slug: apple-id-buy-guide
@@ -125,7 +127,7 @@ related:
 
 更习惯在手机、iPad 上看，或者只追某一个平台的，可以只买单平台车——这才是手机追剧党的正确解法。
 
-环球巴士的平台车非常丰富：Netflix、Disney+、HBO Max、Prime Video、Apple TV+、Hulu、Peacock、Paramount+、Crunchyroll 都有，新用户用优惠码 `Tanqingbo` 同样打 9 折。其中网飞单平台年付 ¥188.88，折下来一个月 15 块多，是平台车里卖得最凶的一款。
+环球巴士的平台车非常丰富：Netflix、Disney+、HBO Max、Prime Video、Apple TV+、Hulu、Peacock、Paramount+、Crunchyroll 都有，新用户用优惠码 `Tanqingbo` 同样打 9 折。其中网飞单平台年付 ¥188.88，折下来一个月 15 块多，是平台车里卖得最凶的一款。网飞怎么从零看到（节点、账号、客户端三步走）以及独立合租账号的选法，单独写在 [奈飞怎么看全教程](/netflix-guide/)。
 
 顺带一提，这个平台不只有流媒体——买海外账号（[美区 Apple ID](/apple-id-buy-guide/)、[谷歌邮箱](/gmail-buy-guide/)）也在它家买得到，一个账号通买。
 
