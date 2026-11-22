@@ -20,6 +20,8 @@ faq:
   - q: "机场默认给我的协议，需要自己换吗？"
     a: "基本不用。靠谱机场的默认配置就是 Trojan 或 VLESS（新机场多为 VLESS+Reality），直接用就是最优解。协议是机场服务端定的，你客户端这边只是「能连」和「连不上」的区别，换协议不解决速度慢的问题——速度看节点质量和线路。"
 related:
+  - slug: airport-lines-guide
+    text: 机场线路怎么选：直连、中转、专线（IPLC/IEPL）一次讲透
   - slug: best-vpn-guide
     text: 翻墙 VPN 选型总览：三条硬标准与全平台安装
   - slug: windows-internet-guide
@@ -215,7 +217,7 @@ Reality 第一，抓包都难和真实 HTTPS 区分；Trojan 和 VLESS+TLS 紧�
 
 **机场默认给我的协议，需要自己换吗？**
 
-基本不用。靠谱机场的默认配置就是 Trojan 或 VLESS（新机场多为 VLESS+Reality），直接用就是最优解。协议是机场服务端定的，你客户端这边只是「能连」和「连不上」的区别，换协议不解决速度慢的问题——速度看节点质量和线路。
+基本不用。靠谱机场的默认配置就是 Trojan 或 VLESS（新机场多为 VLESS+Reality），直接用就是最优解。协议是机场服务端定的，你客户端这边只是「能连」和「连不上」的区别，换协议不解决速度慢的问题——速度看节点质量和线路，线路分直连、中转、专线三种，怎么选展开在 [机场线路怎么选](/airport-lines-guide/)。
 
 ## 写在最后
 
