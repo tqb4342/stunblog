@@ -50,7 +50,7 @@ related:
 
 大模型负责理解、推理和生成；Harness 负责把模型放进一个能干活的环境里——给它工具、文件权限、上下文、任务循环、插件和执行记录。
 
-同一个模型放进不同的 Harness，表现可能差很多。区别常常出在：模型能看到哪些信息、可以调用什么工具、失败以后怎么重试、每一步有没有权限限制。
+同一个模型放进不同的 Harness，表现可能差很多。区别常常出在：模型能看到哪些信息、可以调用什么工具、失败以后怎么重试、每一步有没有权限限制。这套思路不止开源社区在玩，小米 MiMo Desktop 就是「MiMo 模型 + MiMo Code 框架」包成开箱即用桌面产品的路线——一张图自动调 Blender 建模、跨会话做 PPT，实测看 [小米 MiMo Desktop 邀测指南](/xiaomi-mimo-desktop-guide/)。
 
 ![DeepSeek Harness 项目概念图](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/dsh-01.webp)
 

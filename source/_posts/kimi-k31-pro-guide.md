@@ -28,6 +28,8 @@ related:
     text: DeepSeek 多模态实测：V4.1 Flash 看图能力、接入教程与价格
   - slug: chatgpt-vpn-guide
     text: ChatGPT 国内使用教程：访问、注册到上手
+  - slug: xiaomi-mimo-desktop-guide
+    text: 小米 MiMo Desktop 实测：小米版 Codex，邀测免费
 ---
 
 > 🛠️ 国产模型在智能指数前十头部「没存在感」的沉默期，被 Kimi K3.1 Pro 打破了：**发布时全球第四、Terminal-Bench 4.0 冲到 65.7、草图 40 分钟变 3D 网页**——而且国内直连、免费额度就能用。对还没解决网络问题的读者，这篇尤其值得先看：它是你**不开任何工具就能摸到的最强档之一**。<!-- more -->网络已经配置好的，想横向对比海外旗舰的看 [GPT-6.2 Astra/Sol 发布解读](/gpt-62-astra-sol/) 和 [GPT-6 Astra 全指南](/gpt-6-astra/)。
@@ -130,6 +132,6 @@ AI 碰金融翻车是老梗了——写摘要凑合，一遇到跨表公式和�
 
 ## 写在最后
 
-K3.1 Pro 这次是真把东西端上来了：发布时全球第四的分数、终端 Agent 第一梯队、3D 建模一条龙、价格砍到 Astra 的四分之一，而且免费额度就能用。国模不是掉队了，是在攒大招。
+K3.1 Pro 这次是真把东西端上来了：发布时全球第四的分数、终端 Agent 第一梯队、3D 建模一条龙、价格砍到 Astra 的四分之一，而且免费额度就能用。国模不是掉队了，是在攒大招。桌面 Agent 这条赛道国产也在挤——小米 MiMo Desktop 邀测期免费干同样的活（建模、网页、PPT），实测在 [小米 MiMo Desktop 邀测指南](/xiaomi-mimo-desktop-guide/)。
 
 对普通用户就一句话——打开 kimi.com 直接试，一张草图丢进 3D Make，40 分钟后你会回来转发的。编程党把 Kimi Code 的模型切到 K3.1 Pro，等同一件事。至于海外旗舰——GPT-6.2 都降价 20% 了，两边都用、按任务选型，才是 2026 年底的正确姿势。

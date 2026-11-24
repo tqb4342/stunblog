@@ -387,6 +387,11 @@ categories:
     name: AI 智能体
     desc: 自主任务执行与协作
     tools:
+      - name: 小米 MiMo Desktop
+        url: https://mimo.xiaomimimo.com/desktop/invite
+        desc: 小米版 Codex，邀测免费：参考图自动调 Blender 建模，跨会话做 PPT
+        tested: /xiaomi-mimo-desktop-guide/
+        hot: true
       - name: Manus
         url: https://manus.im/
         desc: 火出圈的通用 AI Agent，给目标就干活
