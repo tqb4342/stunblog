@@ -164,7 +164,7 @@ Astra 是 OpenAI **第一个跨过 Preparedness Framework「关键级」网络�
 
 - 想第一时间用上 GPT-6 Astra，又懒得搞账号/绑卡的
 - 重度 AI 用户，需要稳定干活不中断（独享 / 代充）
-- 想一个平台管理多个 AI 和流媒体账号的（ChatGPT、Gemini、Grok、Netflix 都能一起合租）
+- 想一个平台管理多个 AI 和流媒体账号的（ChatGPT、Gemini、Grok、Netflix 都能一起合租，Claude/Gemini/Grok 等其他模型怎么买，全攻略在 [AI 大模型合租充值教程](/ai-llm-buy-guide/)）
 - 第一次上车 AI 大模型，想选个运营多年有赔付承诺的老平台
 
 反过来，**什么人不用急着买**：只是偶尔问两句、还没到每天都要用的程度——官方免费版和[国内能直连的 AI 工具](/ai-tools/)先练手，等确定自己用得动再上车不迟。

@@ -123,7 +123,7 @@ Netflix Premium 套餐官方支持 **4 路同时观看 + 多个个人档案（Pr
 
 ### 平台：环球巴士
 
-[环球巴士](http://cn.goingbus.com/?s=wX0haoloon) 的前身是「奈飞站」（NetflixStation），2019 年 7 月起做 Netflix 单品合租，2023 年升级更名，现在覆盖 20+ 种流媒体和 AI 工具。有 ICP 备案、有公司主体（杭州十全信息科技）、累计用户 10 万+——属于你能跟人说「我买的是正经平台」的那种，跑路风险低。
+[环球巴士](http://cn.goingbus.com/?s=wX0haoloon) 的前身是「奈飞站」（NetflixStation），2019 年 7 月起做 Netflix 单品合租，2023 年升级更名，现在覆盖 20+ 种流媒体和 AI 工具（ChatGPT、Claude 等 AI 大模型的合租充值，看 [AI 大模型合租充值教程](/ai-llm-buy-guide/)）。有 ICP 备案、有公司主体（杭州十全信息科技）、累计用户 10 万+——属于你能跟人说「我买的是正经平台」的那种，跑路风险低。
 
 ![环球巴士合租平台官网首页](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/image-20260827104327537.png)
 

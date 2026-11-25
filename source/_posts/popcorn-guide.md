@@ -129,7 +129,7 @@ related:
 
 环球巴士的平台车非常丰富：Netflix、Disney+、HBO Max、Prime Video、Apple TV+、Hulu、Peacock、Paramount+、Crunchyroll 都有，新用户用优惠码 `Tanqingbo` 同样打 9 折。其中网飞单平台年付 ¥188.88，折下来一个月 15 块多，是平台车里卖得最凶的一款。网飞怎么从零看到（节点、账号、客户端三步走）以及独立合租账号的选法，单独写在 [奈飞怎么看全教程](/netflix-guide/)。
 
-顺带一提，这个平台不只有流媒体——买海外账号（[美区 Apple ID](/apple-id-buy-guide/)、[谷歌邮箱](/gmail-buy-guide/)）也在它家买得到，一个账号通买。
+顺带一提，这个平台不只有流媒体——买海外账号（[美区 Apple ID](/apple-id-buy-guide/)、[谷歌邮箱](/gmail-buy-guide/)）也在它家买得到，ChatGPT、Claude 这些 AI 大模型的合租充值也有（怎么选看 [AI 大模型合租充值教程](/ai-llm-buy-guide/)），一个账号通买。
 
 ## 环球巴士靠谱吗
 

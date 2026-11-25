@@ -1,13 +1,13 @@
 ---
 title: 关于本站与作者
-description: 一个爱折腾的开发者写的中文博客：AI 工具真实实测 14 篇、网络冲浪实践教程 7 篇、谷歌账号与流媒体合租装备指南 7 篇，另维护 101 个工具的 AI 工具箱导航。全部亲手用过才写，没有云评测。
+description: 一个爱折腾的开发者写的中文博客：AI 工具真实实测 14 篇、网络冲浪实践教程 7 篇、谷歌账号与流媒体合租装备指南 8 篇，另维护 101 个工具的 AI 工具箱导航。全部亲手用过才写，没有云评测。
 keywords: 关于本站,关于作者,AI冲浪指南,博客介绍,AI工具实测,网络配置教程,aisurf
 ---
 
 这里专写 **AI 工具**与**网络冲浪**，落笔的是一个爱折腾的开发者。
 
 <div class="about-stats">
-  <div class="stat"><b>28</b><span>篇长文</span></div>
+  <div class="stat"><b>29</b><span>篇长文</span></div>
   <div class="stat"><b>3</b><span>条内容线</span></div>
   <div class="stat"><b>101</b><span>工具导航</span></div>
   <div class="stat stat-hot"><b>100<i>%</i></b><span>亲手实测</span></div>
@@ -59,9 +59,9 @@ keywords: 关于本站,关于作者,AI冲浪指南,博客介绍,AI工具实测,�
 <div class="lane-card">
   <div class="lane-head">
     <span class="lane-name">冲浪装备</span>
-    <span class="lane-badge">7 篇</span>
+    <span class="lane-badge">8 篇</span>
   </div>
-  <p class="lane-desc">网络通了之后的事：谷歌账号注册、美区 Apple ID、流媒体合租这类「装备」怎么买不踩坑。</p>
+  <p class="lane-desc">网络通了之后的事：谷歌账号注册、美区 Apple ID、流媒体合租、AI 大模型合租充值这类「装备」怎么买不踩坑。</p>
   <p class="lane-links">
     <a href="/apple-id-buy-guide/">美区 Apple ID 购买</a>
     <a href="/telegram-register-guide/">Telegram 注册教程</a>
