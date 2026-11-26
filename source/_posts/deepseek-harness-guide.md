@@ -20,10 +20,10 @@ faq:
   - q: "DeepSeek Harness 装社区插件安全吗？"
     a: "要谨慎。收录数量多不等于都经过安全审核。从 GitHub 装的插件可能在安装阶段执行 prepare 构建脚本，pnpm 默认会拦住，只有把插件明确加入 allowBuilds 才会继续。建议只装来源可信、最好锁定具体 commit 的插件，来路不明的仓库别急着运行。"
 related:
+  - slug: deepseek-harness-update-guide
+    text: DeepSeek Harness v0.2.3 大更新：时间线、代码审阅与 Git 插件源
   - slug: deepseek-vision-guide
     text: DeepSeek 多模态实测：V4.1 Flash 看图能力与接入
-  - slug: multimodel-game-assets
-    text: DeepSeek 1017 批量造游戏素材：多模型分工与成本账
   - slug: claude-code-install-guide
     text: Claude Code 安装配置教程：Windows 安装到实战
   - slug: codex-install-guide
@@ -171,7 +171,7 @@ dsh 还保留完整的会话和工具执行记录：用户说了什么、模型�
 
 **有明确需求、现成 Agent 又缺某项能力的**：dsh 有意思得多——装别人写好的插件，或让 Agent 按官方文档替你做一个，模型、工具、界面都能继续调整，做出来的东西更贴近自己的活。
 
-它当前的短板也直说：开发者预览阶段，界面和配置可能变化；社区插件质量参差；自制插件能生成出来，但测试和维护都是你自己的事。
+它当前的短板也直说：开发者预览阶段，界面和配置可能变化（v0.2.3 就把 Cordis 升到了 4.0、插件接口改了一轮，变化快到什么程度、升级要注意什么，[v0.2.3 大更新解读](/deepseek-harness-update-guide/)里逐条列了）；社区插件质量参差；自制插件能生成出来，但测试和维护都是你自己的事。
 
 所以第一次上手别急着组装万能 Agent，走这三步：
 
