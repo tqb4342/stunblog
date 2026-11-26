@@ -32,6 +32,10 @@ related:
     text: Codex 安装使用教程：国内 Trae 配置全流程
 ---
 
+> 🔄 这篇写给**已经在用 DeepSeek Harness 的人**：v0.2.3 把任务时间线、独立代码审阅、Git 插件源一口气全安排上，更新量堪比大版本，升级前还有两个破坏性改动必须先知道。还没装过的，先看[安装与四种模式教程](/deepseek-harness-guide/)再回来，这篇只讲它更新了什么。只想看结论的，直接跳「30 秒速答」。
+
+<!-- more -->
+
 版本号是最会骗人的东西。
 
 DeepSeek Harness 这次从 v0.2.2 升到 v0.2.3-alpha.1，看版本号是个不起眼的小更新，翻开更新日志，长度完全不像个小版本该有的。有海外开发者感慨：这帮「疯子」在 0.2.2 和 0.2.3-alpha.1 之间搞出的改动，把破坏性变更都算上，比不少软件从 V2 升到 V3 还多。
@@ -41,10 +45,6 @@ DeepSeek Harness 这次从 v0.2.2 升到 v0.2.3-alpha.1，看版本号是个不�
 Agent 任务时间线、独立代码审阅页面、会话状态区、Git 插件源、七类办公连接器、Windows 电脑操作——一口气全安排上了。DSH 这是在加速把自己从一个 Agent 工具做成完整的 Agent 工作平台。
 
 ![v0.2.3 新增功能清单：插件市场 Git 源、时间线插件、代码审阅页面、会话状态区、7 类连接器、Web 远程登录、MCP OAuth 等](https://tqb4342.oss-cn-guangzhou.aliyuncs.com/img/dsh-v023-01.webp)
-
-还没装过 DeepSeek Harness 的，先看[安装与四种模式教程](/deepseek-harness-guide/)再回来，这篇讲的是它更新了什么。
-
-<!-- more -->
 
 ## 30 秒速答
 
