@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""aisurf.cc 全面 SEO 诊断脚本（针对 localhost:4000 即将部署版本）"""
+"""aikits.cc 全面 SEO 诊断脚本（针对 localhost:4000 即将部署版本）"""
 import re, json, sys, io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
@@ -58,7 +58,7 @@ for path in URLS:
     c = re.search(r'<link rel="canonical" href="([^"]*)"', html)
     if not c: issue(f'{page}: 无 canonical')
     else:
-        expected = 'https://aisurf.cc' + (path if path == '/' else path)
+        expected = 'https://aikits.cc' + (path if path == '/' else path)
         if c.group(1) != expected:
             issue(f'{page}: canonical 不匹配: {c.group(1)} != {expected}')
         else: ok(f'{page}: canonical 正确')
@@ -113,7 +113,7 @@ for path in URLS:
     ext = []
     for tag in re.findall(r'<a\s[^>]*href="https?://[^"]*"[^>]*>', html):
         href = re.search(r'href="([^"]*)"', tag).group(1)
-        if 'aisurf.cc' not in href and 'localhost' not in href:
+        if 'aikits.cc' not in href and 'localhost' not in href:
             rel = re.search(r'rel="([^"]*)"', tag)
             ext.append((href, rel.group(1) if rel else ''))
     mysite = [e for e in ext]

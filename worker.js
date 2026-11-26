@@ -1,4 +1,4 @@
-// aisurf.cc 访问量计数 Worker（路由层）
+// aikits.cc 访问量计数 Worker（路由层）
 // /api/pv?path=/页面路径/  GET=只读  POST=+1 并返回新值
 // 计数逻辑在 Durable Object（counter-do.js，SQLite 存储，免费档 10 万行写/天），
 // 本文件只做路径校验、爬虫过滤和转发；KV（COUNTER 绑定）保留给 DO 首次启动导入存量用

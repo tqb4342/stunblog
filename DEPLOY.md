@@ -157,7 +157,7 @@ git push
 `_config.yml` 的 `url` 已替换为正式域名：
 
 ```yaml
-url: https://aisurf.cc
+url: https://aikits.cc
 ```
 
 域名在 Cloudflare Registrar 注册（成本价、无套路续费），DNS 自动托管在 Cloudflare，无需配置 nameserver。

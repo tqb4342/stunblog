@@ -22,4 +22,4 @@ echo "==> [SEO] 自动推送到 Bing(IndexNow) / 百度..."
 ./seo-push.sh "$PRE_PUSH_SHA" || true
 
 echo ""
-echo "✅ 完成！1-2 分钟后线上生效：https://aisurf.cc"
+echo "✅ 完成！1-2 分钟后线上生效：https://aikits.cc"

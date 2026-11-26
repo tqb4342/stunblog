@@ -1,4 +1,4 @@
-// aisurf.cc 访问量 Durable Object（SQLite 存储）
+// aikits.cc 访问量 Durable Object（SQLite 存储）
 // 免费档限额 10 万行写入/天，是 KV 免费档（1000 写/天）的 100 倍，日常流量随便用
 // 首次启动自动把 KV（COUNTER 绑定）里的存量计数导入 SQLite，一次性、幂等，数据无缝衔接
 // 请求形状：GET https://counter/api?path=/xxx/&count=0|1  返回 { pv, total }

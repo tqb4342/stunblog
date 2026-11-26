@@ -11,7 +11,7 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-url: https://aisurf.cc
+url: https://aikits.cc
 root: /
 # 文章直接挂根路径：/文章名/；注意文章名别撞 about/tags/archives/categories 这些保留路径
 permalink: :title/

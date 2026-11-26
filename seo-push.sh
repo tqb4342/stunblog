@@ -5,13 +5,13 @@
 set -uo pipefail
 cd "$(dirname "$0")"
 
-SITE="aisurf.cc"
+SITE="aikits.cc"
 
 # IndexNow 密钥（对应文件 source/<key>.txt 已随站部署）
 INDEXNOW_KEY="41699b6c66a682d18c6c418b516c728e"
 
 # 百度 API 推送 token 从本地私密文件读取（seo-push.secret.sh 已 gitignore，仓库公开也不泄露）
-# 注意：API 的 site 参数必须用裸域名 aisurf.cc（不带 https://），脚本已按此拼接
+# 注意：API 的 site 参数必须用裸域名 aikits.cc（不带 https://），脚本已按此拼接
 BAIDU_TOKEN=""
 [ -f ./seo-push.secret.sh ] && . ./seo-push.secret.sh
 
