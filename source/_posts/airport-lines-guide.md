@@ -96,7 +96,7 @@ related:
 - **IPLC**（International Private Leased Circuit）：国际私有租用线路，老牌专线产品
 - **IEPL**（International Ethernet Private Line）：国际以太网专线，以太网封装，带宽弹性更好
 
-对用户来说两者的体验差别可以忽略——都是内网直达、不受防火墙干扰、延迟极稳。**真要二选一，选便宜的就行**，不用纠结术语。
+对用户来说两者的体验差别可以忽略——都是内网直达、不受防火墙干扰、延迟极稳。**真要二选一，选便宜的就行**，不用纠结术语——各种线路黑话的完整释义，[机场黑话字典](/airport-glossary-guide/)一次查清。
 
 专线的爽点：
 
