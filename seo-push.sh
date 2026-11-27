@@ -44,10 +44,10 @@ done <<< "$POSTS"
 echo "SEO推送: 变动文章 $(echo "$POSTS" | wc -l) 篇，推送以下 URL："
 echo "$URLS" | sed 's/^/  /'
 
-# ---- 2. IndexNow（一次覆盖 Bing、Yandex 等） ----
+# ---- 2. IndexNow（Bing 端点；api.indexnow.org 聚合入口 2026-11-26 实测不可达，Bing 才是目标引擎） ----
 echo "--> IndexNow (Bing)..."
 HTTP_CODE=$(curl -s -m 20 -o /tmp/indexnow_resp.txt -w "%{http_code}" -X POST \
-  "https://api.indexnow.org/indexnow" \
+  "https://www.bing.com/indexnow" \
   -H "Content-Type: application/json; charset=utf-8" \
   -d "{\"host\": \"$SITE\", \"key\": \"$INDEXNOW_KEY\", \"keyLocation\": \"https://$SITE/$INDEXNOW_KEY.txt\", \"urlList\": [$URL_LIST]}")
 BODY=$(head -c 200 /tmp/indexnow_resp.txt)

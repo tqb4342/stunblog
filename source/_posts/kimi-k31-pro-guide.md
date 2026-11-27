@@ -126,7 +126,7 @@ AI 碰金融翻车是老梗了——写摘要凑合，一遇到跨表公式和�
 
 **现实上**：这才是国产模型真正的护城河。K3.1 Pro 国内直连、免费额度就能用；Astra 和 Opus 得先有稳定的出海线路才能摸到。这也是它对看这个站的读者最实际的意义——**网络还没配置好的，K3.1 Pro 就是现在能直接上手的最强档**。想让家里网络达标的，从 [Windows 网络教程](/windows-internet-guide/) 或 [iPhone 网络教程](/iphone-open-internet/) 起步；安卓用户看 [安卓教程](/android-internet-guide/)。
 
-两边都想体验做对比的，海外模型不用自己折腾账号：[环球巴士](http://cn.goingbus.com/?s=wX0haoloon) ChatGPT 镜像版 28.88 元/月起、Plus 合租 69.88 元/月，新用户首单 9 折，优惠码 `Tanqingbo`；想自己注册官方账号的完整流程看 [ChatGPT 国内使用教程](/chatgpt-vpn-guide/)。
+两边都想体验做对比的，各家模型按场景怎么选，[AI 工具选型总览](/ai-tools-guide/)有完整对照表；海外模型不用自己折腾账号：[环球巴士](http://cn.goingbus.com/?s=wX0haoloon) ChatGPT 镜像版 28.88 元/月起、Plus 合租 69.88 元/月，新用户首单 9 折，优惠码 `Tanqingbo`；想自己注册官方账号的完整流程看 [ChatGPT 国内使用教程](/chatgpt-vpn-guide/)。
 
 编程党还有一层选择：K3 系属于「国产直连免费路线」的主力——Kimi Code 的 CLI 和 VS Code 插件对标 Claude Code，K3.1 Pro 的 Agent 能力涨上来之后，这条路线的含金量又高了一截。海外工具怎么装的看 [Codex 安装使用指南](/codex-install-guide/) 和 [Claude Code 安装配置教程](/claude-code-install-guide/)，后者还写了 cc-switch 接国产模型的省法。
 
